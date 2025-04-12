@@ -166,7 +166,7 @@ awards:
     summary: |
       The Deutschlandstipendium supports highly talented students at all participating universities in Germany..
 
-  - title: Patent: Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box
+  - title: Patent - Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box
     date: '2021-06'
     awarder: China National Intellectual Property Administration
     icon: patent
