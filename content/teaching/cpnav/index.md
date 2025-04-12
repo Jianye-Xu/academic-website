@@ -6,3 +6,5 @@ type: docs
 math: false
 ---
 Find more details on our [official website](https://www.embedded.rwth-aachen.de/cms/embedded/studium/lehrveranstaltungen/~bixxdz/regelung-und-wahrnehmung-in-vernetzten-u/?lidx=1).
+
+![lab-architecture](lab-architecture.png)

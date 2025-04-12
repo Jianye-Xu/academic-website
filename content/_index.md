@@ -30,17 +30,6 @@ sections:
           size: cover
           position: center
           parallax: false
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Hello! 👋
-
-        I'm Jianye, a Ph.D. student in the Chair of Embedded Software at RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee"> Prof. Bassam Alrifaee </a>.
-        My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Currently, my favarite methods are reinforcement learning and control barrier functions.
-    design:
-      columns: '1'
   - block: collection
     id: Research
     content:

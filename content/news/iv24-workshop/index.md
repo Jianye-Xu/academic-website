@@ -1,5 +1,5 @@
 ---
-title:  📚 Join our **1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms** at IEEE IV 2024!
+title:  📚 Join our _1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms_ at IEEE IV 2024!
 summary: Discuss challenges and design a roadmap.
 date: 2024-06-02
 authors:

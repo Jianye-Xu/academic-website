@@ -3,7 +3,7 @@
 title: Jianye Xu
 
 # Name pronunciation (optional)
-name_pronunciation: Jianye Xu
+# name_pronunciation: Jianye Xu
 
 # Full name (for SEO)
 first_name: Jianye
@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Student
+role: Ph.D. Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -48,7 +48,7 @@ interests:
   - Connected and Automated Vehicles
 
 education:
-  - area: PhD Computer Science
+  - area: Ph.D. Computer Science
     institution: RWTH Aachen University
     date_start: 2023-04-01
     date_end: 2028-03-31
@@ -166,4 +166,4 @@ awards:
 ---
 
 ## About Me
-Jianye Xu is a Ph.D. student in the Department of Computer Science at RWTH Aachen University. His research focus on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles.
+Hello 👋! I'm Jianye, a Ph.D. student at the Chair of Embedded Software (Informatik 11), RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee">Prof. Bassam Alrifaee</a>. My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Specifically, I am interested in the intersection of reinforcement learning and control barrier functions.
