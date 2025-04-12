@@ -75,44 +75,6 @@ education:
 #     date_end: ''
 #     summary: |
 
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Technical Skills
-    items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
-  # - name: Hobbies
-  #   color: '#eeac02'
-  #   color_border: '#f0bf23'
-  #   items:
-  #     - name: Sport
-  #       description: ''
-  #       percent: 60
-  #       icon: person-simple-walk
-  #     - name: Music
-  #       description: ''
-  #       percent: 100
-  #       icon: cat
-
-# languages:
-#   - name: English
-#     percent: 100
-#   - name: Chinese
-#     percent: 75
-#   - name: Portuguese
-#     percent: 25
-
 # Awards.
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
