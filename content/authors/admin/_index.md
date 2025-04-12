@@ -51,7 +51,7 @@ education:
   - area: PhD Computer Science
     institution: RWTH Aachen University
     date_start: 2023-04
-    date_end: 2028-03 (estimated)
+    date_end: 2028-03
     summary: |
       Supervised by [Prof. Bassam Alrifaee](https://scholar.google.com/citations?user=M8JL-poAAAAJ&hl=en).
   - area: M.Sc. Automation Engineering
