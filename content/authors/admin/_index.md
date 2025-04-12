@@ -50,20 +50,20 @@ interests:
 education:
   - area: PhD Computer Science
     institution: RWTH Aachen University
-    date_start: 2023-04
-    date_end: 2028-03
+    date_start: 2023-04-01
+    date_end: 2028-03-31
     summary: |
       Supervised by [Prof. Bassam Alrifaee](https://scholar.google.com/citations?user=M8JL-poAAAAJ&hl=en).
   - area: M.Sc. Automation Engineering
     institution: RWTH Aachen University
-    date_start: 2020-10
-    date_end: 2022-09
+    date_start: 2020-10-01
+    date_end: 2022-09-31
     summary: |
       GPA: 1.2/1.0 (graduated with distinction.)
   - area: B.Sc. Vehicle Engineering
     institution: Beijing Institute of Technology
-    date_start: 2016-08
-    date_end: 2019-09
+    date_start: 2016-08-01
+    date_end: 2019-09-31
     summary: |
       GPA: 91.48/100 (graduated with distinction)
 # work:
@@ -71,7 +71,7 @@ education:
 #     company_name: xxx
 #     company_url: 'xxx'
 #     company_logo: 'xxx'
-#     date_start: 20xx-0x
+#     date_start: 20xx-0x-01
 #     date_end: ''
 #     summary: |
 
