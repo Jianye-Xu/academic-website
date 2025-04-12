@@ -11,7 +11,7 @@ last_name: Xu
 
 # Status emoji
 status:
-  icon: ☕️
+  icon:
 
 # Is this the primary user of the site?
 superuser: true
@@ -36,7 +36,7 @@ profiles:
   - icon: brands/github
     url: https://github.com/Jianye-Xu
   - icon: brands/linkedin
-    url: www.linkedin.com/in/jianye-xu-
+    url: https://www.linkedin.com/in/jianye-xu-/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=t5nUUGMAAAAJ&hl=en
   # - icon: academicons/orcid
@@ -83,9 +83,9 @@ awards:
   - title: Dean's List
     date: '2023-01-01'
     awarder: RWTH Aachen University
-    icon: university
-    summary: |
-      Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.
+    # icon: university
+    # summary: |
+    #   Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.
 
   - title: M.Sc. with distinction
     date: '2022-09-01'
