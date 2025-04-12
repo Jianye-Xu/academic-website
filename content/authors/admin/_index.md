@@ -83,87 +83,75 @@ awards:
   - title: Dean's List
     date: '2023-01-01'
     awarder: RWTH Aachen University
-    # icon: university
-    # summary: |
-    #   Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.
+    summary: |
+      Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.
 
   - title: M.Sc. with distinction
     date: '2022-09-01'
     awarder: RWTH Aachen University
-    icon: university
     summary: |
       Graduated with distinction in the Master of Science program at RWTH Aachen University.
 
   - title: German National Scholarship (Deutschlandstipendium)
     date: '2021-11-01'
     awarder: RWTH Aachen University
-    icon: scholarship
     summary: |
       The Deutschlandstipendium supports highly talented students at all participating universities in Germany..
 
   - title: Patent - Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box
     date: '2021-06-01'
     awarder: China National Intellectual Property Administration
-    icon: patent
     summary: |
       Invented and received authorization for a patent on a mechanical device to enhance safety and efficiency in battery swapping systems for electric vehicles.
 
   - title: German National Scholarship (Deutschlandstipendium)
     date: '2020-11-01'
     awarder: RWTH Aachen University
-    icon: scholarship
     summary: |
       The Deutschlandstipendium supports highly talented students at all participating universities in Germany..
 
   - title: Outstanding Graduate
     date: '2020-06-01'
     awarder: Beijing Institute of Technology
-    icon: award
     summary: |
       Recognized as an Outstanding Graduate for academic achievement and contributions during undergraduate studies.
 
   - title: China National Scholarship
     date: '2018-11-01'
     awarder: Ministry of Education of the People's Republic of China
-    icon: scholarship
     summary: |
       Prestigious national-level scholarship awarded to top-performing students for academic excellence.
 
   - title: Second Prize in National Student Mechanical Product Digital Design Competition
     date: '2018-06-01'
     awarder: China Mechanical Discipline Steering Committee
-    icon: award
     summary: |
       Awarded second prize in a national competition for mechanical product digital design, demonstrating advanced CAD modeling and design skills.
 
   - title: Outstanding Undergraduate
     date: '2017-12-01'
     awarder: Beijing Institute of Technology
-    icon: award
     summary: |
       Recognized for outstanding academic achievements during undergraduate studies.
 
   - title: First Prize in Beijing Student Engineering Design Expression Competition
     date: '2017-12-01'
     awarder: Beijing Municipal Commission of Education
-    icon: award
     summary: |
       Earned first prize for excellence in a city-level engineering drawing competition.
 
   - title: First Prize in National Student Drafting and Modelling Innovation Competition
     date: '2017-07-01'
     awarder: China Cartographic Association
-    icon: award
     summary: |
       Awarded first prize for innovative drafting and 3D modeling techniques in a nationwide student competition.
 
   - title: Second Prize in Engineering Drafting Skills Competition
     date: '2017-06-01'
     awarder: Beijing Institute of Technology
-    icon: award
     summary: |
       Earned second prize in a university-wide engineering drafting competition, demonstrating strong technical drawing skills.
 ---
 
 ## About Me
-Hello 👋! I'm Jianye, a Ph.D. student at the Chair of Embedded Software (Informatik 11), RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee">Prof. Bassam Alrifaee</a>. My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Specifically, I am interested in the intersection of reinforcement learning and control barrier functions.
+Hello! I'm Jianye, a Ph.D. student at the Chair of Embedded Software (Informatik 11), RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee">Prof. Bassam Alrifaee</a>. My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Specifically, I am interested in the intersection of reinforcement learning and control barrier functions.

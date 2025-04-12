@@ -12,12 +12,12 @@ sections:
   - block: collection
     content:
       title: Selected Projects
-      text: Here are a selection of my projects.
+      text: ''
       filters:
         folders:
           - projects
     design:
       view: article-grid
-      fill_image: false
+      fill_image: true
       columns: 3
 ---
