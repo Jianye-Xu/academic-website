@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ""
-date: 2022-10-24
+date: 2025-04-12
 type: landing
 
 design:
@@ -35,11 +35,10 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        Hello! 👋
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
+        I'm Jianye, a Ph.D. student in the Chair of Embedded Software at RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee"> Prof. Bassam Alrifaee </a>.
+        My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Currently, my favarite methods are reinforcement learning and control barrier functions.
     design:
       columns: '1'
   - block: collection
