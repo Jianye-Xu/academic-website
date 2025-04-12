@@ -57,13 +57,13 @@ education:
   - area: M.Sc. Automation Engineering
     institution: RWTH Aachen University
     date_start: 2020-10-01
-    date_end: 2022-09-31
+    date_end: 2022-09-30
     summary: |
       GPA: 1.2/1.0 (graduated with distinction.)
   - area: B.Sc. Vehicle Engineering
     institution: Beijing Institute of Technology
     date_start: 2016-08-01
-    date_end: 2019-09-31
+    date_end: 2019-09-30
     summary: |
       GPA: 91.48/100 (graduated with distinction)
 # work:
