@@ -8,13 +8,13 @@ main:
     url: /
     weight: 10
   - name: Projects
-    url: /#projects
+    url: projects/
     weight: 11
   - name: Publication
-    url: /#publications
+    url: publications/
     weight: 11
   - name: News
-    url: /#news
+    url: news/
     weight: 13
   - name: Awards
     url: awards/

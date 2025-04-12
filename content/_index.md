@@ -31,12 +31,12 @@ sections:
           position: center
           parallax: false
   - block: collection
-    id: Research
+    id: Projects
     content:
-      title: Research (WIP)
+      title: Projects (WIP)
       filters:
         folders:
-          - research
+          - projects
         featured_only: true
     design:
       view: article-grid
@@ -60,7 +60,7 @@ sections:
       # Page type to display. E.g. post, talk, publication...
       page_type: news
       # Choose how many pages you would like to display (0 = all pages)
-      count: 5
+      count: 3
       # Filter on criteria
       filters:
         author: ""
