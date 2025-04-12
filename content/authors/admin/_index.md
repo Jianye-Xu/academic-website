@@ -118,112 +118,85 @@ skills:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
-    summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
-    summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
-    summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
-
-awards:
   - title: Dean's List
-    date: '2023-01'
+    date: '2023-01-01'
     awarder: RWTH Aachen University
     icon: university
     summary: |
       Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.
 
   - title: M.Sc. with distinction
-    date: '2022-09'
+    date: '2022-09-01'
     awarder: RWTH Aachen University
     icon: university
     summary: |
       Graduated with distinction in the Master of Science program at RWTH Aachen University.
 
   - title: German National Scholarship (Deutschlandstipendium)
-    date: '2021-11'
+    date: '2021-11-01'
     awarder: RWTH Aachen University
     icon: scholarship
     summary: |
       The Deutschlandstipendium supports highly talented students at all participating universities in Germany..
 
   - title: Patent - Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box
-    date: '2021-06'
+    date: '2021-06-01'
     awarder: China National Intellectual Property Administration
     icon: patent
     summary: |
       Invented and received authorization for a patent on a mechanical device to enhance safety and efficiency in battery swapping systems for electric vehicles.
 
   - title: German National Scholarship (Deutschlandstipendium)
-    date: '2020-11'
+    date: '2020-11-01'
     awarder: RWTH Aachen University
     icon: scholarship
     summary: |
       The Deutschlandstipendium supports highly talented students at all participating universities in Germany..
 
   - title: Outstanding Graduate
-    date: '2020-06'
+    date: '2020-06-01'
     awarder: Beijing Institute of Technology
     icon: award
     summary: |
       Recognized as an Outstanding Graduate for academic achievement and contributions during undergraduate studies.
 
   - title: China National Scholarship
-    date: '2018-11'
+    date: '2018-11-01'
     awarder: Ministry of Education of the People's Republic of China
     icon: scholarship
     summary: |
       Prestigious national-level scholarship awarded to top-performing students for academic excellence.
 
   - title: Second Prize in National Student Mechanical Product Digital Design Competition
-    date: '2018-06'
+    date: '2018-06-01'
     awarder: China Mechanical Discipline Steering Committee
     icon: award
     summary: |
       Awarded second prize in a national competition for mechanical product digital design, demonstrating advanced CAD modeling and design skills.
 
   - title: Outstanding Undergraduate
-    date: '2017-12'
+    date: '2017-12-01'
     awarder: Beijing Institute of Technology
     icon: award
     summary: |
       Recognized for outstanding academic achievements during undergraduate studies.
 
   - title: First Prize in Beijing Student Engineering Design Expression Competition
-    date: '2017-12'
+    date: '2017-12-01'
     awarder: Beijing Municipal Commission of Education
     icon: award
     summary: |
       Earned first prize for excellence in a city-level engineering drawing competition.
 
   - title: First Prize in National Student Drafting and Modelling Innovation Competition
-    date: '2017-07'
+    date: '2017-07-01'
     awarder: China Cartographic Association
     icon: award
     summary: |
       Awarded first prize for innovative drafting and 3D modeling techniques in a nationwide student competition.
 
   - title: Second Prize in Engineering Drafting Skills Competition
-    date: '2017-06'
+    date: '2017-06-01'
     awarder: Beijing Institute of Technology
     icon: award
     summary: |
