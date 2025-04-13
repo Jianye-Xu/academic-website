@@ -19,6 +19,10 @@ superuser: true
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
+avatar: 
+  filename: avatar.jpg
+  size: 160  # change this number to control the image width in pixels
+
 # Role/position/tagline
 role: Ph.D. Student
 
@@ -153,7 +157,6 @@ awards:
       Earned second prize in a university-wide engineering drafting competition, demonstrating strong technical drawing skills.
 ---
 
-## About Me
 <div style="color: white">
 
 ## About Me

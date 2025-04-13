@@ -54,7 +54,7 @@ sections:
   - block: collection
     id: news
     content:
-      title: Recent News (WIP)
+      title: News (WIP)
       subtitle: ''
       text: ''
       # Page type to display. E.g. post, talk, publication...
