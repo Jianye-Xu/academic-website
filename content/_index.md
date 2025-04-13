@@ -45,6 +45,7 @@ sections:
     content:
       title: Publications (WIP)
       text: ""
+      count: 10
       filters:
         folders:
           - publication
