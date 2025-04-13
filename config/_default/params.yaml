@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: blue  # emerald, blue, cyan, green, indigo, purple, red, rose, sky, teal, and zinc
+  color: green-test  # emerald, blue, cyan, green, indigo, purple, red, rose, sky, teal, and zinc
 
 # SEO
 marketing:
