@@ -154,4 +154,11 @@ awards:
 ---
 
 ## About Me
-Hello! I'm Jianye, a Ph.D. student at the Chair of Embedded Software (Informatik 11), RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee">Prof. Bassam Alrifaee</a>. My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Specifically, I am interested in the intersection of reinforcement learning and control barrier functions.
+<div style="color: white">
+
+## About Me
+
+Hello! I'm Jianye, a Ph.D. student at the Chair of Embedded Software (Informatik 11), RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee" style="color: white; text-decoration: underline;">Prof. Bassam Alrifaee</a>. My research focuses on learning and optimization-based multi-agent decision-making and its applications in connected and automated vehicles. Specifically, I am interested in the intersection of reinforcement learning and control barrier functions.
+
+</div>
+
