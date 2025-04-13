@@ -24,14 +24,14 @@ sections:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: background-3.jpg
+          filename: background-5.svg
           filters:
             brightness: 1.0
           size: cover
           position: center
           parallax: false
   - block: collection
-    id: Projects
+    id: projects
     content:
       title: Projects (WIP)
       filters:
