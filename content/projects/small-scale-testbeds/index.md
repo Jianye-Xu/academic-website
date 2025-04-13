@@ -1,8 +1,12 @@
 ---
-title: Small-scale testbeds for connected and automated vehicles and robot swarms.
+title: Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms.
 date: 2024-09-01
-external_link: https://cpm-remote.lrt.unibw-muenchen.de/testbeds
 tags:
-  - Testbeds, CAV, Robot Swarms
+  - CAV
+  - Robot Swarm
+  - Testbed
 ---
-WIP.
+
+<a href="https://cpm-remote.lrt.unibw-muenchen.de/testbeds" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary-600 text-white font-semibold px-4 py-2 rounded hover:bg-primary-700 transition">
+  Website
+</a>
