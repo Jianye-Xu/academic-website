@@ -1,5 +1,5 @@
 ---
-title: Selected Projects
+title: Projects
 cms_exclude: true
 
 # View.

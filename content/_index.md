@@ -43,7 +43,7 @@ sections:
       columns: 2
   - block: collection
     content:
-      title: Selected Publications (WIP)
+      title: Publications (WIP)
       text: ""
       filters:
         folders:
