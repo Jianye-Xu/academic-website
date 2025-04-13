@@ -16,8 +16,8 @@ publishDate: "2024-09-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *The 17th International Symposium on Distributed Autonomous Robotic Systems (DARS)*
-publication_short: In *Distributed Autonomous Robotic Systems (DARS)*
+publication: In *The 27th IEEE International Conference on Intelligent Transportation Systems (IEEE ITSC 2024)*
+publication_short: In *IEEE ITSC 2024*
 
 abstract: This paper introduces an open-source, decentralized framework named SigmaRL, designed to enhance both sample effciency and generalization of multi-agent Reinforcement Learning (RL) for motion planning of connected and automated vehicles. Most RL agents exhibit a limited capacity to generalize, often focusing narrowly on specific scenarios, and are usually evaluated in similar or even the same scenarios seen during training. Various methods have been proposed to address these challenges, including experience replay and regularization. However, how observation design in RL affects sample efficiency and generalization remains an under-explored area. We address this gap by proposing five strategies to design information-dense observations, focusing on general features that are applicable to most traffic scenarios. We train our RL agents using these strategies on an intersection and evaluate their generalization through numerical experiments across completely unseen traffic scenarios, including a new intersection, an on-ramp, and a roundabout. Incorporating these information-dense observations reduces training times to under one hour on a single CPU, and the evaluation results reveal that our RL agents can effectively zero-shot generalize. [Code](https://github.com/cas-lab-munich/SigmaRL)
 # Summary. An optional shortened abstract.
