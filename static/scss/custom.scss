@@ -1,11 +1,7 @@
-.container {
-    margin: 0 auto;
-    // Adjusting the max-width to increase page width. 
-    // The original file path - `/<website-root>/themes/<theme-name>/assets/scss/..`
-    // max-width: 90rem;  // Default value
-    max-width: 200rem;
+/* Only override max-width for the Projects section */
+section#Projects .container {
+    max-width: 1600px;
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  
