@@ -1,0 +1,23 @@
+{{- $cite := printf "@article{%s,\n  title={%s},\n  author={%s},\n  year={%s},\n  journal={%s},\n  doi={%s}\n}" (urlize .Title) .Title (delimit .Authors ", ") (time.Format "2006" .Date) (.Params.publication | plainify) .Params.doi -}}
+
+<div class="publication-links">
+  <a class="btn btn-sm btn-outline-primary" href="javascript:void(0);" onclick="copyCitation(this)" data-cite="{{ $cite }}">📋 CITE</a>
+
+  {{ with .Params.doi }}
+    <a class="btn btn-sm btn-outline-primary" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>
+  {{ end }}
+
+  {{ range .Params.links }}
+    <a class="btn btn-sm btn-outline-primary" href="{{ .url }}" target="_blank" rel="noopener">{{ .name | upper }}</a>
+  {{ end }}
+</div>
+
+<script>
+function copyCitation(elem) {
+  const bib = elem.getAttribute("data-cite");
+  navigator.clipboard.writeText(bib).then(() => {
+    elem.innerText = "✓ COPIED";
+    setTimeout(() => { elem.innerText = "📋 CITE"; }, 1500);
+  });
+}
+</script>
