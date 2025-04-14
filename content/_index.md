@@ -33,7 +33,7 @@ sections:
   - block: collection
     id: projects
     content:
-      title: Projects (WIP)
+      title: Projects
       filters:
         folders:
           - projects
