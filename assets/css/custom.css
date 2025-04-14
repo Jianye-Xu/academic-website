@@ -1,6 +1,0 @@
-/* Override the maximum width of the article container */
-.article {
-    max-width: 100% !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }

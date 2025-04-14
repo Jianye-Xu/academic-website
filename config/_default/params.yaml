@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: green-test  # emerald, blue, cyan, green, indigo, purple, red, rose, sky, teal, and zinc
+  color: blue  # emerald, blue, cyan, green, indigo, purple, red, rose, sky, teal, and zinc
 
 # SEO
 marketing:
@@ -58,9 +58,3 @@ features:
     enable: false
   privacy_pack:
     enable: false
-
-# style:
-#   custom_css: scss/custom.scss
-assets:
-  css:
-    - css/custom.css
