@@ -1,10 +1,26 @@
 ---
 title: News
+summary: News.
+date: 2023-04-01
+type: landing
 
-# View.
-#   1 = List
-#   2 = Compact
-#   3 = Card
-#   4 = Citation
-view: 2
+cascade:
+  - _target:
+      kind: page
+    params:
+      show_breadcrumb: true
+
+sections:
+  - block: collection
+    id: news
+    content:
+      title: News
+      filters:
+        folders:
+          - news
+      # Page order: descending (desc) or ascending (asc) date.
+      order: asc
+    design:
+      view: article-grid
+      columns: 3
 ---

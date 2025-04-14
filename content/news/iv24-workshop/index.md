@@ -10,4 +10,5 @@ tags:
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
+# 📚 Join our "1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms" at IEEE IV 2024!
 Check out our [official website](https://cpm-remote.lrt.unibw-muenchen.de/iv24-workshop) for more information.

@@ -1,7 +1,7 @@
 ---
 title: Control Barrier Functions for Safe Reinforcement Learning
 
-date: 2024-06-01
+date: 2025-03-01
 tags:
   - CAV
   - CBF
