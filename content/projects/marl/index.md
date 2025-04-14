@@ -1,7 +1,7 @@
 ---
 title: Multi-Agent Reinforcement Learning and its Applications in Connected and Automated Vehicles
 
-date: 2024-08-01
+date: 2024-01-01
 tags:
   - MARL
   - CAV

@@ -57,7 +57,7 @@ education:
     date_start: 2023-04-01
     date_end: 2028-03-31
     summary: |
-      Supervised by [Prof. Bassam Alrifaee](https://scholar.google.com/citations?user=M8JL-poAAAAJ&hl=en).
+      Supervised by [Prof. Bassam Alrifaee](https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee).
   - area: M.Sc. Automation Engineering
     institution: RWTH Aachen University
     date_start: 2020-10-01

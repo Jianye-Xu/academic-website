@@ -1,6 +1,6 @@
 ---
 title: Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms.
-date: 2024-09-01
+date: 2024-10-01
 tags:
   - CAV
   - Robot Swarm

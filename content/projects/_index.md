@@ -1,15 +1,26 @@
 ---
 title: Projects
-cms_exclude: true
+summary: Selected research projects.
+date: 2023-04-01
+type: landing
 
-view: article-grid  # list, compact, card, citation, showcase, article-grid
+cascade:
+  - _target:
+      kind: page
+    params:
+      show_breadcrumb: true
 
-columns: 3
-
-# Optional header image (relative to `static/media/` folder).
-banner:
-  caption: ''
-  image: ''
+sections:
+  - block: collection
+    id: projects
+    content:
+      title: Projects
+      filters:
+        folders:
+          - projects
+      # Page order: descending (desc) or ascending (asc) date.
+      order: asc
+    design:
+      view: article-grid
+      columns: 3
 ---
-
-
