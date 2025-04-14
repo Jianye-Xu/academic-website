@@ -1,5 +1,10 @@
-@layer components {
-    .custom-wide {
-      @apply max-w-screen-xl;
-    }
-  }
+// @layer components {
+//     .custom-wide {
+//         @apply max-w-screen-xl;
+//     }
+// }
+.page {
+    max-width: 1200px;
+    /* adjust as needed */
+    margin: 0 auto;
+}
