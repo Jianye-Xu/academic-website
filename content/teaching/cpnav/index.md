@@ -1,5 +1,5 @@
 ---
-title: Control and Perception in Connected and Autonomous Vehicles
+title: Control and Perception in Connected and Autonomous Vehicles 🚗
 summary: Master's course.
 date: 2024-10-01
 type: docs
