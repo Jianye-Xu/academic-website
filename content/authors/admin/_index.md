@@ -67,7 +67,7 @@ education:
   - area: B.Sc. Vehicle Engineering
     institution: Beijing Institute of Technology
     date_start: 2016-08-01
-    date_end: 2019-09-30
+    date_end: 2020-09-30
     summary: |
       GPA: 91.48/100 (graduated with distinction)
 # work:

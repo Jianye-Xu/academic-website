@@ -11,12 +11,12 @@ tags:
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
-<video controls width="100%">
-  <source src="scenario-example.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 Check out our [official website](https://cpm-remote.lrt.unibw-muenchen.de/olympics) for more information.
 
 ## Timeline
 ![Timeline](timeline.png)
+
+<video controls width="75%">
+  <source src="scenario-example.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

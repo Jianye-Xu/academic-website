@@ -48,7 +48,7 @@ sections:
       count: 100
       filters:
         folders:
-          - publication
+          - publications
         exclude_featured: false
     design:
       view: citation
