@@ -30,7 +30,7 @@ sections:
           size: cover
           position: center
           parallax: false
-          text_color_light: true
+          text_color_light: false
   - block: collection
     id: projects
     content:
