@@ -43,9 +43,9 @@ sections:
       columns: 3
   - block: collection
     content:
-      title: Publications (WIP)
+      title: Publications
       text: ""
-      count: 10
+      count: 100
       filters:
         folders:
           - publication
