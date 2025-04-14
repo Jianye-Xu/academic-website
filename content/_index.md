@@ -45,10 +45,10 @@ sections:
     content:
       title: Publications
       text: ""
-      count: 100
+      count: 10
       filters:
         folders:
-          - publications
+          - publication
         exclude_featured: false
     design:
       view: citation
