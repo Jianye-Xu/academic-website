@@ -3,9 +3,11 @@ title: Multi-Agent Reinforcement Learning and its Applications in Connected and 
 
 date: 2024-01-01
 tags:
-  - MARL
   - CAV
+  - MARL
 ---
+# Multi-Agent Reinforcement Learning and its Applications in Connected and Automated Vehicles
+
 This project addressed the challenges in Multi-Agent Reinforcement Learning (MARL) and its applications in Connected and Automated Vehicles (CAVs).
 
 ## Challenge 1: Sample Efficiency and Generalization

@@ -7,6 +7,8 @@ tags:
   - CBF
   - MARL
 ---
+# Control Barrier Functions for Safe Reinforcement Learning
+
 This project studies the theoretical and practical aspects of Control Barrier Functions (CBFs) for safe reinforcement learning in the context of Connected and Automated Vehicles (CAVs).
 
 ## Less Conservative CBFs for Motion Planning of CAVs
