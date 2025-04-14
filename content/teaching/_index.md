@@ -1,6 +1,7 @@
 ---
 title: Teaching
-summary: My courses
+summary: Educational activities.
+date: 2023-01-01
 type: landing
 
 cascade:
@@ -17,7 +18,9 @@ sections:
       filters:
         folders:
           - teaching
+      # Page order: descending (desc) or ascending (asc) date.
+      order: asc
     design:
       view: article-grid
-      columns: 2
+      columns: 3
 ---

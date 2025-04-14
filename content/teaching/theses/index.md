@@ -1,7 +1,7 @@
 ---
 title: Supervised Theses 🎓
 summary: Bachelor's and Master's students.
-date: 
+date: 2023-08-01
 type: docs
 math: false
 ---

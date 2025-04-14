@@ -1,7 +1,7 @@
 ---
 title: Supervised Seminar Works 📚
 summary: Bachelor's and Master's students.
-date: 2023-04-01
+date: 2023-10-01
 type: docs
 math: false
 ---
