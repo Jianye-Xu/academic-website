@@ -4,7 +4,9 @@ summary: Bachelor's and Master's students.
 date: 2023-08-01
 type: docs
 math: false
+toc: false
 ---
+
 ## Master's Theses
 * Xinyue Cui (2024). *Determining the Longitudinal and Lateral Acceleration of a Bicycle Using a Smartphone Mounted on Its Handlebar* (Master's thesis, RWTH Aachen University).
 * Xia Yan (2024). *Learning-Based Motion Planner for Connected and Automated Vehicles* (Master's thesis, RWTH Aachen University).

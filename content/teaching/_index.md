@@ -3,7 +3,6 @@ title: Teaching
 summary: Educational activities.
 date: 2023-01-01
 type: landing
-toc: false
 
 cascade:
   - _target:
