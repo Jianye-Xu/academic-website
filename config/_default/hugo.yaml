@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: Jianye Xu's Personal Website
+title: Jianye Xu
 # Website URL
 baseURL: 'https://jianyexu.com/'
 
