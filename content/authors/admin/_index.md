@@ -86,13 +86,13 @@ education:
 awards:
   - title: Best Poster
     date: '2025-12-11'
-    awarder: RWTH Aachen University
+    awarder: German Autonomy Summit (GAS)
     summary: |
       2025 German Autonomy Summit (GAS) best poster award.
 
   - title: Best Paper Nomination
     date: '2025-11-21'
-    awarder: RWTH Aachen University
+    awarder: IEEE Intelligent Transportation Systems Society (ITSS)
     summary: |
       IEEE International Conference on Intelligent Transportation Systems (ITSC) 2025 best paper nomination.
 
