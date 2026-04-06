@@ -84,6 +84,18 @@ education:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
+  - title: Best Poster
+    date: '2025-12-11'
+    awarder: RWTH Aachen University
+    summary: |
+      2025 German Autonomy Summit (GAS) best poster award.
+
+  - title: Best Paper Nomination
+    date: '2025-11-21'
+    awarder: RWTH Aachen University
+    summary: |
+      IEEE International Conference on Intelligent Transportation Systems (ITSC) 2025 best paper nomination.
+
   - title: Dean's List
     date: '2023-01-01'
     awarder: RWTH Aachen University
