@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+  {{ partial "site_head" . }}
+  <body class="portfolio-site">
+    {{ partial "portfolio/sidebar.html" . }}
+    <div class="portfolio-content" id="top">
+      {{ block "main" . }}{{ end }}
+      <footer class="portfolio-footer">
+        <span>© {{ now.Year }} Jianye Xu</span>
+        <span>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></span>
+      </footer>
+    </div>
+    <script src="{{ "js/portfolio.js" | relURL }}" defer></script>
+  </body>
+</html>
