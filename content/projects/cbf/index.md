@@ -19,9 +19,13 @@ We propose a learning-based CBF to reduce conservatism in collision avoidance of
 </a>
 
 
-## High-Order CBFs
-We examine the complexity of the standard High-Order CBF (HOCBF) approach and propose a truncated Taylor-based approach that reduces design parameters. First, we derive the explicit inequality condition for the HOCBF approach and show that the corresponding equality condition sets a lower bound on the barrier function value that regulates its decay rate. Next, we present our Truncated Taylor CBF (TTCBF), which uses a truncated Taylor series to approximate the discrete-time CBF condition. While the standard HOCBF approach requires multiple class K functions, leading to more design parameters as the constraint's relative degree increases, our TTCBF approach requires only one. We support our theoretical findings in numerical collision-avoidance experiments and show that our approach ensures safety while reducing design complexity.
+## TTCBF: A Truncated Taylor Control Barrier Function for High-Order Safety Constraints
+High-Order Control Barrier Functions (HOCBFs) handle safety constraints with relative degree greater than one by introducing a chain of auxiliary functions. This requires multiple class K functions, whose number and tuning burden grow with the relative degree. Because their parameters affect the conservatism and feasibility of the resulting control constraint, tuning them can complicate controller design. We introduce a Truncated Taylor Control Barrier Function (TTCBF), which extends the discrete-time CBF formulation to high-order safety constraints using a single class K function, independent of relative degree. We also propose an adaptive variant, aTTCBF, which optimizes the class K gain online. This paper updates our earlier TTCBF preprint, which remains available at its original arXiv record.
+
+<a href="https://arxiv.org/abs/2601.15196" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary-600 text-white font-semibold px-4 py-2 rounded hover:bg-primary-700 transition">
+  Updated paper (arXiv:2601.15196)
+</a>
 
 <a href="https://arxiv.org/abs/2503.15014" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary-600 text-white font-semibold px-4 py-2 rounded hover:bg-primary-700 transition">
-  arXiv
+  Earlier preprint (arXiv:2503.15014)
 </a>
