@@ -12,7 +12,7 @@ image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
 # 🏎️🏁 Join our CPM Olympics
-Check out our [official website](https://cpm-remote.lrt.unibw-muenchen.de/olympics) for more information.
+Check out our [official website](https://cpm.lrt.unibw.de/olympics/) for more information.
 
 
 ## Timeline
