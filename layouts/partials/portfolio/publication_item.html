@@ -1,0 +1,38 @@
+{{ $slug := path.Base .File.Dir }}
+{{ $extra := index site.Data.publication_links $slug | default dict }}
+{{ $arxiv := $extra.arxiv | default "" }}
+{{ $code := $extra.code | default "" }}
+{{ range .Params.links }}
+  {{ if and (not $arxiv) (eq (lower .name) "arxiv") }}{{ $arxiv = .url }}{{ end }}
+  {{ if and (not $code) (eq (lower .name) "code") }}{{ $code = .url }}{{ end }}
+{{ end }}
+{{ $doi := .Params.doi | default "" }}
+{{ $publisher := "Publisher" }}
+{{ $doiLower := lower $doi }}
+{{ if or (hasPrefix $doiLower "10.1109/") (hasPrefix $doiLower "10.23919/") }}
+  {{ $publisher = "IEEE" }}
+{{ else if hasPrefix $doiLower "10.1515/" }}
+  {{ $publisher = "De Gruyter" }}
+{{ else if hasPrefix $doiLower "10.1016/" }}
+  {{ $publisher = "Elsevier" }}
+{{ else if hasPrefix $doiLower "10.1007/" }}
+  {{ $publisher = "Springer" }}
+{{ end }}
+{{ $published := and $doi (not (hasPrefix $doiLower "10.48550/arxiv.")) }}
+<article class="publication-item">
+  <span class="publication-year">{{ .Date.Format "2006" }}</span>
+  <div class="publication-content">
+    <h3>{{ .Title }}</h3>
+    {{ with .Params.authors }}<p class="publication-authors">{{ delimit . ", " }}</p>{{ end }}
+    <div class="publication-bottom">
+      {{ with .Params.publication }}<p class="publication-venue">{{ . | markdownify }}</p>{{ end }}
+      {{ if or $arxiv $published $code }}
+      <nav class="publication-actions" aria-label="Links for {{ .Title }}">
+        {{ with $arxiv }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">arXiv</a>{{ end }}
+        {{ if $published }}<a href="https://doi.org/{{ $doi }}" target="_blank" rel="noopener noreferrer">{{ $publisher }}</a>{{ end }}
+        {{ with $code }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Code</a>{{ end }}
+      </nav>
+      {{ end }}
+    </div>
+  </div>
+</article>

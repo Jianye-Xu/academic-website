@@ -3,10 +3,7 @@
   <header class="interior-heading"><a href="{{ site.Home.RelPermalink }}">← Home</a><p class="eyebrow">Research output</p><h1>Publications</h1><p>Research papers and preprints.</p></header>
   <div class="publication-list">
     {{ range .RegularPages.ByDate.Reverse }}
-    <article class="publication-item">
-      <span class="publication-year">{{ .Date.Format "2006" }}</span>
-      <div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ with .Params.authors }}<p>{{ delimit . ", " }}</p>{{ end }}{{ with .Params.publication }}<p class="publication-venue">{{ . | markdownify }}</p>{{ end }}</div>
-    </article>
+    {{ partial "portfolio/publication_item.html" . }}
     {{ end }}
   </div>
 </main>

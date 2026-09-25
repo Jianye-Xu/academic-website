@@ -1,6 +1,6 @@
 {{ $profile := site.GetPage "/authors/admin" }}
 {{ $projects := where site.RegularPages "Section" "projects" }}
-{{ $publications := where site.RegularPages "Section" "publication" }}
+{{ $publications := (site.GetPage "/publication").RegularPages }}
 {{ $news := where site.RegularPages "Section" "news" }}
 {{ $teaching := where site.RegularPages "Section" "teaching" }}
 <main>
@@ -67,11 +67,10 @@
   <section class="portfolio-section" id="publications">
     <div class="section-heading"><p class="eyebrow">Research output</p><h2>Selected Publications</h2></div>
     <div class="publication-list">
-      {{ range first 8 ($publications.ByDate.Reverse) }}
-      <article class="publication-item"><span class="publication-year">{{ .Date.Format "2006" }}</span><div><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ with .Params.authors }}<p>{{ delimit . ", " }}</p>{{ end }}{{ with .Params.publication }}<p class="publication-venue">{{ . | markdownify }}</p>{{ end }}</div></article>
+      {{ range $publications.ByDate.Reverse }}
+      {{ partial "portfolio/publication_item.html" . }}
       {{ end }}
     </div>
-    <a class="section-more" href="{{ "publication/" | relURL }}">All publications →</a>
   </section>
 
   <section class="portfolio-section section-muted" id="teaching">

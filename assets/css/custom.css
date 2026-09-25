@@ -73,11 +73,15 @@ body.portfolio-site .project-card { background:#fff; color:var(--portfolio-ink);
 .project-card h3 { font-size:20px; margin:0 0 16px; }
 .project-card-body span,.simple-card span { font-size:15px; color:var(--portfolio-blue); font-weight:700; }
 .publication-list { border-top:1px solid var(--portfolio-line); }
-.publication-item { display:grid; grid-template-columns:72px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--portfolio-line); }
+.publication-item { display:grid; grid-template-columns:72px minmax(0,1fr); gap:20px; padding:13px 0; border-bottom:1px solid var(--portfolio-line); }
 .publication-year { color:#5e7f95; font-size:16px; font-weight:700; padding-top:3px; }
-.publication-item h3 { margin:0 0 7px; font-size:20px; }
-.publication-item p { margin:0 0 3px; font-size:16px; color:var(--portfolio-muted); }
+.publication-item h3 { margin:0 0 2px; font-size:20px; color:#17345b; }
+.publication-item p { margin:0; font-size:16px; line-height:1.45; color:var(--portfolio-muted); }
+.publication-bottom { display:flex; align-items:center; flex-wrap:wrap; gap:5px 12px; margin-top:2px; }
 .publication-item .publication-venue { color:#425d73; font-style:italic; }
+.publication-actions { display:flex; flex-wrap:wrap; gap:5px; }
+body.portfolio-site .publication-actions a { display:inline-block; border:1px solid #b9d9e9; border-radius:4px; padding:1px 8px; color:#126d9e; font-size:14px; font-weight:700; line-height:1.5; white-space:nowrap; }
+body.portfolio-site .publication-actions a:hover { background:#e7f5fc; color:#075779; }
 .simple-card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
 body.portfolio-site .simple-card { background:#fff; border:1px solid #e0ebf2; color:var(--portfolio-ink); padding:24px; min-height:160px; display:flex; flex-direction:column; justify-content:space-between; }
 .simple-card h3 { margin:0 0 18px; font-size:20px; }
