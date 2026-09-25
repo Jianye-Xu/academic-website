@@ -4,7 +4,7 @@
 {{ $news := where site.RegularPages "Section" "news" }}
 {{ $teaching := where site.RegularPages "Section" "teaching" }}
 <main>
-  {{ $hero := resources.Get "media/background-3.jpg" }}
+  {{ $hero := resources.Get "media/main.svg" }}
   <section class="portfolio-hero" aria-labelledby="hero-title" style="background-image: url('{{ $hero.RelPermalink }}')">
     <div class="hero-shade"></div>
     <div class="hero-inner">

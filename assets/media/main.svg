@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640">
+
+  <defs>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="microDots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#89D8F8" opacity="0.055"/>
+    </pattern>
+
+    <marker id="arrowSoft" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#79D6F7" opacity="0.55"/>
+    </marker>
+  </defs>
+
+  <!-- Keep the left text area quiet -->
+  <rect x="690" y="0" width="910" height="640" fill="url(#microDots)" opacity="0.30"/>
+
+  <!-- Highway corridor -->
+  <path d="M 760 160 C 1000 145, 1280 150, 1600 185
+           L 1600 500
+           C 1280 465, 1000 470, 760 485 Z"
+        fill="#A9C5D1" opacity="0.040"
+        stroke="#D7EDF6" stroke-width="2" stroke-opacity="0.10"/>
+
+  <!-- Road outer boundaries -->
+  <path d="M 760 160 C 1000 145, 1280 150, 1600 185"
+        fill="none" stroke="#D7EDF6" stroke-width="2.2" stroke-opacity="0.14"/>
+  <path d="M 760 485 C 1000 470, 1280 465, 1600 500"
+        fill="none" stroke="#D7EDF6" stroke-width="2.2" stroke-opacity="0.14"/>
+
+  <!-- Lane separator -->
+  <path d="M 760 322 C 1010 305, 1290 310, 1600 342"
+        fill="none" stroke="#D7EDF6" stroke-width="3"
+        stroke-opacity="0.18" stroke-dasharray="24 20"/>
+
+  <!-- Ego vehicle in right lane -->
+  <g transform="translate(1080 390)">
+    <ellipse cx="0" cy="0" rx="62" ry="34"
+             fill="none" stroke="#57C8F2" stroke-width="2"
+             stroke-opacity="0.16" stroke-dasharray="7 8"/>
+    <rect x="-31" y="-17" width="62" height="34" rx="10"
+          fill="#52C6F3" opacity="0.66"/>
+    <rect x="-15" y="-13" width="30" height="26" rx="5"
+          fill="#D8F5FF" opacity="0.17"/>
+  </g>
+
+  <!-- Slow lead vehicle in right lane -->
+  <g transform="translate(1355 405)">
+    <ellipse cx="0" cy="0" rx="58" ry="32"
+             fill="none" stroke="#CDEAF5" stroke-width="1.7"
+             stroke-opacity="0.11" stroke-dasharray="7 8"/>
+    <rect x="-29" y="-16" width="58" height="32" rx="9"
+          fill="#BFD5DE" opacity="0.36"/>
+    <rect x="-14" y="-12" width="28" height="24" rx="5"
+          fill="#EAF7FB" opacity="0.10"/>
+  </g>
+
+  <!-- Faster rear vehicle in left lane -->
+  <g transform="translate(940 255)">
+    <ellipse cx="0" cy="0" rx="64" ry="35"
+             fill="none" stroke="#79D6F7" stroke-width="2"
+             stroke-opacity="0.17" stroke-dasharray="7 8"/>
+    <rect x="-32" y="-18" width="64" height="36" rx="10"
+          fill="#72D1F5" opacity="0.52"/>
+    <rect x="-15" y="-14" width="30" height="28" rx="5"
+          fill="#D8F5FF" opacity="0.14"/>
+  </g>
+
+  <!-- Velocity indicators: rear-left is faster, lead-right is slower -->
+  <g fill="none" stroke="#83DCF9" stroke-linecap="round">
+    <path d="M 975 245 C 1045 242, 1120 243, 1205 250"
+          stroke-width="3.2" stroke-opacity="0.34" marker-end="url(#arrowSoft)"/>
+    <path d="M 1115 380 C 1175 381, 1230 384, 1280 390"
+          stroke-width="2.4" stroke-opacity="0.28" marker-end="url(#arrowSoft)"/>
+    <path d="M 1390 396 C 1425 398, 1460 402, 1490 405"
+          stroke-width="1.8" stroke-opacity="0.20" marker-end="url(#arrowSoft)"/>
+  </g>
+
+  <!-- Tentative overtaking trajectory from ego to left lane -->
+  <path d="M 1115 390
+           C 1170 370, 1200 335, 1235 305
+           C 1275 270, 1330 262, 1415 275"
+        fill="none" stroke="#7ED9F8" stroke-width="3.2"
+        stroke-linecap="round" stroke-dasharray="10 10"
+        stroke-opacity="0.38"/>
+
+  <!-- Alternative safe-follow trajectory -->
+  <path d="M 1115 390
+           C 1185 392, 1240 395, 1298 400"
+        fill="none" stroke="#A9DDEA" stroke-width="2.4"
+        stroke-linecap="round" stroke-dasharray="6 10"
+        stroke-opacity="0.20"/>
+
+  <!-- Decision region near lane-change merge point -->
+  <ellipse cx="1235" cy="305" rx="88" ry="55"
+           fill="#39B6E8" opacity="0.026"
+           stroke="#6FD2F5" stroke-width="2"
+           stroke-opacity="0.12" stroke-dasharray="9 10"/>
+
+  <!-- V2V communication links -->
+  <g fill="none" stroke="#70D2F3" stroke-width="1.8"
+     stroke-opacity="0.15" stroke-dasharray="5 8">
+    <path d="M 1080 390 C 1040 345, 1000 300, 940 255"/>
+    <path d="M 1080 390 C 1160 400, 1260 405, 1355 405"/>
+    <path d="M 940 255 C 1090 285, 1230 345, 1355 405"/>
+  </g>
+
+  <!-- Communication nodes -->
+  <g fill="#9DE7FF" opacity="0.26" filter="url(#softGlow)">
+    <circle cx="1007" cy="332" r="3.5"/>
+    <circle cx="1186" cy="398" r="3.5"/>
+    <circle cx="1140" cy="318" r="3.5"/>
+  </g>
+
+  <!-- Small uncertainty / decision markers -->
+  <g fill="#9DE7FF" opacity="0.28">
+    <circle cx="1210" cy="322" r="3.2"/>
+    <circle cx="1238" cy="304" r="3.2"/>
+    <circle cx="1264" cy="287" r="3.2"/>
+  </g>
+
+  <!-- Subtle directional road flow -->
+  <path d="M 805 208 C 1030 195, 1260 205, 1560 230"
+        fill="none" stroke="#D4EDF6" stroke-width="1.8" stroke-opacity="0.045"/>
+  <path d="M 805 445 C 1030 430, 1270 435, 1560 460"
+        fill="none" stroke="#D4EDF6" stroke-width="1.8" stroke-opacity="0.045"/>
+
+</svg>
