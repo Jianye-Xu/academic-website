@@ -86,10 +86,10 @@ body.portfolio-site .publication-actions a:hover { background:#e7f5fc; color:#07
 body.portfolio-site .simple-card { background:#fff; border:1px solid #e0ebf2; color:var(--portfolio-ink); padding:24px; min-height:160px; display:flex; flex-direction:column; justify-content:space-between; }
 .simple-card h3 { margin:0 0 18px; font-size:20px; }
 .award-list { border-top:1px solid var(--portfolio-line); }
-.award-row { display:grid; grid-template-columns:72px 1fr; gap:20px; padding:16px 0; border-bottom:1px solid var(--portfolio-line); }
+.award-row { display:grid; grid-template-columns:72px minmax(0,1fr); gap:20px; padding:10px 0; border-bottom:1px solid var(--portfolio-line); }
 .award-row>span { color:#5e7f95; font-size:16px; font-weight:700; }
-.award-row h3 { margin:0 0 3px; font-size:20px; }
-.award-row p { margin:0 0 5px; color:var(--portfolio-muted); font-size:16px; }
+.award-row h3 { margin:0 0 2px; font-size:20px; line-height:1.35; }
+.award-row p { margin:0; color:var(--portfolio-muted); font-size:16px; line-height:1.4; }
 .portfolio-footer { padding:28px clamp(28px,6vw,92px); border-top:1px solid var(--portfolio-line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; color:#698096; font-size:14px; }
 .interior-page { max-width:1150px; margin:auto; padding:50px clamp(28px,6vw,80px) 80px; min-height:70vh; }
 .interior-heading { margin-bottom:40px; }

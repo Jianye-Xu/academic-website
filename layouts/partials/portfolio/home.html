@@ -79,8 +79,7 @@
   </section>
 
   <section class="portfolio-section" id="awards">
-    <div class="section-heading"><p class="eyebrow">Recognition</p><h2>Selected Awards</h2></div>
-    <div class="award-list">{{ range first 6 $profile.Params.awards }}<div class="award-row"><span>{{ time.Format "2006" .date }}</span><div><h3>{{ .title }}</h3><p>{{ .awarder }}</p></div></div>{{ end }}</div>
-    <a class="section-more" href="{{ "awards/" | relURL }}">All awards →</a>
+    <div class="section-heading"><p class="eyebrow">Recognition</p><h2>Awards</h2></div>
+    <div class="award-list">{{ range $profile.Params.awards }}<div class="award-row"><span>{{ time.Format "2006" .date }}</span><div><h3>{{ .title }}</h3><p>{{ .awarder }}</p></div></div>{{ end }}</div>
   </section>
 </main>
