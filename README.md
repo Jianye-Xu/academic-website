@@ -1,52 +1,68 @@
-# [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
+# Jianye Xu’s academic website
 
-[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/)
+An independently implemented, minimal academic website for **https://jianyexu.com/**. Plain HTML, CSS, and JavaScript, with a small Node.js build script and no npm dependencies. The redesign is developed on `redesign/minimal-academic`; it has not been deployed.
 
-The Hugo **Academic CV Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
+## Preview and check
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/templates/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/GetResearchDev)
+Requires Node.js 20 or newer. No installation step is needed.
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, Hugo Blox Builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+```sh
+npm run build
+npm test
+npm run preview
+```
 
-Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
+Open **http://localhost:4173**. The server binds only to the local computer. Stop it with Ctrl+C. Build output is in `dist/` and should not be edited or committed.
 
-[Check out the latest demo](https://academic-demo.netlify.app/) of what you'll get in less than 10 minutes, or [get inspired by our academics and research groups](https://hugoblox.com/creators/).
+## File organization
 
-The integrated [**Hugo Blox Builder**](https://hugoblox.com) and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+- `index.html`: semantic page structure, introduction, contact links, SEO metadata.
+- `assets/site.css`: responsive layout, sticky navigation, typography, print styles, and reduced-motion support.
+- `assets/site.js`: progressive enhancement for publication filters, citation copying, and legacy anchors.
+- `assets/filters.js`: publication matching and query-string parsing.
+- `assets/`: styles, scripts, portrait, research figures, CV, and news media. `assets/full/` retains full-resolution research figures alongside optimized previews.
+- `data/publications.json`: one record per paper, including metadata, tags, links, figures, summary, and BibTeX.
+- `data/news.json`: news sorted by date during the build.
+- `data/profile.json`: education, experience, awards, talks, and academic service.
+- `data/teaching.json`: complete thesis and seminar supervision lists.
+- `scripts/build.mjs`: dependency-free static HTML generator and legacy URL compatibility pages.
+- `tests/site.test.mjs`: filter behavior, static content, citations, local assets, and anchor checks.
 
-- 👉 [**Get Started**](https://hugoblox.com/templates/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Hugo Blox Builder community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@GetResearchDev](https://twitter.com/GetResearchDev) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithHugoBlox](https://twitter.com/search?q=%23MadeWithHugoBlox&src=typed_query)
-- ⬇️ **Automatically import your publications from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 💡 [Suggest an improvement](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/reference/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+The repository contains only the current site and its build/test/deployment files. The old Hugo template, duplicate Markdown content, backgrounds, and import/update workflows have been removed; they remain available in Git history. Edit `assets/resume.pdf` to update the CV. Publications and their BibTeX citations have a single source of truth in `data/publications.json`. The original license notice is retained.
 
-## We ask you, humbly, to support this open source movement
+The root `index.html` is the page template. Use the preview command rather than opening it directly; the build fills its content placeholders from `data/`. The header stays visible while scrolling, and anchor offsets follow its actual height on desktop, mobile, and enlarged text.
 
-Today we ask you to defend the open source independence of the Hugo Blox Builder and themes 🐧
+## Update a publication
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+Add an object to `data/publications.json`, then rebuild. Preserve a stable, unique `id`, since it becomes the paper’s anchor and legacy route. Use `status: "peer-reviewed"` or `"preprint"`, an explicit `selected` boolean, and one or more of `MARL`, `Safe Control`, `CAVs`, `Robotics` in `tags`. Selected flags and topic tags are editorial choices and can be changed independently of publication metadata.
 
-### [❤️ Click here to become a Sponsor, unlocking awesome perks such as _exclusive academic templates and blocks_](https://hugoblox.com/sponsor/)
+Available resource keys are `paper`, `publisher`, `code`, `video`, and `project`. Omit unavailable resources; the site does not render dead or disabled links. Put a verified citation in `bibtex` to show a native expandable BibTeX panel, copying, and a `.bib` download. Each paper remains one independent item even when it shares a code repository with another paper.
 
-<!--
-<p align="center"><a href="https://hugoblox.com/templates/" target="_blank" rel="noopener"><img src="https://hugoblox.com/uploads/readmes/academic_logo_200px.png" alt="Hugo Academic Theme for Hugo Blox Builder"></a></p>
--->
+Use `image: "/assets/example.png"` (also accepts JPEG, WebP, or GIF) and descriptive `imageAlt`. Images are shown without cropping and lazy-loaded. The migrated figures use optimized 960-pixel previews with `fullImage` pointing to their full-resolution originals. Use a still preview and a `video` link for motion-heavy demonstrations or animations that cannot respect reduced-motion preferences. If no verified image is available, leave `image` null: the site shows a simple typographic paper preview. Do not substitute unrelated experimental figures.
 
-## Demo image credits
+Publication selection and research-area filters combine with AND, update the result count, and can be shared through URL query parameters, for example `/?type=preprint&area=Safe+Control#research`. All papers and citations are present in the generated HTML even without JavaScript.
 
-- [Unsplash](https://unsplash.com)
+## Update news and other sections
 
-## Latest news
+Add news with an ISO `date`, `title`, `summary`, and `url`. The newest announcement is initially shown; older items are in a native disclosure that also works without JavaScript. `recentNewsCount` in the build script controls the initial count. Only two verified announcements existed at migration, so no acceptance announcements or dates were invented.
 
-<!--START_SECTION:news-->
+The profile data includes roles and talks transcribed from the existing downloadable CV. Teaching keeps all 20 theses and 14 seminar works in expandable lists. Details of the historical CPM Olympics remain available under its news disclosure, and previous academic URLs redirect to relevant homepage anchors.
 
-- [Easily make an academic CV website to get more cites and grow your audience 🚀](https://hugoblox.com/blog/easily-make-academic-website/)
-- [What&#39;s new in v5.2?](https://hugoblox.com/blog/whats-new-in-v5.2/)
-- [What&#39;s new in v5.1?](https://hugoblox.com/blog/whats-new-in-v5.1/)
-- [Version 5.0 (February 2021)](https://hugoblox.com/blog/version-5.0-february-2021/)
-- [Version 5.0 Beta 3 (February 2021)](https://hugoblox.com/blog/version-5.0-beta-3-february-2021/)
-<!--END_SECTION:news-->
+## Deployment and domain
+
+Nothing is deployed by local build or preview commands. GitHub Pages deploys **only from `main`**; pull requests build and test a downloadable artifact without deploying. The manual workflow also refuses deployment from other branches. Netlify uses the same build and supports branch/deploy previews. Preview builds are marked `noindex` when `SITE_PREVIEW=true`.
+
+The generated `CNAME`, canonical URL, sitemap, and social metadata preserve `jianyexu.com`. No DNS or hosting settings have been changed. Review the redesign before merging into `main`, since merging triggers the existing production deployment mechanism.
+
+## Content review notes
+
+- All 13 existing publication records are retained, including the 2021 CPM Lab platform paper. Jianye Xu is not in that paper’s author list, so it is explicitly identified as a related platform paper.
+- The 2025 and 2026 TTCBF preprints remain separate records, with the earlier paper labeled accordingly.
+- The existing site lists undergraduate study as August 2016–September 2020; the CV lists October 2016–September 2019, plus exchange studies in October 2019–August 2020. Homepage degree dates were preserved and exchange studies added separately. Please reconcile the dates when updating the CV/site.
+- The Ph.D. end date from the old site is now explicitly labeled “expected.”
+- The six paper figures come from the repository. Other papers have citation previews until verified paper-specific media are supplied. Video links are supported but are not invented.
+- No reviewer appointments or talk titles beyond the CV were inferred.
+
+## Design reference
+
+The layout study used [Jung-Hoon Cho’s website](https://www.junghooncho.com/) for general academic hierarchy: compact introduction, dated news, adjacent publication previews/citations, and separate selection/area controls. All HTML, CSS, and JavaScript here were written independently. No reference text, code, figures, or other assets were copied.
