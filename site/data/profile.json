@@ -1,0 +1,187 @@
+{
+  "name": "Jianye Xu",
+  "role": "Ph.D. Student",
+  "education": [
+    {
+      "area": "Ph.D. Computer Science",
+      "institution": "RWTH Aachen University",
+      "date_start": "2023-04-01",
+      "date_end": "2028-03-31",
+      "summary": "Supervised by [Prof. Bassam Alrifaee](https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee).\n"
+    },
+    {
+      "area": "M.Sc. Automation Engineering",
+      "institution": "RWTH Aachen University",
+      "date_start": "2020-10-01",
+      "date_end": "2022-09-30",
+      "summary": "GPA: 1.2/1.0 (graduated with distinction)\n"
+    },
+    {
+      "area": "Exchange studies in Mechanical Engineering",
+      "institution": "RWTH Aachen University",
+      "date_start": "2019-10-01",
+      "date_end": "2020-08-01",
+      "summary": "Faculty of Mechanical Engineering. Source: curriculum vitae."
+    },
+    {
+      "area": "B.Sc. Vehicle Engineering",
+      "institution": "Beijing Institute of Technology",
+      "date_start": "2016-08-01",
+      "date_end": "2020-09-30",
+      "summary": "GPA: 91.48/100 (graduated with distinction)\n"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Poster",
+      "date": "2025-12-11",
+      "awarder": "German Autonomy Summit (GAS)",
+      "summary": "2025 German Autonomy Summit (GAS) best poster award.\n"
+    },
+    {
+      "title": "Best Paper Nomination",
+      "date": "2025-11-21",
+      "awarder": "IEEE Intelligent Transportation Systems Society (ITSS)",
+      "summary": "IEEE International Conference on Intelligent Transportation Systems (ITSC) 2025 best paper nomination.\n"
+    },
+    {
+      "title": "Dean's List",
+      "date": "2023-01-01",
+      "awarder": "RWTH Aachen University",
+      "summary": "Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.\n"
+    },
+    {
+      "title": "M.Sc. with distinction",
+      "date": "2022-09-01",
+      "awarder": "RWTH Aachen University",
+      "summary": "Graduated with distinction in the Master of Science program at RWTH Aachen University.\n"
+    },
+    {
+      "title": "German National Scholarship (Deutschlandstipendium)",
+      "date": "2021-11-01",
+      "awarder": "RWTH Aachen University",
+      "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany..\n"
+    },
+    {
+      "title": "Patent - Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box",
+      "date": "2021-06-01",
+      "awarder": "China National Intellectual Property Administration",
+      "summary": "Invented and received authorization for a patent on a mechanical device to enhance safety and efficiency in battery swapping systems for electric vehicles.\n"
+    },
+    {
+      "title": "German National Scholarship (Deutschlandstipendium)",
+      "date": "2020-11-01",
+      "awarder": "RWTH Aachen University",
+      "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany..\n"
+    },
+    {
+      "title": "Outstanding Graduate",
+      "date": "2020-06-01",
+      "awarder": "Beijing Institute of Technology",
+      "summary": "Recognized as an Outstanding Graduate for academic achievement and contributions during undergraduate studies.\n"
+    },
+    {
+      "title": "China National Scholarship",
+      "date": "2018-11-01",
+      "awarder": "Ministry of Education of the People's Republic of China",
+      "summary": "Prestigious national-level scholarship awarded to top-performing students for academic excellence.\n"
+    },
+    {
+      "title": "Second Prize in National Student Mechanical Product Digital Design Competition",
+      "date": "2018-06-01",
+      "awarder": "China Mechanical Discipline Steering Committee",
+      "summary": "Awarded second prize in a national competition for mechanical product digital design, demonstrating advanced CAD modeling and design skills.\n"
+    },
+    {
+      "title": "Outstanding Undergraduate",
+      "date": "2017-12-01",
+      "awarder": "Beijing Institute of Technology",
+      "summary": "Recognized for outstanding academic achievements during undergraduate studies.\n"
+    },
+    {
+      "title": "First Prize in Beijing Student Engineering Design Expression Competition",
+      "date": "2017-12-01",
+      "awarder": "Beijing Municipal Commission of Education",
+      "summary": "Earned first prize for excellence in a city-level engineering drawing competition.\n"
+    },
+    {
+      "title": "First Prize in National Student Drafting and Modelling Innovation Competition",
+      "date": "2017-07-01",
+      "awarder": "China Cartographic Association",
+      "summary": "Awarded first prize for innovative drafting and 3D modeling techniques in a nationwide student competition.\n"
+    },
+    {
+      "title": "Second Prize in Engineering Drafting Skills Competition",
+      "date": "2017-06-01",
+      "awarder": "Beijing Institute of Technology",
+      "summary": "Earned second prize in a university-wide engineering drafting competition, demonstrating strong technical drawing skills.\n"
+    }
+  ],
+  "experience": [
+    {
+      "date": "Winter terms 2024 & 2025",
+      "title": "Assistant Lecturer",
+      "organization": "RWTH Aachen University",
+      "description": "Master’s course: Control and Perception in Networked and Autonomous Vehicles",
+      "url": "https://cpm.lrt.unibw.de/courses/master/"
+    },
+    {
+      "date": "Sep–Oct 2017",
+      "title": "Undergraduate Teaching Assistant",
+      "organization": "Beijing Institute of Technology",
+      "description": "CAD software training lectures for first-year students."
+    }
+  ],
+  "talks": [
+    {
+      "date": "Sep 2026",
+      "title": "Invited workshop speaker",
+      "organization": "IEEE ITSC · Naples, Italy",
+      "description": "The 16th Workshop & Industry Panel on Cooperative and Automated Driving and Future Mobility",
+      "url": "https://ieee-itsc.org/2026/workshops/"
+    },
+    {
+      "date": "Nov 2025",
+      "title": "Invited workshop speaker",
+      "organization": "IEEE ITSC · Gold Coast, Australia",
+      "description": "Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI",
+      "url": "https://www.itsc2025.mixedtraffic.org/"
+    },
+    {
+      "date": "Jan 2025",
+      "title": "Control Barrier Functions and Their Applications to Collision Avoidance in Networked and Autonomous Vehicles",
+      "organization": "RWTH Aachen University",
+      "description": "Guest lecture"
+    }
+  ],
+  "service": [
+    {
+      "date": "Sep 2026",
+      "title": "Invited session co-organizer",
+      "organization": "IEEE ITSC · Naples, Italy",
+      "description": "Bridging Optimal Control and Learning for Connected and Automated Vehicles",
+      "url": "https://bassamlab.github.io/itsc2026-invited-session/"
+    },
+    {
+      "date": "Nov 2025",
+      "title": "Workshop co-organizer",
+      "organization": "IEEE ITSC · Gold Coast, Australia",
+      "description": "Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI",
+      "url": "https://www.itsc2025.mixedtraffic.org/"
+    },
+    {
+      "date": "Jun 2024",
+      "title": "Workshop co-organizer",
+      "organization": "IEEE IV · Jeju, South Korea",
+      "description": "1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms",
+      "url": "https://cpm.lrt.unibw.de/workshop/"
+    },
+    {
+      "date": "Jan–Jun 2024",
+      "title": "Competition co-organizer",
+      "organization": "CPM Olympics · Aachen, Germany",
+      "description": "A motion planning competition for connected and automated vehicles",
+      "url": "https://cpm.lrt.unibw.de/olympics/"
+    }
+  ]
+}

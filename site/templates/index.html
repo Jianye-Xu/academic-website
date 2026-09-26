@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jianye Xu | Multi-Agent Learning & Safe Control</title>
+  <meta name="description" content="Jianye Xu is a Ph.D. student at RWTH Aachen University researching multi-agent reinforcement learning, control barrier functions, and connected and automated vehicles.">
+  <link rel="canonical" href="https://jianyexu.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jianye Xu | Multi-Agent Learning & Safe Control">
+  <meta property="og:description" content="Research, publications, and teaching in multi-agent learning, safe control, and autonomous vehicles.">
+  <meta property="og:url" content="https://jianyexu.com/">
+  <meta property="og:image" content="https://jianyexu.com/assets/portrait.jpeg">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="module" src="/assets/site.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jianye Xu","url":"https://jianyexu.com/","image":"https://jianyexu.com/assets/portrait.jpeg","jobTitle":"Ph.D. Student","affiliation":{"@type":"Organization","name":"RWTH Aachen University"},"sameAs":["https://github.com/Jianye-Xu","https://scholar.google.com/citations?user=t5nUUGMAAAAJ&hl=en","https://www.linkedin.com/in/jianye-xu-/"]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#about" aria-label="Jianye Xu, introduction">Jianye Xu<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#research">Research</a><a href="#news">News</a><a href="#education">Background</a><a href="#teaching">Teaching</a><a href="/uploads/resume.pdf">CV <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section id="about" class="intro" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow">Ph.D. Student · RWTH Aachen University</p>
+        <h1 id="intro-title">Jianye Xu</h1>
+        <p>Hello! I’m Jianye, a Ph.D. student at the <a href="https://www.embedded.rwth-aachen.de/">Chair of Embedded Software (Informatik 11)</a>, RWTH Aachen University, supervised by <a href="https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee">Prof. Bassam Alrifaee</a>.</p>
+        <p>I study <strong>learning- and optimization-based multi-agent decision-making</strong> for connected and automated vehicles. I am particularly interested in the interplay between <strong>reinforcement learning</strong> and <strong>control barrier functions</strong>.</p>
+        <div class="profile-links" aria-label="Contact and profiles"><a href="mailto:xu@embedded.rwth-aachen.de">Email</a><a href="/uploads/resume.pdf">CV</a><a href="https://scholar.google.com/citations?user=t5nUUGMAAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/Jianye-Xu">GitHub</a><a href="https://www.linkedin.com/in/jianye-xu-/">LinkedIn</a></div>
+      </div>
+      <figure class="portrait"><img src="/assets/portrait.jpeg" width="260" height="300" fetchpriority="high" alt="Jianye Xu"><figcaption>Aachen, Germany</figcaption></figure>
+    </section>
+    <section id="news" aria-labelledby="news-title">
+      <div class="section-heading"><h2 id="news-title">News</h2></div>
+      {{NEWS}}
+    </section>
+    <section id="research" aria-labelledby="research-title">
+      <div class="section-heading"><h2 id="research-title">Research / Publications</h2><a class="quiet-link" href="https://scholar.google.com/citations?user=t5nUUGMAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span></a></div>
+      <p class="section-intro">My research connects multi-agent reinforcement learning, optimal control, and connected and automated vehicles, from decision-making in simulation to safe robotic systems.</p>
+      <p class="research-note"><span class="selected-key">★</span> Selected work <span class="separator">·</span> Papers listed by year, newest first.</p>
+      <div id="publication-filters" class="filters" hidden>
+        <div role="group" aria-label="Publication selection" class="filter-row"><span class="filter-label">Show</span>{{STATUS_FILTERS}}</div>
+        <div role="group" aria-label="Research area" class="filter-row"><span class="filter-label">Area</span>{{AREA_FILTERS}}</div>
+      </div>
+      <p id="publication-count" class="result-count" role="status" aria-live="polite" aria-atomic="true">{{COUNT}} publications</p>
+      <div id="publications">{{PUBLICATIONS}}</div>
+      <p id="empty-results" hidden>No publications match these filters. <button id="reset-filters" class="text-button" type="button">Show all publications</button></p>
+    </section>
+    <section id="education" aria-labelledby="education-title"><div class="section-heading"><h2 id="education-title">Education and Experience</h2></div>{{EDUCATION}}<h3 class="subheading">Experience</h3>{{EXPERIENCE}}</section>
+    <section id="awards" aria-labelledby="awards-title"><div class="section-heading"><h2 id="awards-title">Awards</h2></div>{{AWARDS}}</section>
+    <section id="talks" aria-labelledby="talks-title"><div class="section-heading"><h2 id="talks-title">Talks</h2></div>{{TALKS}}</section>
+    <section id="teaching" aria-labelledby="teaching-title"><div class="section-heading"><h2 id="teaching-title">Teaching</h2></div>
+      <div class="teaching-course"><h3><a href="https://www.embedded.rwth-aachen.de/cms/embedded/studium/lehrveranstaltungen/~bixxdz/regelung-und-wahrnehmung-in-vernetzten-u/?lidx=1">Control and Perception in Connected and Autonomous Vehicles</a></h3><p>Master’s course · RWTH Aachen University</p><p class="muted">Assistant lecturer, winter terms 2024 and 2025</p><details><summary>Course architecture</summary><img class="course-image" src="/assets/lab-architecture.png" alt="Architecture of the control and perception teaching laboratory" loading="lazy" width="1000" height="600"></details></div>
+      {{TEACHING}}
+    </section>
+    <section id="service" aria-labelledby="service-title"><div class="section-heading"><h2 id="service-title">Academic Service</h2></div>{{SERVICE}}</section>
+  </main>
+  <footer class="wrap"><p>© {{YEAR}} Jianye Xu</p><a href="#about">Back to top ↑</a></footer>
+</body>
+</html>
