@@ -16,23 +16,25 @@ Open **http://localhost:4173**. The server binds only to the local computer. Sto
 
 ## File organization
 
-- `site/templates/index.html`: semantic page structure, introduction, contact links, SEO metadata.
-- `site/assets/site.css`: responsive layout, typography, print styles, and reduced-motion support.
-- `site/assets/site.js`: progressive enhancement for publication filters, citation copying, and legacy anchors.
-- `site/assets/filters.js`: publication matching and query-string parsing.
-- `site/assets/`: existing portrait and research figures; no reference-site assets.
-- `site/data/publications.json`: one record per paper, including metadata, tags, links, figures, summary, and BibTeX.
-- `site/data/news.json`: news sorted by date during the build.
-- `site/data/profile.json`: education, experience, awards, talks, and academic service.
-- `site/data/teaching.json`: complete thesis and seminar supervision lists.
+- `index.html`: semantic page structure, introduction, contact links, SEO metadata.
+- `assets/site.css`: responsive layout, sticky navigation, typography, print styles, and reduced-motion support.
+- `assets/site.js`: progressive enhancement for publication filters, citation copying, and legacy anchors.
+- `assets/filters.js`: publication matching and query-string parsing.
+- `assets/`: styles, scripts, portrait, research figures, CV, and news media. `assets/full/` retains full-resolution research figures alongside optimized previews.
+- `data/publications.json`: one record per paper, including metadata, tags, links, figures, summary, and BibTeX.
+- `data/news.json`: news sorted by date during the build.
+- `data/profile.json`: education, experience, awards, talks, and academic service.
+- `data/teaching.json`: complete thesis and seminar supervision lists.
 - `scripts/build.mjs`: dependency-free static HTML generator and legacy URL compatibility pages.
 - `tests/site.test.mjs`: filter behavior, static content, citations, local assets, and anchor checks.
 
-The old Hugo source is retained as a migration archive and is no longer used to build the site. Do not edit it to update the redesigned site. `static/uploads/resume.pdf` remains the CV source. `publications.bib` and the old publication import workflow are historical: updating them alone does not update the redesign.
+The repository contains only the current site and its build/test/deployment files. The old Hugo template, duplicate Markdown content, backgrounds, and import/update workflows have been removed; they remain available in Git history. Edit `assets/resume.pdf` to update the CV. Publications and their BibTeX citations have a single source of truth in `data/publications.json`. The original license notice is retained.
+
+The root `index.html` is the page template. Use the preview command rather than opening it directly; the build fills its content placeholders from `data/`. The header stays visible while scrolling, and anchor offsets follow its actual height on desktop, mobile, and enlarged text.
 
 ## Update a publication
 
-Add an object to `site/data/publications.json`, then rebuild. Preserve a stable, unique `id`, since it becomes the paper’s anchor and legacy route. Use `status: "peer-reviewed"` or `"preprint"`, an explicit `selected` boolean, and one or more of `MARL`, `Safe Control`, `CAVs`, `Robotics` in `tags`. Selected flags and topic tags are editorial choices and can be changed independently of publication metadata.
+Add an object to `data/publications.json`, then rebuild. Preserve a stable, unique `id`, since it becomes the paper’s anchor and legacy route. Use `status: "peer-reviewed"` or `"preprint"`, an explicit `selected` boolean, and one or more of `MARL`, `Safe Control`, `CAVs`, `Robotics` in `tags`. Selected flags and topic tags are editorial choices and can be changed independently of publication metadata.
 
 Available resource keys are `paper`, `publisher`, `code`, `video`, and `project`. Omit unavailable resources; the site does not render dead or disabled links. Put a verified citation in `bibtex` to show a native expandable BibTeX panel, copying, and a `.bib` download. Each paper remains one independent item even when it shares a code repository with another paper.
 

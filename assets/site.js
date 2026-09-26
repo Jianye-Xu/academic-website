@@ -1,5 +1,13 @@
 import { matchesPublication, readFilters } from './filters.js';
 
+// Keep anchors clear of the header when navigation wraps or text is enlarged.
+const header = document.querySelector('.site-header');
+const updateHeaderHeight = () => {
+  document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+};
+updateHeaderHeight();
+new ResizeObserver(updateHeaderHeight).observe(header);
+
 const filterPanel = document.querySelector('#publication-filters');
 const buttons = [...filterPanel.querySelectorAll('button')];
 const publications = [...document.querySelectorAll('.publication')].map(element => ({

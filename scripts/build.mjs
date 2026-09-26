@@ -5,7 +5,7 @@ import path from 'node:path';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const out = path.join(root, 'dist');
 const read = name => readFile(path.join(root, name), 'utf8');
-const data = async name => JSON.parse(await read(`site/data/${name}.json`));
+const data = async name => JSON.parse(await read(`data/${name}.json`));
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const link = (url, label, attrs = '') => `<a href="${escape(url)}" ${attrs}>${label}</a>`;
 const markdown = text => escape(text).replace(/\[([^\]]+)\]\((https:\/\/[^)]+)\)/g, '<a href="$2">$1</a>').replace(/\*([^*]+)\*/g, '<em>$1</em>');
@@ -66,14 +66,14 @@ const replacements = {
   SERVICE: entries(profile.service),
   YEAR: new Date().getFullYear(),
 };
-let html = await read('site/templates/index.html');
+let html = await read('index.html');
 for (const [key, value] of Object.entries(replacements)) html = html.replace(`{{${key}}}`, value);
 if (/\{\{\w+\}\}/.test(html)) throw Error('Unresolved template field');
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
-await cp(path.join(root,'site/assets'), path.join(out,'assets'), { recursive: true });
+await cp(path.join(root,'assets'), path.join(out,'assets'), { recursive: true });
 await mkdir(path.join(out,'uploads'), { recursive: true });
-await cp(path.join(root,'static/uploads/resume.pdf'), path.join(out,'uploads/resume.pdf'));
+await cp(path.join(root,'assets/resume.pdf'), path.join(out,'uploads/resume.pdf'));
 if (process.env.SITE_PREVIEW === 'true') html = html.replace('</head>', '<meta name="robots" content="noindex, nofollow"></head>');
 await writeFile(path.join(out,'index.html'), html);
 await writeFile(path.join(out,'CNAME'), 'jianyexu.com\n');
@@ -94,5 +94,5 @@ for (const [route, anchor] of Object.entries(redirects)) {
   await writeFile(path.join(dir,'index.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=/#${anchor}"><link rel="canonical" href="https://jianyexu.com/#${anchor}"><title>Jianye Xu</title><p>This content is now on <a href="/#${anchor}">Jianye Xu’s homepage</a>.</p></html>`);
 }
 // Preserve news media and teaching resources linked from older pages.
-for (const [source, dest] of [['content/news/cpm-olympics/scenario-example.mp4','news/cpm-olympics/scenario-example.mp4'],['content/news/cpm-olympics/timeline.png','news/cpm-olympics/timeline.png'],['content/teaching/cpnav/lab-architecture.png','teaching/cpnav/lab-architecture.png']]) await cp(path.join(root,source),path.join(out,dest));
+for (const [source, dest] of [['assets/cpm-scenario.mp4','news/cpm-olympics/scenario-example.mp4'],['assets/cpm-timeline.png','news/cpm-olympics/timeline.png'],['assets/lab-architecture.png','teaching/cpnav/lab-architecture.png']]) await cp(path.join(root,source),path.join(out,dest));
 console.log(`Built ${publications.length} publications, ${news.length} news entries, ${profile.awards.length} awards, ${teaching.theses.length} theses, and ${teaching.seminar.length} seminar works → dist/`);

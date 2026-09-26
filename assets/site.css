@@ -5,14 +5,15 @@
   --accent:#245c83;
   --rule:#e0e5e9;
   --soft:#f3f6f8;
-  --radius:5px
+  --radius:5px;
+  --header-height:84px
 }
 * {
   box-sizing:border-box
 }
 html {
   scroll-behavior:smooth;
-  scroll-padding-top:24px
+  scroll-padding-top:calc(var(--header-height) + 20px)
 }
 body {
   margin:0;
@@ -79,6 +80,10 @@ strong {
   margin-inline:auto
 }
 .site-header {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#fff;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -146,7 +151,7 @@ nav a:hover {
 }
 main>section {
   margin-bottom:62px;
-  scroll-margin-top:28px
+  scroll-margin-top:0
 }
 .section-heading {
   display:flex;
@@ -513,7 +518,7 @@ footer {
   top:-100px;
   padding:12px;
   background:#fff;
-  z-index:10
+  z-index:30
 }
 .skip-link:focus {
   top:10px

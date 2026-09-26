@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
-import { matchesPublication, readFilters } from '../site/assets/filters.js';
-const publications = JSON.parse(await readFile(new URL('../site/data/publications.json', import.meta.url)));
+import { matchesPublication, readFilters } from '../assets/filters.js';
+const publications = JSON.parse(await readFile(new URL('../data/publications.json', import.meta.url)));
 const html = await readFile(new URL('../dist/index.html', import.meta.url),'utf8');
 
 test('filters intersect selection/status with area and recover invalid query values', () => {
@@ -59,4 +59,18 @@ test('preview serves the homepage and assets, and returns a real 404', async t =
   assert.ok((await home.text()).includes('Research / Publications'));
   assert.equal((await fetch(`${origin}/assets/site.js`)).status,200);
   assert.equal((await fetch(`${origin}/missing-page`)).status,404);
+});
+
+test('CV and historical media URLs retain their original downloadable content', async () => {
+  for (const [source, output] of [
+    ['assets/resume.pdf', 'uploads/resume.pdf'],
+    ['assets/cpm-scenario.mp4', 'news/cpm-olympics/scenario-example.mp4'],
+    ['assets/cpm-timeline.png', 'news/cpm-olympics/timeline.png'],
+    ['assets/lab-architecture.png', 'teaching/cpnav/lab-architecture.png'],
+  ]) {
+    assert.deepEqual(
+      await readFile(new URL(`../dist/${output}`, import.meta.url)),
+      await readFile(new URL(`../${source}`, import.meta.url)),
+    );
+  }
 });
