@@ -5,19 +5,30 @@ import { matchesPublication, readFilters } from '../assets/filters.js';
 const publications = JSON.parse(await readFile(new URL('../data/publications.json', import.meta.url)));
 const html = await readFile(new URL('../dist/index.html', import.meta.url),'utf8');
 
-test('filters intersect selection/status with area and recover invalid query values', () => {
-  const paper = { selected:true, status:'preprint', tags:['Safe Control','CAVs'] };
+test('selection and tag filters intersect and preserve old shared links', () => {
+  const paper = { selected:true, status:'preprint', tags:['Learning','CAVs'] };
   assert.equal(matchesPublication(paper,'selected','CAVs'),true);
-  assert.equal(matchesPublication(paper,'peer-reviewed','CAVs'),false);
-  assert.equal(matchesPublication(paper,'preprint','Robotics'),false);
+  assert.equal(matchesPublication({...paper, selected:false},'selected','CAVs'),false);
+  assert.equal(matchesPublication(paper,'all','Safe Control'),false);
   assert.equal(matchesPublication(paper,'all','all'),true);
-  assert.deepEqual(readFilters('?type=preprint&area=Safe+Control'),{type:'preprint',area:'Safe Control'});
-  assert.deepEqual(readFilters('?type=unknown&area=unknown'),{type:'all',area:'all'});
+  assert.deepEqual(readFilters('?type=selected&tag=Learning'),{type:'selected',tag:'Learning'});
+  assert.deepEqual(readFilters('?type=preprint&area=Safe+Control'),{type:'all',tag:'Safe Control'});
+  assert.deepEqual(readFilters('?area=MARL'),{type:'all',tag:'Learning'});
+  assert.deepEqual(readFilters('?type=peer-reviewed&area=Robotics'),{type:'all',tag:'all'});
+  assert.deepEqual(readFilters('?type=unknown&tag=unknown'),{type:'all',tag:'all'});
 });
-test('every requested filter has real matching content', () => {
-  for (const type of ['all','selected','peer-reviewed','preprint']) assert.ok(publications.some(p=>matchesPublication(p,type,'all')));
-  for (const area of ['MARL','Safe Control','CAVs','Robotics']) assert.ok(publications.some(p=>matchesPublication(p,'all',area)));
-  assert.equal(publications.filter(p=>p.status==='preprint').length,3);
+test('only the requested filters and tags are rendered', () => {
+  const types = [...html.matchAll(/data-group="type" data-value="([^"]+)"/g)].map(m=>m[1]);
+  const tags = [...html.matchAll(/data-group="tag" data-value="([^"]+)"/g)].map(m=>m[1]);
+  assert.deepEqual(types,['all','selected']);
+  assert.deepEqual(tags,['all','Learning','Safe Control','CAVs']);
+  for (const tag of tags) assert.ok(publications.some(p=>matchesPublication(p,'all',tag)));
+  assert.ok(publications.every(p=>p.tags.every(tag=>tags.includes(tag))));
+  assert.equal((html.match(/class="preprint-badge"/g)||[]).length,publications.filter(p=>p.status==='preprint').length);
+  for (const id of ['xu-2026-safety','xu-2025-learningbased','xu-2025-realtime']) assert.ok(publications.find(p=>p.id===id).tags.includes('Learning'));
+});
+test('CAVs excludes single-robot and single-vehicle studies', () => {
+  for (const id of ['xu-2026-ttcbf','xu-2025-highorder','xu-2025-realtime']) assert.ok(!publications.find(p=>p.id===id).tags.includes('CAVs'));
 });
 test('all source publications and citations are preserved in static HTML', async () => {
   assert.equal((html.match(/<article class="publication"/g)||[]).length,publications.length);
@@ -98,5 +109,22 @@ test('CV and historical media URLs retain their original downloadable content', 
       await readFile(new URL(`../dist/${output}`, import.meta.url)),
       await readFile(new URL(`../${source}`, import.meta.url)),
     );
+  }
+});
+
+test('paper titles are plain headings and action-row disclosures target preserved content', () => {
+  for (const p of publications) {
+    const article = html.split(`<article class="publication" id="${p.id}"`)[1].split('</article>')[0];
+    assert.ok(!article.match(/<h3[^>]*>[\s\S]*?<a[\s\S]*?<\/h3>/));
+    const row = article.split('<div class="paper-links">')[1].split('</div>')[0];
+    for (const [kind, content] of [['bibtex',p.bibtex],['about',p.summary]]) {
+      assert.equal(row.includes(`aria-controls="${kind}-${p.id}"`),Boolean(content));
+      if (content) assert.ok(article.includes(`id="${kind}-${p.id}"`));
+    }
+    if (p.bibtex) {
+      const actions = article.split('<div class="citation-actions">')[1].split('</div>')[0];
+      assert.ok(actions.includes('Download .bib'));
+      assert.ok(actions.includes('Copy BibTeX'));
+    }
   }
 });

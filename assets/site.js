@@ -21,7 +21,7 @@ let filters = readFilters(location.search);
 function applyFilters(updateURL = false) {
   let count = 0;
   for (const publication of publications) {
-    const visible = matchesPublication(publication, filters.type, filters.area);
+    const visible = matchesPublication(publication, filters.type, filters.tag);
     publication.element.hidden = !visible;
     if (visible) count++;
   }
@@ -32,7 +32,8 @@ function applyFilters(updateURL = false) {
   document.querySelector('#empty-results').hidden = count !== 0;
   if (updateURL) {
     const url = new URL(location.href);
-    for (const key of ['type', 'area']) {
+    url.searchParams.delete('area');
+    for (const key of ['type', 'tag']) {
       if (filters[key] === 'all') url.searchParams.delete(key);
       else url.searchParams.set(key, filters[key]);
     }
@@ -48,7 +49,7 @@ filterPanel.addEventListener('click', event => {
   applyFilters(true);
 });
 document.querySelector('#reset-filters').addEventListener('click', () => {
-  filters = { type: 'all', area: 'all' };
+  filters = { type: 'all', tag: 'all' };
   applyFilters(true);
   buttons[0].focus();
 });
@@ -57,6 +58,22 @@ window.addEventListener('popstate', () => {
   applyFilters();
 });
 applyFilters();
+
+// Keep disclosure controls in the shared action row while retaining native
+// details/summary access when JavaScript is unavailable.
+for (const button of document.querySelectorAll('.disclosure-button')) {
+  const panel = document.getElementById(button.getAttribute('aria-controls'));
+  panel.querySelector('summary').hidden = true;
+  button.hidden = false;
+  button.setAttribute('aria-expanded', String(panel.open));
+  button.addEventListener('click', () => {
+    panel.open = !panel.open;
+    button.setAttribute('aria-expanded', String(panel.open));
+  });
+  panel.addEventListener('toggle', () => {
+    button.setAttribute('aria-expanded', String(panel.open));
+  });
+}
 
 for (const button of document.querySelectorAll('.copy-button')) {
   button.hidden = false;
@@ -89,7 +106,7 @@ if (legacyAnchors[location.hash.slice(1)]) {
 // A shared link to a publication should reveal it even when a filter is present.
 const linkedPaper = document.getElementById(location.hash.slice(1));
 if (linkedPaper?.classList.contains('publication') && linkedPaper.hidden) {
-  filters = { type: 'all', area: 'all' };
+  filters = { type: 'all', tag: 'all' };
   applyFilters(true);
   linkedPaper.scrollIntoView();
 }

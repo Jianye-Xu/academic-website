@@ -41,9 +41,8 @@
     "status": "peer-reviewed",
     "selected": false,
     "tags": [
-      "MARL",
-      "CAVs",
-      "Robotics"
+      "Learning",
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2601.16578",
@@ -69,9 +68,9 @@
     "status": "peer-reviewed",
     "selected": true,
     "tags": [
+      "Learning",
       "Safe Control",
-      "CAVs",
-      "Robotics"
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2605.16894",
@@ -110,8 +109,7 @@
     "status": "peer-reviewed",
     "selected": true,
     "tags": [
-      "CAVs",
-      "Robotics"
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2503.05656",
@@ -164,9 +162,9 @@
     "status": "peer-reviewed",
     "selected": true,
     "tags": [
+      "Learning",
       "Safe Control",
-      "CAVs",
-      "Robotics"
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2411.08999",
@@ -195,9 +193,8 @@
     "status": "peer-reviewed",
     "selected": true,
     "tags": [
-      "Safe Control",
-      "CAVs",
-      "Robotics"
+      "Learning",
+      "Safe Control"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2505.02395",
@@ -237,8 +234,7 @@
     "status": "peer-reviewed",
     "selected": false,
     "tags": [
-      "CAVs",
-      "Robotics"
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2408.14199",
@@ -271,8 +267,7 @@
     "status": "peer-reviewed",
     "selected": false,
     "tags": [
-      "CAVs",
-      "Robotics"
+      "CAVs"
     ],
     "links": {
       "paper": "https://doi.org/10.13140/RG.2.2.34128.28161",
@@ -330,9 +325,8 @@
     "status": "peer-reviewed",
     "selected": true,
     "tags": [
-      "MARL",
-      "CAVs",
-      "Robotics"
+      "Learning",
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2408.07644",
@@ -360,9 +354,8 @@
     "status": "preprint",
     "selected": true,
     "tags": [
-      "MARL",
-      "CAVs",
-      "Robotics"
+      "Learning",
+      "CAVs"
     ],
     "links": {
       "paper": "https://arxiv.org/abs/2409.11852",
