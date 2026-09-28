@@ -62,7 +62,7 @@ const replacements = {
   TAG_FILTERS: filterButtons('tag', [['all','All'],['Learning','Learning'],['Safe Control','Safe Control'],['CAVs','CAVs']]),
   EDUCATION: education,
   EXPERIENCE: entries(profile.experience),
-  AWARDS: `<ul class="award-list">${profile.awards.map(item => `<li><span class="award-year">${item.date.slice(0,4)}</span><div><strong>${escape(item.title)}</strong><p class="awarder">${escape(item.awarder)}</p><details class="paper-details"><summary>Award details</summary><p>${escape(item.summary.trim())}</p></details></div></li>`).join('')}</ul>`,
+  AWARDS: `<ul class="award-list">${profile.awards.map(item => `<li><span class="award-year">${item.date.slice(0,4)}</span> <strong>${escape(item.title)}</strong> <span class="awarder">· ${escape(item.awarder)}</span> <details class="award-details"><summary>Award details</summary><p>${escape(item.summary.trim())}</p></details></li>`).join('')}</ul>`,
   TALKS: entries(profile.talks),
   TEACHING: supervision('theses','Supervised theses') + supervision('seminar','Supervised seminar works'),
   SERVICE: entries(profile.service),

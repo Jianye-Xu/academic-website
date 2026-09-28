@@ -6,7 +6,7 @@
   --rule:#e0e5e9;
   --soft:#f3f6f8;
   --radius:5px;
-  --header-height:84px
+  --header-height:64px
 }
 * {
   box-sizing:border-box
@@ -61,7 +61,7 @@ h1 {
   font-size:46px;
   letter-spacing:-1.8px;
   font-weight:650;
-  margin:10px 0 22px
+  margin:8px 0 16px
 }
 h2 {
   font-size:26px;
@@ -87,7 +87,7 @@ strong {
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:26px 0;
+  padding:16px 0;
   border-bottom:1px solid var(--rule)
 }
 .wordmark {
@@ -115,10 +115,10 @@ nav a:hover {
   grid-template-columns:minmax(0,1fr) 230px;
   gap:80px;
   align-items:center;
-  padding:66px 0 10px
+  padding:36px 0 0
 }
 .intro-copy p:not(.eyebrow) {
-  margin-bottom:17px
+  margin-bottom:14px
 }
 .eyebrow {
   text-transform:uppercase;
@@ -143,14 +143,14 @@ nav a:hover {
   display:flex;
   flex-wrap:wrap;
   gap:8px 20px;
-  margin-top:25px;
+  margin-top:16px;
   font-size:14px
 }
 .profile-links a {
   padding-block:4px
 }
 main>section {
-  margin-bottom:62px;
+  margin-bottom:40px;
   scroll-margin-top:0
 }
 .section-heading {
@@ -159,8 +159,8 @@ main>section {
   align-items:baseline;
   gap:20px;
   border-bottom:1px solid var(--rule);
-  padding-bottom:12px;
-  margin-bottom:22px
+  padding-bottom:8px;
+  margin-bottom:16px
 }
 .quiet-link {
   font-size:13px;
@@ -173,7 +173,7 @@ main>section {
 .research-note {
   font-size:13px;
   color:var(--muted);
-  margin-bottom:22px
+  margin-bottom:14px
 }
 .selected-key {
   color:var(--accent);
@@ -228,7 +228,7 @@ main>section {
 .filters {
   display:grid;
   gap:10px;
-  margin-top:25px
+  margin-top:16px
 }
 .filter-row {
   display:flex;
@@ -263,14 +263,15 @@ main>section {
 .result-count {
   font-size:12px;
   color:var(--muted);
-  margin:20px 0 3px
+  margin:12px 0 0
 }
 .publication {
   display:grid;
-  grid-template-columns:320px minmax(0,1fr);
-  gap:32px;
-  padding:26px 20px;
-  margin-top:14px;
+  align-items:center;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:24px;
+  padding:12px 16px;
+  margin-top:8px;
   border-radius:var(--radius);
   background:#fff;
   border:1px solid var(--rule)
@@ -287,8 +288,7 @@ main>section {
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:180px;
-  align-self:start;
+  min-height:0;
   overflow:hidden;
   border:1px solid var(--rule);
   border-radius:var(--radius);
@@ -296,15 +296,15 @@ main>section {
 }
 .publication-preview img {
   width:100%;
-  height:215px;
+  height:160px;
   object-fit:contain;
-  padding:9px
+  padding:6px
 }
 .publication-preview:hover {
   border-color:#a3b6c5
 }
 .paper-cover {
-  height:215px;
+  height:160px;
   width:100%;
   padding:25px;
   display:flex;
@@ -368,7 +368,7 @@ main>section {
   display:flex;
   gap:7px;
   flex-wrap:wrap;
-  margin:12px 0
+  margin:8px 0
 }
 .tag,.preprint-badge {
   font-size:10px;
@@ -449,7 +449,7 @@ main>section {
   display:grid;
   grid-template-columns:155px minmax(0,1fr);
   gap:25px;
-  margin-bottom:25px
+  margin-bottom:18px
 }
 .entry-date {
   font-size:12px;
@@ -469,30 +469,49 @@ main>section {
   margin-top:4px
 }
 .subheading {
-  margin:30px 0 22px;
+  margin:22px 0 14px;
   font-size:18px
 }
 .award-list li {
-  display:grid;
-  grid-template-columns:65px minmax(0,1fr);
-  gap:25px;
-  margin-bottom:14px;
+  position:relative;
+  margin-bottom:6px;
   font-size:14px
 }
 .award-year {
   font-size:12px;
   color:var(--muted);
-  padding-top:3px
+  margin-right:8px
 }
 .award-list .awarder {
   color:var(--muted);
   font-size:13px
 }
+.award-details {
+  display:inline-block;
+  margin-left:6px;
+  font-size:13px
+}
+.award-details summary {
+  cursor:pointer;
+  color:var(--accent)
+}
+.award-details p {
+  position:absolute;
+  right:0;
+  z-index:2;
+  width:min(420px,100%);
+  padding:10px 12px;
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:0 3px 10px #00000014;
+  color:var(--ink)
+}
 .muted {
   color:var(--muted)
 }
 .teaching-course {
-  margin-bottom:26px
+  margin-bottom:18px
 }
 .teaching-course p {
   font-size:14px;
@@ -509,7 +528,7 @@ main>section {
 }
 .supervision {
   border-top:1px solid var(--rule);
-  padding:17px 0
+  padding:12px 0
 }
 .supervision>summary {
   font-weight:600;
@@ -521,7 +540,7 @@ main>section {
   font-size:13px
 }
 .supervision li {
-  margin:12px 0
+  margin:8px 0
 }
 .supervision h4 {
   font-size:14px;
@@ -535,7 +554,7 @@ main>section {
   text-decoration:underline
 }
 footer {
-  padding:25px 0 35px;
+  padding:18px 0 24px;
   border-top:1px solid var(--rule);
   display:flex;
   justify-content:space-between;
@@ -561,7 +580,7 @@ footer {
     width:1060px
   }
   .intro {
-    padding-top:76px
+    padding-top:40px
   }
 }
 @media(max-width:800px) {
@@ -571,7 +590,7 @@ footer {
   .intro {
     gap:30px;
     grid-template-columns:minmax(0,1fr) 180px;
-    padding-top:45px
+    padding-top:32px
   }
   .portrait img {
     width:180px;
@@ -581,11 +600,11 @@ footer {
     font-size:40px
   }
   .publication {
-    grid-template-columns:245px minmax(0,1fr);
-    gap:24px
+    grid-template-columns:220px minmax(0,1fr);
+    gap:20px
   }
   .publication-preview img,.paper-cover {
-    height:185px
+    height:150px
   }
   nav {
     gap:17px
@@ -604,7 +623,7 @@ footer {
   .site-header {
     align-items:flex-start;
     gap:18px;
-    padding:20px 0
+    padding:14px 0
   }
   .wordmark {
     white-space:nowrap;
@@ -619,8 +638,8 @@ footer {
   }
   .intro {
     grid-template-columns:1fr;
-    gap:25px;
-    padding-top:35px
+    gap:18px;
+    padding-top:24px
   }
   .intro-copy {
     order:2
@@ -640,7 +659,7 @@ footer {
   }
   h1 {
     font-size:38px;
-    margin:9px 0 18px
+    margin:8px 0 14px
   }
   .eyebrow {
     font-size:10px;
@@ -654,7 +673,7 @@ footer {
     margin-bottom:14px
   }
   main>section {
-    margin-bottom:44px
+    margin-bottom:32px
   }
   h2 {
     font-size:23px
@@ -674,19 +693,19 @@ footer {
   }
   .publication {
     grid-template-columns:1fr;
-    gap:18px;
-    padding:20px 14px
+    gap:10px;
+    padding:12px
   }
   .publication-preview {
     width:100%;
     min-height:0
   }
   .publication-preview img {
-    height:235px;
-    padding:10px
+    height:170px;
+    padding:6px
   }
   .paper-cover {
-    height:180px
+    height:170px
   }
   .paper-cover .cover-title {
     max-width:none
@@ -715,11 +734,7 @@ footer {
   .entry {
     grid-template-columns:1fr;
     gap:4px;
-    margin-bottom:25px
-  }
-  .award-list li {
-    grid-template-columns:37px minmax(0,1fr);
-    gap:13px
+    margin-bottom:18px
   }
   .research-note {
     font-size:12px

@@ -114,3 +114,26 @@ if (linkedPaper?.classList.contains('publication') && linkedPaper.hidden) {
 if (linkedPaper instanceof HTMLDetailsElement) {
   linkedPaper.open = true;
 }
+
+// Enhance native click/keyboard disclosures with mouse hover previews.
+for (const details of document.querySelectorAll('.award-details')) {
+  let openedByHover = false;
+  details.addEventListener('pointerenter', event => {
+    if (event.pointerType !== 'mouse' || details.open) return;
+    openedByHover = true;
+    details.open = true;
+  });
+  details.addEventListener('pointerleave', () => {
+    if (openedByHover) details.open = false;
+    openedByHover = false;
+  });
+  details.querySelector('summary').addEventListener('click', () => {
+    openedByHover = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      details.open = false;
+      openedByHover = false;
+    }
+  });
+}

@@ -128,3 +128,17 @@ test('paper titles are plain headings and action-row disclosures target preserve
     }
   }
 });
+
+test('awards retain every entry with inline metadata and native details', async () => {
+  const { awards } = JSON.parse(await readFile(new URL('../data/profile.json', import.meta.url)));
+  const list = html.split('<ul class="award-list">')[1].split('</ul>')[0];
+  const entries = [...list.matchAll(/<li>(.*?)<\/li>/g)].map(match => match[1]);
+  assert.equal(entries.length, awards.length);
+  for (const entry of entries) {
+    const inlineContent = entry.split('<details')[0];
+    assert.ok(inlineContent.includes('class="award-year"'));
+    assert.ok(inlineContent.includes('<span class="awarder">'));
+    assert.doesNotMatch(inlineContent, /<(?:p|div|br)\b/);
+    assert.ok(entry.includes('<details class="award-details"><summary>Award details</summary><p>'));
+  }
+});
