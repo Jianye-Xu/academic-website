@@ -20,13 +20,15 @@ test('every requested filter has real matching content', () => {
   assert.equal(publications.filter(p=>p.status==='preprint').length,3);
 });
 test('all source publications and citations are preserved in static HTML', async () => {
-  assert.equal((html.match(/<article class="publication"/g)||[]).length,13);
+  assert.equal((html.match(/<article class="publication"/g)||[]).length,publications.length);
   for (const p of publications) {
     assert.ok(html.includes(`id="${p.id}"`));
     await access(new URL(`../dist/publication/${p.id}/index.html`,import.meta.url));
     if (p.bibtex) assert.equal(await readFile(new URL(`../dist/publication/${p.id}/cite.bib`,import.meta.url),'utf8'),p.bibtex);
   }
-  assert.ok(html.includes('Jianye Xu is not listed as an author'));
+  assert.ok(publications.every(p => p.authors.includes('Jianye Xu')));
+  assert.ok(!html.includes('kloock-2021-cyberphysical'));
+  await assert.rejects(access(new URL('../dist/publication/kloock-2021-cyberphysical/index.html', import.meta.url)));
 });
 test('local assets and fragment targets resolve', async () => {
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);

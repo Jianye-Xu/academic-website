@@ -18,12 +18,12 @@
       "code": "https://github.com/bassamlab/ttcbf"
     },
     "bibtex": "@article{xu2026ttcbf,\n archiveprefix = {arXiv},\n author = {Xu, Jianye and Alrifaee, Bassam},\n doi = {10.48550/arXiv.2601.15196},\n eprint = {2601.15196},\n journal = {arXiv preprint arXiv:2601.15196},\n primaryclass = {eess},\n publisher = {arXiv},\n title = {TTCBF: A Truncated Taylor Control Barrier Function for High-Order Safety Constraints},\n year = {2026}\n}\n",
-    "image": "/assets/ttcbf.png",
+    "image": "/assets/xu2026ttcbf.jpg",
     "imageAlt": "Comparison of high-order and truncated Taylor control barrier functions",
     "summary": "High-Order Control Barrier Functions (HOCBFs) handle safety constraints with relative degree greater than one by introducing a chain of auxiliary functions. This requires multiple class K functions, whose number and tuning burden grow with the relative degree. Because their parameters affect the conservatism and feasibility of the resulting control constraint, tuning them can complicate controller design. We introduce a Truncated Taylor Control Barrier Function (TTCBF), which extends the discrete-time CBF formulation to high-order safety constraints using a single class K function, independent of relative degree. We also propose an adaptive variant, aTTCBF, which optimizes the class K gain online. This paper updates our earlier TTCBF preprint, which remains available at its original arXiv record.",
     "shortVenue": "arXiv",
     "previewTitle": "TTCBF: A Truncated Taylor Control Barrier Function for High-Order Safety Constraints",
-    "fullImage": "/assets/full/ttcbf.png"
+    "fullImage": "/assets/full/xu2026ttcbf.jpg"
   },
   {
     "id": "beerwerth-2026-zeroshot",
@@ -49,11 +49,12 @@
       "publisher": "https://doi.org/10.1515/auto-2025-0057"
     },
     "bibtex": "@article{beerwerth2026zeroshot,\n author = {Beerwerth, Julius and Xu, Jianye and Schäfer, Simon and Belderink, Fynn and Alrifaee, Bassam},\n copyright = {De Gruyter expressly reserves the right to use all content for commercial text and data mining within the meaning of Section 44b of the German Copyright Act.},\n doi = {10.1515/auto-2025-0057},\n journal = {at - Automatisierungstechnik},\n number = {5},\n pages = {376--385},\n publisher = {De Gruyter},\n title = {Zero-Shot MARL Benchmark in the Cyber-Physical Mobility Lab},\n volume = {74},\n year = {2026}\n}\n",
-    "image": null,
-    "imageAlt": "",
+    "image": "/assets/beerwerth2026zeroshot.jpg",
+    "imageAlt": "Vehicle trajectories in the initial setup, SigmaRL simulation, CPM Lab digital twin, and physical experiment",
     "summary": "",
     "shortVenue": "at",
-    "previewTitle": "Zero-shot learning in the CPM Lab"
+    "previewTitle": "Zero-shot learning in the CPM Lab",
+    "fullImage": "/assets/full/beerwerth2026zeroshot.jpg"
   },
   {
     "id": "xu-2026-safety",
@@ -76,11 +77,12 @@
       "code": "https://github.com/bassamlab/SigmaRL"
     },
     "bibtex": "@inproceedings{xu2026safety,\n author = {Xu, Jianye and Alrifaee, Bassam},\n booktitle = {2026 IEEE 29th International Conference on Intelligent Transportation Systems (ITSC), in Press},\n title = {Beyond Safety Filtering: Control Barrier Function-Informed Reinforcement Learning for Connected and Automated Vehicles},\n year = {2026}\n}\n",
-    "image": null,
-    "imageAlt": "",
+    "image": "/assets/xu2026safety.jpg",
+    "imageAlt": "Heatmaps comparing total reward and control barrier function activation across hyperparameter settings",
     "summary": "",
     "shortVenue": "ITSC",
-    "previewTitle": "Beyond safety filtering"
+    "previewTitle": "Beyond safety filtering",
+    "fullImage": "/assets/full/xu2026safety.jpg"
   },
   {
     "id": "xu-2026-smallscale",
@@ -114,11 +116,12 @@
       "publisher": "https://doi.org/10.1109/MITS.2026.3666681"
     },
     "bibtex": "@article{xu2026smallscale,\n author = {Xu, Jianye and Betz, Johannes and Mokhtarian, Armin and Mittal, Archak and Cai, Mengchi and Mangharam, Rahul and Shehata, Omar M. and Elias, Catherine M. and Zaech, Jan-Nico and Scheffe, Patrick and Jahncke, Felix and Ulhas, Sangeet Sankaramangalam and Arfvidsson, Kaj Munhoz and Alrifaee, Bassam},\n doi = {10.1109/MITS.2026.3666681},\n journal = {IEEE Intelligent Transportation Systems Magazine},\n pages = {2--16},\n title = {Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: Challenges and a Roadmap},\n year = {2026}\n}\n",
-    "image": null,
-    "imageAlt": "",
+    "image": "/assets/xu2026smallscale.jpg",
+    "imageAlt": "Collage of presentations and participants at the small-scale testbeds workshop at IEEE IV 2024",
     "summary": "This paper summarizes the outcomes of the 1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms at IEEE IV 2024. Small-scale testbeds combine rapid prototyping with experiments that approximate real-world conditions more closely than simulations.",
     "shortVenue": "ITSM",
-    "previewTitle": "Testbeds: challenges & a roadmap"
+    "previewTitle": "Testbeds: challenges & a roadmap",
+    "fullImage": "/assets/full/xu2026smallscale.jpg"
   },
   {
     "id": "xu-2025-highorder",
@@ -130,7 +133,7 @@
     "year": 2025,
     "venue": "arXiv preprint arXiv:2503.15014",
     "status": "preprint",
-    "selected": false,
+    "selected": true,
     "tags": [
       "Safe Control"
     ],
@@ -138,13 +141,13 @@
       "paper": "https://arxiv.org/abs/2503.15014"
     },
     "bibtex": "@article{xu2025highorder,\n archiveprefix = {arXiv},\n author = {Xu, Jianye and Alrifaee, Bassam},\n doi = {10.48550/arXiv.2503.15014},\n eprint = {2503.15014},\n journal = {arXiv preprint arXiv:2503.15014},\n primaryclass = {eess},\n publisher = {arXiv},\n title = {High-Order Control Barrier Functions: Insights and a Truncated Taylor-Based Formulation},\n year = {2025}\n}\n",
-    "image": "/assets/ttcbf.png",
+    "image": "/assets/xu2026ttcbf.jpg",
     "imageAlt": "High-order control barrier function parameter and trajectory comparisons",
     "summary": "",
     "shortVenue": "arXiv",
     "note": "Earlier preprint; see the updated TTCBF paper (2026).",
     "previewTitle": "High-Order Control Barrier Functions: Insights and a Truncated Taylor-Based Formulation",
-    "fullImage": "/assets/full/ttcbf.png"
+    "fullImage": "/assets/full/xu2026ttcbf.jpg"
   },
   {
     "id": "xu-2025-learningbased",
@@ -168,12 +171,12 @@
       "code": "https://github.com/bassamlab/SigmaRL"
     },
     "bibtex": "@inproceedings{xu2025learningbased,\n author = {Xu, Jianye and Alrifaee, Bassam},\n booktitle = {2025 European Control Conference (ECC)},\n doi = {10.23919/ECC65951.2025.11187043},\n pages = {988--995},\n title = {A Learning-Based Control Barrier Function for Car-Like Robots: Toward Less Conservative Collision Avoidance},\n year = {2025}\n}\n",
-    "image": "/assets/learning-cbf.png",
+    "image": "/assets/xu2025learningbased.jpg",
     "imageAlt": "Overtaking and bypassing comparisons for collision avoidance",
     "summary": "We propose a learning-based CBF to reduce conservatism in collision avoidance of car-like robots. Traditional CBFs often use Euclidean distance between robots' centers as safety margin, neglecting headings and simplifying geometries to circles. While this ensures smooth, differentiable safety functions required by CBFs, it can be overly conservative in tight environments. To address this limitation, we design a heading-aware safety margin that accounts for the robots' orientations, enabling a less conservative and more accurate estimation of safe regions. Since the function computing this safety margin is non-differentiable, we approximate it with a neural network to ensure differentiability and facilitate integration with CBFs. We describe how we achieve bounded learning error and incorporate the upper bound into the CBF to provide formal safety guarantees through forward invariance. We show that our CBF is a high-order CBF with relative degree two for a system with two robots whose dynamics are modeled by the nonlinear kinematic bicycle model. Experimental results in overtaking and bypassing scenarios reveal a 33.5 % reduction in conservatism compared to traditional methods, while maintaining safety",
     "shortVenue": "ECC",
     "previewTitle": "A Learning-Based Control Barrier Function for Car-Like Robots: Toward Less Conservative Collision Avoidance",
-    "fullImage": "/assets/full/learning-cbf.png"
+    "fullImage": "/assets/full/xu2025learningbased.jpg"
   },
   {
     "id": "xu-2025-realtime",
@@ -186,7 +189,7 @@
     "year": 2025,
     "venue": "2025 IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)",
     "status": "peer-reviewed",
-    "selected": false,
+    "selected": true,
     "tags": [
       "Safe Control",
       "CAVs",
@@ -198,11 +201,12 @@
       "code": "https://github.com/bassamlab/SigmaRL"
     },
     "bibtex": "@inproceedings{xu2025realtime,\n author = {Xu, Jianye and Che, Chang and Alrifaee, Bassam},\n booktitle = {2025 IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)},\n doi = {10.1109/ITSC60802.2025.11423203},\n pages = {2818--2825},\n title = {A Real-Time Control Barrier Function-Based Safety Filter for Motion Planning with Arbitrary Road Boundary Constraints},\n year = {2025}\n}\n",
-    "image": null,
-    "imageAlt": "",
+    "image": "/assets/xu2025realtime.jpg",
+    "imageAlt": "Vehicle footprints in four traffic scenarios with and without the control barrier function safety filter",
     "summary": "",
     "shortVenue": "ITSC",
-    "previewTitle": "Real-time safety filtering"
+    "previewTitle": "Real-time safety filtering",
+    "fullImage": "/assets/full/xu2025realtime.jpg"
   },
   {
     "id": "mokhtarian-2024-survey",
@@ -237,11 +241,12 @@
       "project": "https://cpm.lrt.unibw.de/survey/"
     },
     "bibtex": "@article{mokhtarian2024survey,\n author = {Mokhtarian, Armin and Xu, Jianye and Scheffe, Patrick and Kloock, Maximilian and Schäfer, Simon and Bang, Heeseung and Le, Viet-Anh and Ulhas, Sangeet and Betz, Johannes and Wilson, Sean and Berman, Spring and Paull, Liam and Prorok, Amanda and Alrifaee, Bassam},\n doi = {10.1109/MRA.2024.3505772},\n journal = {IEEE Robotics & Automation Magazine},\n pages = {2--19},\n title = {A Survey on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: A Guide for Creating a New Testbed},\n year = {2024}\n}\n",
-    "image": "/assets/testbeds.png",
+    "image": "/assets/mokhtarian2024survey.jpg",
     "imageAlt": "Small-scale vehicle and robot testbeds reviewed in the survey",
     "summary": "A survey of small-scale testbeds for connected and automated vehicles and robot swarms, with an online comparison of more than 25 existing testbeds.",
     "shortVenue": "RAM",
-    "previewTitle": "A Survey on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: A Guide for Creating a New Testbed"
+    "previewTitle": "A Survey on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: A Guide for Creating a New Testbed",
+    "fullImage": "/assets/full/mokhtarian2024survey.jpg"
   },
   {
     "id": "schafer-2024-educational",
@@ -267,11 +272,12 @@
       "publisher": "https://doi.org/10.23919/ECC64448.2024.10591176"
     },
     "bibtex": "@inproceedings{schafer2024educational,\n author = {Schäfer, Simon and Xu, Jianye and Klüner, David and Mokhtarian, Armin and Scheffel, Patrick and Alrifaee, Bassam},\n booktitle = {2024 European Control Conference (ECC)},\n doi = {10.23919/ECC64448.2024.10591176},\n pages = {2666--2671},\n title = {Educational Applications of the Cyber-Physical Mobility Lab: A Summary},\n year = {2024}\n}\n",
-    "image": null,
-    "imageAlt": "",
+    "image": "/assets/schafer2024educational.jpg",
+    "imageAlt": "Course evaluation responses for goals, structure, concept, interest, application, and alignment",
     "summary": "",
     "shortVenue": "ECC",
-    "previewTitle": "Learning in the CPM Lab"
+    "previewTitle": "Learning in the CPM Lab",
+    "fullImage": "/assets/full/schafer2024educational.jpg"
   },
   {
     "id": "scheffe-2024-limiting",
@@ -294,11 +300,12 @@
       "publisher": "https://doi.org/10.23919/ECC64448.2024.10591179"
     },
     "bibtex": "@inproceedings{scheffe2024limiting,\n author = {Scheffe, Patrick and Xu, Jianye and Alrifaee, Bassam},\n booktitle = {2024 European Control Conference (ECC)},\n doi = {10.23919/ECC64448.2024.10591179},\n pages = {297--304},\n title = {Limiting Computation Levels in Prioritized Trajectory Planning with Safety Guarantees},\n year = {2024}\n}\n",
-    "image": null,
-    "imageAlt": "",
+    "image": "/assets/scheffe2024limiting.jpg",
+    "imageAlt": "Colliding and safe intersection trajectories with vehicle predictions and reachable sets",
     "summary": "",
     "shortVenue": "ECC",
-    "previewTitle": "Safe trajectory planning"
+    "previewTitle": "Safe trajectory planning",
+    "fullImage": "/assets/full/scheffe2024limiting.jpg"
   },
   {
     "id": "xu-2024-sigmarl",
@@ -323,12 +330,12 @@
       "code": "https://github.com/bassamlab/SigmaRL"
     },
     "bibtex": "@inproceedings{xu2024sigmarl,\n author = {Xu, Jianye and Hu, Pan and Alrifaee, Bassam},\n booktitle = {2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},\n doi = {10.1109/ITSC58415.2024.10919918},\n pages = {768--775},\n title = {SigmaRL: A Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning Framework for Motion Planning},\n year = {2024}\n}\n",
-    "image": "/assets/sigmarl.png",
+    "image": "/assets/xu2024sigmarl.jpg",
     "imageAlt": "Vehicle trajectories in a testbed, intersection, on-ramp, and roundabout",
     "summary": "Sample efficiency and generalization are two key challenges in MARL. Most RL agents exhibit a limited capacity to generalize, often focusing narrowly on specific scenarios, and are usually evaluated in similar or even the same scenarios seen during training. Various methods have been proposed to address these challenges, including experience replay and regularization. However, how observation design in RL affects sample efficiency and generalization remains an under-explored area. We introduce an open-source, decentralized framework named SigmaRL, designed to enhance both sample efficiency and generalization of MARL for motion planning of CAVs. We address this gap by proposing five strategies to design information-dense observations, focusing on general features that are applicable to most traffic scenarios. We train our RL agents using these strategies on an intersection and evaluate their generalization through numerical experiments across completely unseen traffic scenarios, including a new intersection, an on-ramp, and a roundabout. Incorporating these information-dense observations reduces training times to under one hour on a single CPU, and the evaluation results reveal that our RL agents can effectively zero-shot generalize.",
     "shortVenue": "ITSC",
     "previewTitle": "SigmaRL: A Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning Framework for Motion Planning",
-    "fullImage": "/assets/full/sigmarl.png"
+    "fullImage": "/assets/full/xu2024sigmarl.jpg"
   },
   {
     "id": "xu-2024-xpmarl",
@@ -341,7 +348,7 @@
     "year": 2024,
     "venue": "arXiv preprint arXiv:2409.11852",
     "status": "preprint",
-    "selected": false,
+    "selected": true,
     "tags": [
       "MARL",
       "CAVs",
@@ -352,43 +359,11 @@
       "code": "https://github.com/bassamlab/SigmaRL"
     },
     "bibtex": "@article{xu2024xpmarl,\n archiveprefix = {arXiv},\n author = {Xu, Jianye and Sobhy, Omar and Alrifaee, Bassam},\n doi = {10.48550/arXiv.2409.11852},\n eprint = {2409.11852},\n journal = {arXiv preprint arXiv:2409.11852},\n primaryclass = {cs},\n publisher = {arXiv},\n title = {XP-MARL: Auxiliary Prioritization in Multi-Agent Reinforcement Learning to Address Non-Stationarity},\n year = {2024}\n}\n",
-    "image": "/assets/xp-marl.png",
+    "image": "/assets/xu2024xpmarl.jpg",
     "imageAlt": "Prioritized agents and their interactions on a road network",
     "summary": "Non-stationarity poses a fundamental challenge in MARL, arising from agents simultaneously learning and altering their policies. This creates a non-stationary environment from the perspective of each individual agent, often leading to suboptimal or even unconverged learning outcomes. We propose an open-source framework named XP-MARL, which augments MARL with auxiliary prioritization to address this challenge in cooperative settings. XP-MARL is 1) founded upon our hypothesis that prioritizing agents and letting higher-priority agents establish their actions first would stabilize the learning process and thus mitigate non-stationarity and 2) enabled by our proposed mechanism called action propagation, where higher-priority agents act first and communicate their actions, providing a more stationary environment for others. Moreover, instead of using a predefined or heuristic priority assignment, XP-MARL learns priority-assignment policies with an auxiliary MARL problem, leading to a joint learning scheme. Experiments in a motion-planning scenario involving CAVs demonstrate that XP-MARL improves the safety of a baseline model by 84.4% and outperforms a state-of-the-art approach, which improves the baseline by only 12.8%",
     "shortVenue": "arXiv",
     "previewTitle": "XP-MARL: Auxiliary Prioritization in Multi-Agent Reinforcement Learning to Address Non-Stationarity",
-    "fullImage": "/assets/full/xp-marl.png"
-  },
-  {
-    "id": "kloock-2021-cyberphysical",
-    "title": "Cyber-Physical Mobility Lab: An Open-Source Platform for Networked and Autonomous Vehicles",
-    "authors": [
-      "Maximilian Kloock",
-      "Patrick Scheffe",
-      "Janis Maczijewski",
-      "Alexandru Kampmann",
-      "Armin Mokhtarian",
-      "Stefan Kowalewski",
-      "Bassam Alrifaee"
-    ],
-    "year": 2021,
-    "venue": "2021 European Control Conference (ECC)",
-    "status": "peer-reviewed",
-    "selected": false,
-    "tags": [
-      "CAVs",
-      "Robotics"
-    ],
-    "links": {
-      "paper": "https://doi.org/10.23919/ECC54610.2021.9654986",
-      "publisher": "https://doi.org/10.23919/ECC54610.2021.9654986"
-    },
-    "bibtex": "@inproceedings{kloock2021cyberphysical,\n author = {Kloock, Maximilian and Scheffe, Patrick and Maczijewski, Janis and Kampmann, Alexandru and Mokhtarian, Armin and Kowalewski, Stefan and Alrifaee, Bassam},\n booktitle = {2021 European Control Conference (ECC)},\n doi = {10.23919/ECC54610.2021.9654986},\n pages = {1937--1944},\n title = {Cyber-Physical Mobility Lab: An Open-Source Platform for Networked and Autonomous Vehicles},\n year = {2021}\n}\n",
-    "image": null,
-    "imageAlt": "",
-    "summary": "",
-    "shortVenue": "ECC",
-    "note": "Related platform paper. Jianye Xu is not listed as an author.",
-    "previewTitle": "Cyber-Physical Mobility Lab"
+    "fullImage": "/assets/full/xu2024xpmarl.jpg"
   }
 ]

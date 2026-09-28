@@ -213,7 +213,16 @@ main>section {
   font-size:13px;
   color:var(--accent)
 }
+.news-more[open] {
+  display:flex;
+  flex-direction:column
+}
+.news-more[open]>summary {
+  order:2;
+  margin-top:12px
+}
 .news-more[open]>.news-list {
+  order:1;
   margin-top:14px
 }
 .filters {

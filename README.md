@@ -38,7 +38,7 @@ Add an object to `data/publications.json`, then rebuild. Preserve a stable, uniq
 
 Available resource keys are `paper`, `publisher`, `code`, `video`, and `project`. Omit unavailable resources; the site does not render dead or disabled links. Put a verified citation in `bibtex` to show a native expandable BibTeX panel, copying, and a `.bib` download. Each paper remains one independent item even when it shares a code repository with another paper.
 
-Use `image: "/assets/example.png"` (also accepts JPEG, WebP, or GIF) and descriptive `imageAlt`. Images are shown without cropping and lazy-loaded. The migrated figures use optimized 960-pixel previews with `fullImage` pointing to their full-resolution originals. Use a still preview and a `video` link for motion-heavy demonstrations or animations that cannot respect reduced-motion preferences. If no verified image is available, leave `image` null: the site shows a simple typographic paper preview. Do not substitute unrelated experimental figures.
+Name publication figures with their BibTeX citation key in both `assets/` and `assets/full/`. Use `image: "/assets/xu2026ttcbf.jpg"` (also accepts JPEG, WebP, or GIF) and descriptive `imageAlt`. Images are shown without cropping and lazy-loaded. The migrated figures use optimized 960-pixel previews with `fullImage` pointing to their full-resolution originals. Use a still preview and a `video` link for motion-heavy demonstrations or animations that cannot respect reduced-motion preferences. If no verified image is available, leave `image` null: the site shows a simple typographic paper preview. Do not substitute unrelated experimental figures.
 
 Publication selection and research-area filters combine with AND, update the result count, and can be shared through URL query parameters, for example `/?type=preprint&area=Safe+Control#research`. All papers and citations are present in the generated HTML even without JavaScript.
 
@@ -56,11 +56,11 @@ The generated `CNAME`, canonical URL, sitemap, and social metadata preserve `jia
 
 ## Content review notes
 
-- All 13 existing publication records are retained, including the 2021 CPM Lab platform paper. Jianye Xu is not in that paper’s author list, so it is explicitly identified as a related platform paper.
+- The publication list contains 12 papers coauthored by Jianye Xu.
 - The 2025 and 2026 TTCBF preprints remain separate records, with the earlier paper labeled accordingly.
 - The existing site lists undergraduate study as August 2016–September 2020; the CV lists October 2016–September 2019, plus exchange studies in October 2019–August 2020. Homepage degree dates were preserved and exchange studies added separately. Please reconcile the dates when updating the CV/site.
 - The Ph.D. end date from the old site is now explicitly labeled “expected.”
-- The six paper figures come from the repository. Other papers have citation previews until verified paper-specific media are supplied. Video links are supported but are not invented.
+- All 12 publications use the 11 supplied figures, with the earlier high-order CBF preprint sharing the updated TTCBF figure. Previews are 960 pixels wide, and link to full-resolution originals. Video links are supported but are not invented.
 - No reviewer appointments or talk titles beyond the CV were inferred.
 
 ## Design reference
