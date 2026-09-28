@@ -23,7 +23,7 @@
   <header class="site-header wrap">
     <a class="wordmark" href="/">Jianye Xu</a>
     <nav aria-label="Main navigation">
-      <a href="#research">Research</a><a href="#news">News</a><a href="#education">Background</a><a href="#teaching">Teaching and Mentoring</a><a href="/uploads/resume.pdf">CV <span aria-hidden="true">↗</span></a>
+      <a href="#news">News</a><a href="#research">Publications</a><a href="#education">Education</a><a href="#professional-activities">Professional Activities</a><a href="#teaching">Teaching and Mentoring</a><a href="/uploads/resume.pdf">CV <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
   <main id="main" class="wrap">
@@ -42,7 +42,7 @@
       {{NEWS}}
     </section>
     <section id="research" aria-labelledby="research-title">
-      <div class="section-heading"><h2 id="research-title">Research / Publications</h2></div>
+      <div class="section-heading"><h2 id="research-title">Publications</h2></div>
       <p class="section-intro">My research connects multi-agent reinforcement learning, optimal control, and connected and automated vehicles, from decision-making in simulation to safe robotic systems.</p>
       <p class="research-note"><span class="selected-key">★</span> Selected work on pale blue <span class="separator">·</span> Gray titles mark preprints. Papers listed by year, newest first.</p>
       <div id="publication-filters" class="filters" hidden>
@@ -54,13 +54,18 @@
       <p id="empty-results" hidden>No publications match these filters. <button id="reset-filters" class="text-button" type="button">Show all publications</button></p>
     </section>
     <section id="education" aria-labelledby="education-title"><div class="section-heading"><h2 id="education-title">Education</h2></div>{{EDUCATION}}</section>
-    <section id="experiences" aria-labelledby="experiences-title"><div class="section-heading"><h2 id="experiences-title">Experiences</h2></div>{{EXPERIENCE}}</section>
     <section id="awards" aria-labelledby="awards-title"><div class="section-heading"><h2 id="awards-title">Awards</h2></div>{{AWARDS}}</section>
-    <section id="talks" aria-labelledby="talks-title"><div class="section-heading"><h2 id="talks-title">Talks</h2></div>{{TALKS}}</section>
-    <section id="teaching" aria-labelledby="teaching-title"><div class="section-heading"><h2 id="teaching-title">Teaching and Mentoring</h2></div>
-      {{TEACHING}}
+    <section id="professional-activities" aria-labelledby="professional-activities-title">
+      <div class="section-heading"><h2 id="professional-activities-title">Professional Activities</h2></div>
+      <section id="service" aria-labelledby="service-title"><h3 class="subheading" id="service-title">Program Committee</h3>{{SERVICE}}</section>
+      <section id="talks" aria-labelledby="talks-title"><h3 class="subheading" id="talks-title">Invited Talks</h3>{{TALKS}}</section>
+      <section id="journal-reviewing" aria-labelledby="journal-reviewing-title"><h3 class="subheading" id="journal-reviewing-title">Journal Reviewing</h3>{{JOURNAL_REVIEWING}}</section>
+      <section id="conference-reviewing" aria-labelledby="conference-reviewing-title"><h3 class="subheading" id="conference-reviewing-title">Conference Reviewing</h3>{{CONFERENCE_REVIEWING}}</section>
+      <section id="membership" aria-labelledby="membership-title"><h3 class="subheading" id="membership-title">Membership</h3>{{MEMBERSHIP}}</section>
     </section>
-    <section id="service" aria-labelledby="service-title"><div class="section-heading"><h2 id="service-title">Academic Service</h2></div>{{SERVICE}}</section>
+    <section id="teaching" aria-labelledby="teaching-title"><div class="section-heading"><h2 id="teaching-title">Teaching and Mentoring</h2></div>
+      <div id="experiences">{{TEACHING}}</div>
+    </section>
   </main>
   <footer class="wrap"><p>© {{YEAR}} Jianye Xu</p><a href="#about">Back to top ↑</a></footer>
 </body>

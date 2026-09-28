@@ -117,78 +117,76 @@
       "summary": "Earned second prize in a university-wide engineering drafting competition, demonstrating strong technical drawing skills.\n"
     }
   ],
-  "experience": [
-    {
-      "date": "Winter terms 2024 & 2025",
-      "title": "Assistant Lecturer",
-      "organization": "RWTH Aachen University",
-      "description": "Served as an assistant lecturer for the master’s course “Control and Perception in Networked and Autonomous Vehicles”.",
-      "url": "https://cpm.lrt.unibw.de/courses/master/"
-    },
-    {
-      "date": "Jun 2021 – Feb 2022",
-      "title": "Research Assistant",
-      "organization": "Institute for Plastics Processing (IKV), RWTH Aachen University, Germany",
-      "description": "Developed a web-based interface for injection molding process optimization using JavaScript and Vue 3. Used Python for data processing and analysis with pandas and Keras."
-    },
-    {
-      "date": "Sep–Oct 2017",
-      "title": "Undergraduate Teaching Assistant",
-      "organization": "Beijing Institute of Technology",
-      "description": "Assisted with CAD software training lectures for first-year students."
-    }
-  ],
   "talks": [
     {
       "date": "Sep 2026",
-      "title": "Invited workshop speaker",
+      "title": "Workshop Invited Speaker",
       "organization": "IEEE ITSC · Naples, Italy",
       "description": "Invited to speak at the workshop “The 16th Workshop & Industry Panel on Cooperative and Automated Driving and Future Mobility”.",
       "url": "https://ieee-itsc.org/2026/workshops/"
     },
     {
       "date": "Nov 2025",
-      "title": "Invited workshop speaker",
+      "title": "Workshop Invited Speaker",
       "organization": "IEEE ITSC · Gold Coast, Australia",
       "description": "Invited to speak at the workshop “Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI”.",
       "url": "https://www.itsc2025.mixedtraffic.org/"
-    },
-    {
-      "date": "Jan 2025",
-      "title": "Guest lecture",
-      "organization": "RWTH Aachen University",
-      "description": "Gave a guest lecture titled “Control Barrier Functions and Their Applications to Collision Avoidance in Networked and Autonomous Vehicles”.",
-      "url": "https://cpm.lrt.unibw.de/courses/master/"
     }
   ],
   "service": [
     {
+      "date": "2026",
+      "title": "Associate Editor",
+      "organization": "IEEE International Conference on Intelligent Transportation Systems (ITSC)",
+      "description": "Serves as an Associate Editor for IEEE ITSC 2026."
+    },
+    {
       "date": "Sep 2026",
-      "title": "Invited session co-organizer",
+      "title": "Invited Session Organizer",
       "organization": "IEEE ITSC · Naples, Italy",
       "description": "Co-organized the invited session “Bridging Optimal Control and Learning for Connected and Automated Vehicles”.",
       "url": "https://bassamlab.github.io/itsc2026-invited-session/"
     },
     {
       "date": "Nov 2025",
-      "title": "Workshop co-organizer",
+      "title": "Workshop Co-Organizer",
       "organization": "IEEE ITSC · Gold Coast, Australia",
       "description": "Co-organized the workshop “Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI”.",
       "url": "https://www.itsc2025.mixedtraffic.org/"
     },
     {
       "date": "Jun 2024",
-      "title": "Workshop co-organizer",
+      "title": "Workshop Co-Organizer",
       "organization": "IEEE IV · Jeju, South Korea",
       "description": "Co-organized the “1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms”.",
       "url": "https://cpm.lrt.unibw.de/workshop/"
     },
     {
       "date": "Jan–Jun 2024",
-      "title": "Competition co-organizer",
+      "title": "Competition Co-Organizer",
       "organization": "CPM Olympics · Aachen, Germany",
       "description": "Co-organized CPM Olympics, a motion planning competition for connected and automated vehicles.",
       "url": "https://cpm.lrt.unibw.de/olympics/"
     }
+  ],
+  "journalReviewing": [
+    "Automatica",
+    "IEEE Control Systems Letters (L-CSS)",
+    "IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
+    "IEEE Intelligent Transportation Systems Magazine (ITSM)",
+    "IEEE Robotics and Automation Letters (RA-L)"
+  ],
+  "conferenceReviewing": [
+    "IEEE International Conference on Intelligent Transportation Systems (ITSC)",
+    "IEEE Intelligent Vehicles Symposium (IV)",
+    "European Control Conference (ECC)",
+    "IEEE International Conference on Robotics and Automation (ICRA)"
+  ],
+  "membership": [
+    "IEEE Graduate Student Member",
+    "IEEE Intelligent Transportation Systems Society",
+    "IEEE Robotics and Automation Society",
+    "IEEE Control Systems Society",
+    "IEEE Young Professionals"
   ]
 }

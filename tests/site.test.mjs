@@ -93,7 +93,7 @@ test('preview serves the homepage and assets, and returns a real 404', async t =
   });
   const home=await fetch(origin);
   assert.equal(home.status,200);
-  assert.ok((await home.text()).includes('Research / Publications'));
+  assert.ok((await home.text()).includes('Publications'));
   assert.equal((await fetch(`${origin}/assets/site.js`)).status,200);
   assert.equal((await fetch(`${origin}/missing-page`)).status,404);
 });
@@ -174,4 +174,19 @@ test('supervised theses show year, student, and title in order and preserve deta
     assert.doesNotMatch(summary, /<(?:br|p|div)\b/);
     assert.ok(entry.includes(`<p>${escape(item.details)}</p>`));
   }
+});
+
+
+test('CV section order and Professional Activities hierarchy are preserved', () => {
+  const headings = [...html.matchAll(/<h2 id="[^"]+">([^<]+)<\/h2>/g)].map(match => match[1]);
+  assert.deepEqual(headings, ['News', 'Publications', 'Education', 'Awards', 'Professional Activities', 'Teaching and Mentoring']);
+  const activities = html.split('id="professional-activities"')[1].split('<section id="teaching"')[0];
+  const subheadings = [...activities.matchAll(/<h3 class="subheading" id="[^"]+">([^<]+)<\/h3>/g)].map(match => match[1]);
+  assert.deepEqual(subheadings, ['Program Committee', 'Invited Talks', 'Journal Reviewing', 'Conference Reviewing', 'Membership']);
+  for (const text of ['Associate Editor', 'Automatica', 'IEEE Control Systems Letters (L-CSS)', 'IEEE International Conference on Robotics and Automation (ICRA)', 'Graduate Student Member, IEEE', 'IEEE Young Professionals']) assert.ok(activities.includes(text));
+  assert.ok(!activities.includes('Guest Lecturer'));
+  const teaching = html.split('<section id="teaching"')[1];
+  for (const title of ['Assistant Lecturer', 'Guest Lecturer', 'Research Assistant', 'Undergraduate Teaching Assistant']) assert.ok(teaching.includes(title));
+  assert.equal((html.match(/>Assistant Lecturer</g) || []).length, 1);
+  assert.equal((html.match(/>Guest Lecturer</g) || []).length, 1);
 });
