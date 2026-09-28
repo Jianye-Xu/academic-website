@@ -66,7 +66,7 @@ const replacements = {
   EXPERIENCE: entries(profile.experience),
   AWARDS: `<ul class="award-list">${profile.awards.map(item => `<li><details class="award-details"><summary><span class="award-year">${item.date.slice(0,4)}</span> <strong>${escape(item.title)}</strong> <span class="awarder">· ${escape(item.awarder)}</span></summary><p>${escape(item.summary.trim())}</p></details></li>`).join('')}</ul>`,
   TALKS: compactEntries(profile.talks),
-  TEACHING: supervision('theses','Supervised theses') + supervision('seminar','Supervised seminar works'),
+  TEACHING: entries(teaching.lectures) + supervision('theses','Supervised theses') + supervision('seminar','Supervised seminar works'),
   SERVICE: compactEntries(profile.service),
   YEAR: new Date().getFullYear(),
 };
