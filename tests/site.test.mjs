@@ -38,6 +38,30 @@ test('local assets and fragment targets resolve', async () => {
     else if (url.startsWith('/')) await access(new URL(`../dist${url}`,import.meta.url));
   }
 });
+test('publication buttons name their preprint server and publisher', () => {
+  const researchGate = {
+    'schafer-2024-educational': 'https://doi.org/10.13140/RG.2.2.34128.28161',
+    'scheffe-2024-limiting': 'https://doi.org/10.13140/RG.2.2.32731.03368',
+  };
+  for (const p of publications) {
+    const article = html.split(`<article class="publication" id="${p.id}"`)[1].split('</article>')[0];
+    const resources = article.split('<div class="paper-links">')[1].split('</div>')[0];
+    const links = [...resources.matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(([, href, label]) => ({ href, label }));
+    const preprint = links[0];
+    if (researchGate[p.id]) {
+      assert.deepEqual(preprint, { href: researchGate[p.id], label: 'ResearchGate' });
+    } else {
+      assert.equal(preprint.label, 'arXiv');
+      assert.equal(new URL(preprint.href).hostname, 'arxiv.org');
+    }
+    if (p.status === 'peer-reviewed' && p.links.publisher) {
+      assert.ok(links.some(link => link.href === p.links.publisher && link.label === (p.id === 'beerwerth-2026-zeroshot' ? 'De Gruyter Brill' : 'IEEE')));
+    } else {
+      assert.ok(!links.some(link => ['IEEE', 'De Gruyter Brill'].includes(link.label)));
+    }
+    assert.ok(!links.some(link => ['Paper', 'Publisher'].includes(link.label)));
+  }
+});
 test('page retains academic sections, supervision and expandable news without JavaScript', () => {
   for (const id of ['about','news','research','education','awards','talks','teaching','service']) assert.ok(html.includes(`id="${id}"`));
   assert.ok(html.includes('Supervised theses <span class="muted">(20)'));

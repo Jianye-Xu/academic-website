@@ -19,6 +19,7 @@ function validate() {
     if (!p.title || !p.authors.length || !Number.isInteger(p.year) || !p.venue || !['preprint', 'peer-reviewed'].includes(p.status)) throw Error(`Incomplete publication: ${p.id}`);
     if (!p.tags.length || !p.tags.every(tag => ['MARL', 'Safe Control', 'CAVs', 'Robotics'].includes(tag))) throw Error(`Invalid tags: ${p.id}`);
     for (const url of Object.values(p.links)) if (!/^https:\/\//.test(url)) throw Error(`Invalid resource URL: ${p.id}`);
+    if (p.links.publisher && !p.publisherName) throw Error(`Missing publisher name: ${p.id}`);
     if (p.image && (!p.image.startsWith('/assets/') || !p.imageAlt)) throw Error(`Invalid image: ${p.id}`);
   }
   for (const n of news) if (!/^\d{4}-\d{2}-\d{2}$/.test(n.date) || !n.title || !/^https:\/\//.test(n.url)) throw Error('Invalid news entry');
@@ -31,8 +32,8 @@ function paper(p) {
   const preview = p.image
     ? `<a class="publication-preview" href="${escape(p.fullImage || p.image)}" aria-label="View full figure: ${title}"><img src="${escape(p.image)}" alt="${escape(p.imageAlt)}" loading="lazy" decoding="async" width="640" height="430"></a>`
     : `<a class="publication-preview paper-cover" href="${escape(p.links.paper)}" aria-label="Read paper: ${title}"><span class="cover-venue">${escape(p.shortVenue)}</span><span class="cover-title">${escape(p.previewTitle || p.title)}</span><span class="cover-year">${p.year} <span aria-hidden="true">↗</span></span></a>`;
-  const labels = { paper: 'Paper', publisher: 'Publisher', code: 'Code', video: 'Video', project: 'Project Page' };
-  const resources = Object.entries(labels).filter(([key]) => p.links[key]).map(([key, label]) => link(p.links[key], label)).join('');
+  const labels = { paper: p.preprintServer || 'arXiv', publisher: p.publisherName, code: 'Code', video: 'Video', project: 'Project Page' };
+  const resources = Object.entries(labels).filter(([key]) => p.links[key] && (key !== 'publisher' || p.status === 'peer-reviewed')).map(([key, label]) => link(p.links[key], escape(label))).join('');
   return `<article class="publication" id="${p.id}" data-status="${p.status}" data-selected="${p.selected}" data-tags="${escape(p.tags.join('|'))}" aria-labelledby="title-${p.id}"><figure class="preview-container">${preview}</figure><div class="publication-body"><h3 id="title-${p.id}">${badge}${link(p.links.paper, title)}</h3><p class="authors">${p.authors.map(author => author === 'Jianye Xu' ? `<strong>${escape(author)}</strong>` : escape(author)).join(', ')}</p><p class="venue"><strong>${escape(p.venue)}</strong> · ${p.year}</p>${p.note ? `<p class="paper-note">${escape(p.note)}</p>` : ''}<div class="tags" aria-label="Research areas">${p.tags.map(tag => `<span class="tag">${escape(tag)}</span>`).join('')}</div><div class="paper-links">${resources}</div>${p.bibtex ? `<details class="paper-details citation"><summary>BibTeX</summary><button type="button" class="copy-button" data-citation="cite-${p.id}" hidden>Copy BibTeX</button><pre id="cite-${p.id}">${escape(p.bibtex.trim())}</pre>${link(`/publication/${p.id}/cite.bib`, 'Download .bib')}</details>` : ''}${p.summary ? `<details class="paper-details"><summary>About this paper</summary><p>${escape(p.summary)}</p></details>` : ''}</div></article>`;
 }
 const formatMonth = date => new Date(`${date.slice(0, 10)}T12:00:00Z`).toLocaleDateString('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
