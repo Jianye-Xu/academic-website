@@ -127,6 +127,13 @@ for (const details of document.querySelectorAll('.award-details')) {
     if (openedByHover) details.open = false;
     openedByHover = false;
   });
+  details.querySelector('summary').addEventListener('focus', event => {
+    if (event.target.matches(':focus-visible')) details.open = true;
+  });
+  details.addEventListener('focusout', () => {
+    details.open = false;
+    openedByHover = false;
+  });
   details.querySelector('summary').addEventListener('click', () => {
     openedByHover = false;
   });

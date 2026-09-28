@@ -6,7 +6,7 @@
   --rule:#e0e5e9;
   --soft:#f3f6f8;
   --radius:5px;
-  --header-height:64px
+  --header-height:42px
 }
 * {
   box-sizing:border-box
@@ -87,7 +87,8 @@ strong {
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 0;
+  line-height:1.25;
+  padding:8px 0;
   border-bottom:1px solid var(--rule)
 }
 .wordmark {
@@ -95,9 +96,6 @@ strong {
   font-weight:700;
   color:var(--ink);
   letter-spacing:-.5px
-}
-.wordmark span {
-  color:var(--accent)
 }
 nav {
   display:flex;
@@ -486,14 +484,12 @@ main>section {
   color:var(--muted);
   font-size:13px
 }
-.award-details {
-  display:inline-block;
-  margin-left:6px;
-  font-size:13px
-}
 .award-details summary {
   cursor:pointer;
-  color:var(--accent)
+  list-style:none
+}
+.award-details summary::-webkit-details-marker {
+  display:none
 }
 .award-details p {
   position:absolute;
@@ -505,7 +501,19 @@ main>section {
   border-radius:var(--radius);
   background:#fff;
   box-shadow:0 3px 10px #00000014;
-  color:var(--ink)
+  color:var(--ink);
+  font-size:13px
+}
+.compact-entries li {
+  margin-bottom:6px;
+  font-size:14px
+}
+.compact-entries .entry-date {
+  margin-right:8px
+}
+.compact-entries h3 {
+  display:inline;
+  font-size:14px
 }
 .muted {
   color:var(--muted)
@@ -538,6 +546,13 @@ main>section {
 .supervision ul {
   padding-left:20px;
   font-size:13px
+}
+.supervision .thesis-list {
+  padding-left:0;
+  margin-top:8px
+}
+.supervision .thesis-list li {
+  margin:6px 0
 }
 .supervision li {
   margin:8px 0
@@ -623,7 +638,7 @@ footer {
   .site-header {
     align-items:flex-start;
     gap:18px;
-    padding:14px 0
+    padding:8px 0
   }
   .wordmark {
     white-space:nowrap;

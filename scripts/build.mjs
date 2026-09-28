@@ -45,8 +45,10 @@ const recentNewsCount = 1;
 const newsHTML = `<ul class="news-list">${sortedNews.slice(0, recentNewsCount).map(newsRow).join('')}</ul>${sortedNews.length > recentNewsCount ? `<details class="news-more"><summary>Show all news</summary><ul class="news-list">${sortedNews.slice(recentNewsCount).map(newsRow).join('')}</ul></details>` : ''}`;
 const filterButtons = (group, entries) => entries.map(([value, label]) => `<button type="button" class="filter-button" ${group === 'tag' && value !== 'all' ? `data-tag="${escape(value)}" ` : ''}data-group="${group}" data-value="${value}" aria-pressed="${value === 'all'}" aria-controls="publications">${label}</button>`).join('');
 const entries = items => `<ul class="entry-list">${items.map(item => `<li class="entry"><p class="entry-date">${escape(item.date)}</p><div><h3>${item.url ? link(item.url, escape(item.title)) : escape(item.title)}</h3><p>${escape(item.organization)}</p><p class="entry-detail">${escape(item.description)}</p></div></li>`).join('')}</ul>`;
+const compactEntries = items => `<ul class="entry-list compact-entries">${items.map(item => `<li><span class="entry-date">${escape(item.date)}</span> <h3>${item.url ? link(item.url, escape(item.title)) : escape(item.title)}</h3> <span class="muted">· ${escape(item.organization)}</span> <span>· ${escape(item.description)}</span></li>`).join('')}</ul>`;
 const education = `<ul class="entry-list">${profile.education.map(item => `<li class="entry"><p class="entry-date">${formatMonth(item.date_start)} –<br>${formatMonth(item.date_end)}${item.area.startsWith('Ph.D.') ? ' (expected)' : ''}</p><div><h3>${escape(item.area)}</h3><p>${escape(item.institution)}</p><p class="entry-detail">${markdown(item.summary.trim())}</p></div></li>`).join('')}</ul>`;
 const supervision = (kind, title) => {
+  if (kind === 'theses') return `<details class="supervision" id="theses"><summary>${title} <span class="muted">(${teaching.theses.length})</span></summary><ul class="award-list thesis-list">${teaching.theses.map(item => `<li><details class="award-details"><summary><span class="award-year">${escape(item.year)}</span> <strong>${escape(item.student)}</strong> · <span>${escape(item.title)}</span></summary><p>${escape(item.details)}</p></details></li>`).join('')}</ul></details>`;
   let lastTerm;
   return `<details class="supervision" id="${kind}"><summary>${title} <span class="muted">(${teaching[kind].length})</span></summary>${teaching[kind].map(item => {
     const heading = item.term !== lastTerm && item.term ? `<h4>${escape(item.term)}</h4>` : '';
@@ -62,10 +64,10 @@ const replacements = {
   TAG_FILTERS: filterButtons('tag', [['all','All'],['Learning','Learning'],['Safe Control','Safe Control'],['CAVs','CAVs']]),
   EDUCATION: education,
   EXPERIENCE: entries(profile.experience),
-  AWARDS: `<ul class="award-list">${profile.awards.map(item => `<li><span class="award-year">${item.date.slice(0,4)}</span> <strong>${escape(item.title)}</strong> <span class="awarder">· ${escape(item.awarder)}</span> <details class="award-details"><summary>Award details</summary><p>${escape(item.summary.trim())}</p></details></li>`).join('')}</ul>`,
-  TALKS: entries(profile.talks),
+  AWARDS: `<ul class="award-list">${profile.awards.map(item => `<li><details class="award-details"><summary><span class="award-year">${item.date.slice(0,4)}</span> <strong>${escape(item.title)}</strong> <span class="awarder">· ${escape(item.awarder)}</span></summary><p>${escape(item.summary.trim())}</p></details></li>`).join('')}</ul>`,
+  TALKS: compactEntries(profile.talks),
   TEACHING: supervision('theses','Supervised theses') + supervision('seminar','Supervised seminar works'),
-  SERVICE: entries(profile.service),
+  SERVICE: compactEntries(profile.service),
   YEAR: new Date().getFullYear(),
 };
 let html = await read('index.html');

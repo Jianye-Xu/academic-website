@@ -1,84 +1,124 @@
 {
   "theses": [
     {
-      "term": "",
-      "text": "Ali Elbadawy (2026). *Integrating Barrier Functions into Multi-Agent Social Value Orientation for Unsignalized Intersection* (Master's thesis, RWTH Aachen University)."
+      "year": "2026",
+      "student": "Ali Elbadawy",
+      "title": "Integrating Barrier Functions into Multi-Agent Social Value Orientation for Unsignalized Intersections",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Massimo Marcon (2026). *Latent World Models for Motion Planning of Connected and Automated Vehicles* (Master's thesis, RWTH Aachen University)."
+      "year": "2026",
+      "student": "Massimo Marcon",
+      "title": "Latent World Models for Motion Planning of Connected and Automated Vehicles",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Jiaxin Liu (2026). *Mixture of Expert Policies for Decision-Making and Motion Planning in Connected and Automated Vehicles* (Master's thesis, RWTH Aachen University)."
+      "year": "2026",
+      "student": "Jiaxin Liu",
+      "title": "Mixture of Expert Policies for Decision-Making and Motion Planning in Connected and Automated Vehicles",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "George Halim (2026). *Barrier-Certified Exploration for Real-World Reinforcement Learning in the Cyber-Physical Mobility Lab* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2026",
+      "student": "George Halim",
+      "title": "Barrier-Certified Exploration for Real-World Reinforcement Learning in the Cyber-Physical Mobility Lab",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Yousef Sayed (2026). *A Study of Responsibility Assignment in Control Barrier Function for Connected and Automated Vehicles* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2026",
+      "student": "Yousef Sayed",
+      "title": "A Study of Responsibility Assignment in Control Barrier Function for Connected and Automated Vehicles",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Maximilian Petri (2025). *Reinforcement Learning for Formula Student Autonomous Racing* (Master's thesis, RWTH Aachen University)."
+      "year": "2025",
+      "student": "Maximilian Petri",
+      "title": "Reinforcement Learning for Formula Student Autonomous Racing",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Chang Che (2025). *Constraint-Enforced Multi-Agent Reinforcement Learning for Safe Motion Planning of Connected and Automated Vehicles* (Master's thesis, RWTH Aachen University)."
+      "year": "2025",
+      "student": "Chang Che",
+      "title": "Constraint-Enforced Multi-Agent Reinforcement Learning for Safe Motion Planning of Connected and Automated Vehicles",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Pan Hu (2025). *Situation-Aware Trajectory Planning of Connected and Automated Vehicles with Multi-Policy Reinforcement Learning* (Master's thesis, RWTH Aachen University)."
+      "year": "2025",
+      "student": "Pan Hu",
+      "title": "Situation-Aware Trajectory Planning of Connected and Automated Vehicles with Multi-Policy Reinforcement Learning",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Daniel Boules (2025). *A Prioritization-Based Approach for Enhanced Stability in Non-Stationary Multi-Agent Reinforcement Learning* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2025",
+      "student": "Daniel Boules",
+      "title": "A Prioritization-Based Approach for Enhanced Stability in Non-Stationary Multi-Agent Reinforcement Learning",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Fynn Belderink (2025). *Model-Based Receding-Horizon Planning in Multi-Agent Reinforcement Learning* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2025",
+      "student": "Fynn Belderink",
+      "title": "Model-Based Receding-Horizon Planning in Multi-Agent Reinforcement Learning",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Yunjia Chen (2025). *Sensor Fusion-Enhanced Map Matching of Bicycle Routes Using Crowdsourced GPS and IMU Data from Smartphones* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2025",
+      "student": "Yunjia Chen",
+      "title": "Sensor Fusion-Enhanced Map Matching of Bicycle Routes Using Crowdsourced GPS and IMU Data from Smartphones",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Xinyue Cui (2024). *Determining the Longitudinal and Lateral Acceleration of a Bicycle Using a Smartphone Mounted on Its Handlebar* (Master's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Xinyue Cui",
+      "title": "Determining the Longitudinal and Lateral Acceleration of a Bicycle Using a Smartphone Mounted on Its Handlebar",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Lebo Liang (2024). *Safe Multi-Agent Control: Integrating Control Barrier Functions with Reinforcement Learning* (Bachelor's thesis, Aachen University of Applied Sciences)."
+      "year": "2024",
+      "student": "Lebo Liang",
+      "title": "Safe Multi-Agent Control: Integrating Control Barrier Functions with Reinforcement Learning",
+      "details": "Bachelor's thesis, Aachen University of Applied Sciences"
     },
     {
-      "term": "",
-      "text": "Mohamed Shamekh (2024). *Model-Predictive-Control-Based Safe Multi-Agent Reinforcement Learning for Motion Planning* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Mohamed Shamekh",
+      "title": "Model-Predictive-Control-Based Safe Multi-Agent Reinforcement Learning for Motion Planning",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Omar Sobhy (2024). *Dealing with Non-Stationarity in Multi-Agent Reinforcement Learning Through Learning-Based Dynamic Prioritization* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Omar Sobhy",
+      "title": "Dealing with Non-Stationarity in Multi-Agent Reinforcement Learning Through Learning-Based Dynamic Prioritization",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Xia Yan (2024). *Learning-Based Motion Planner for Connected and Automated Vehicles* (Master's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Xia Yan",
+      "title": "Learning-Based Motion Planner for Connected and Automated Vehicles",
+      "details": "Master's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Xilei Chen (2024). *Imitation Learning from Optimization-Based Motion Planners for Connected and Automated Vehicles* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Xilei Chen",
+      "title": "Imitation Learning from Optimization-Based Motion Planners for Connected and Automated Vehicles",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Raphael Malig (2024). *Investigating the Effect of Discretizing Continuous Action Space in Multi-Agent Reinforcement Learning for Motion Planning* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Raphael Malig",
+      "title": "Investigating the Effect of Discretizing Continuous Action Space in Multi-Agent Reinforcement Learning for Motion Planning",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Andreas Pletschko (2024). *Leveraging Temporal Dependencies for Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning in Motion Planning* (Bachelor's thesis, RWTH Aachen University)."
+      "year": "2024",
+      "student": "Andreas Pletschko",
+      "title": "Leveraging Temporal Dependencies for Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning in Motion Planning",
+      "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
-      "term": "",
-      "text": "Ruizhang Zhou (2023). *AI-Based Generation of Testing Scenarios for Motion Planners on Connected and Automated Vehicles* (Master's thesis, RWTH Aachen University)."
+      "year": "2023",
+      "student": "Ruizhang Zhou",
+      "title": "AI-Based Generation of Testing Scenarios for Motion Planners on Connected and Automated Vehicles",
+      "details": "Master's thesis, RWTH Aachen University"
     }
   ],
   "seminar": [

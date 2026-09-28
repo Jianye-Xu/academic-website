@@ -135,10 +135,43 @@ test('awards retain every entry with inline metadata and native details', async 
   const entries = [...list.matchAll(/<li>(.*?)<\/li>/g)].map(match => match[1]);
   assert.equal(entries.length, awards.length);
   for (const entry of entries) {
-    const inlineContent = entry.split('<details')[0];
+    const inlineContent = entry.split('<summary>')[1].split('</summary>')[0];
     assert.ok(inlineContent.includes('class="award-year"'));
     assert.ok(inlineContent.includes('<span class="awarder">'));
     assert.doesNotMatch(inlineContent, /<(?:p|div|br)\b/);
-    assert.ok(entry.includes('<details class="award-details"><summary>Award details</summary><p>'));
+    assert.ok(entry.includes('<details class="award-details"><summary>'));
+    assert.ok(!entry.includes('Award details'));
+    assert.ok(entry.includes('</summary><p>'));
+  }
+});
+
+
+test('talks and service preserve content and links in compact entries', async () => {
+  const profile = JSON.parse(await readFile(new URL('../data/profile.json', import.meta.url)));
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+  for (const section of ['talks', 'service']) {
+    const content = html.split(`id="${section}"`)[1].split('</section>')[0];
+    assert.ok(content.includes('class="entry-list compact-entries"'));
+    assert.doesNotMatch(content, /<(?:p|br)\b/);
+    for (const item of profile[section]) {
+      for (const field of ['date', 'title', 'organization', 'description']) assert.ok(content.includes(escape(item[field])));
+      if (item.url) assert.ok(content.includes(`href="${escape(item.url)}"`));
+    }
+  }
+});
+
+test('supervised theses show year, student, and title in order and preserve details', async () => {
+  const { theses } = JSON.parse(await readFile(new URL('../data/teaching.json', import.meta.url)));
+  const list = html.split('<ul class="award-list thesis-list">')[1].split('</ul>')[0];
+  const entries = [...list.matchAll(/<li>(.*?)<\/li>/g)].map(match => match[1]);
+  assert.equal(entries.length, theses.length);
+  const escape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+  for (const [index, item] of theses.entries()) {
+    const entry = entries[index];
+    const summary = entry.split('<summary>')[1].split('</summary>')[0];
+    const text = summary.replace(/<[^>]+>/g, '');
+    assert.equal(text, `${escape(item.year)} ${escape(item.student)} · ${escape(item.title)}`);
+    assert.doesNotMatch(summary, /<(?:br|p|div)\b/);
+    assert.ok(entry.includes(`<p>${escape(item.details)}</p>`));
   }
 });
