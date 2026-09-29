@@ -6,7 +6,10 @@
   --rule:#e0e5e9;
   --soft:#f3f6f8;
   --radius:5px;
-  --header-height:42px
+  --header-height:42px;
+  /* Every dated list shares one date column so content aligns down the page. */
+  --date-col:128px;
+  --date-gap:16px
 }
 * {
   box-sizing:border-box
@@ -19,7 +22,7 @@ body {
   margin:0;
   background:#fff;
   color:var(--ink);
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size:16px;
   line-height:1.65;
   -webkit-font-smoothing:antialiased
@@ -92,6 +95,7 @@ strong {
   border-bottom:1px solid var(--rule)
 }
 .wordmark {
+  white-space:nowrap;
   font-size:19px;
   font-weight:700;
   color:var(--ink);
@@ -189,14 +193,14 @@ main>section {
 }
 .news-row {
   display:grid;
-  grid-template-columns:90px minmax(0,1fr);
-  gap:22px;
+  grid-template-columns:calc(var(--date-col) - var(--date-gap)) minmax(0,1fr);
+  gap:var(--date-gap);
   margin-bottom:10px;
   font-size:14px
 }
 .news-row time {
   color:var(--muted);
-  font-size:13px;
+  font-size:12px;
   padding-top:2px;
   font-variant-numeric:tabular-nums
 }
@@ -214,6 +218,15 @@ main>section {
 }
 .news-scroll .news-row:last-child {
   margin-bottom:0
+}
+/* site.js sets data-more while content remains below the fold of a scroll window. */
+.news-scroll[data-more],.publication-scroll[data-more] {
+  -webkit-mask-image:linear-gradient(#000 calc(100% - 48px),#0000);
+  mask-image:linear-gradient(#000 calc(100% - 48px),#0000)
+}
+.news-scroll:focus-visible,.publication-scroll:focus-visible {
+  -webkit-mask-image:none;
+  mask-image:none
 }
 /* Taller than News; capped by the viewport so the window always fits on screen. */
 .publication-scroll {
@@ -290,6 +303,9 @@ main>section {
 .publication[data-status="preprint"] h3,
 .publication[data-status="preprint"] .venue {
   color:#59616c
+}
+.publication:has(.paper-details[open]) .preview-container {
+  align-self:start
 }
 .publication-preview {
   display:flex;
@@ -496,14 +512,17 @@ main>section {
 }
 .entry {
   display:grid;
-  grid-template-columns:155px minmax(0,1fr);
-  gap:25px;
+  grid-template-columns:calc(var(--date-col) - var(--date-gap)) minmax(0,1fr);
+  gap:var(--date-gap);
   margin-bottom:18px
 }
-.entry-date {
+.entry-date,.entry .entry-date {
   font-size:12px;
   color:var(--muted);
   padding-top:2px
+}
+.entry-date span {
+  white-space:nowrap
 }
 .entry h3 {
   margin-bottom:3px;
@@ -536,8 +555,8 @@ main>section {
 }
 @media (max-width:600px) {
   .entry-facts div {
-    grid-template-columns:1fr;
-    gap:0
+    grid-template-columns:66px minmax(0,1fr);
+    gap:8px
   }
 }
 .subheading {
@@ -555,12 +574,12 @@ main>section {
   margin-right:8px
 }
 .award-list:not(.thesis-list) .award-details summary {
-  padding-left:4.75rem;
-  text-indent:-4.75rem
+  padding-left:var(--date-col);
+  text-indent:calc(-1 * var(--date-col))
 }
 .award-list:not(.thesis-list) .award-year {
   display:inline-block;
-  min-width:4.75rem;
+  min-width:var(--date-col);
   margin-right:0;
   text-indent:0
 }
@@ -600,13 +619,13 @@ main>section {
 }
 .compact-entries li {
   margin-bottom:6px;
-  padding-left:5.75rem;
-  text-indent:-5.75rem;
+  padding-left:var(--date-col);
+  text-indent:calc(-1 * var(--date-col));
   font-size:14px
 }
 .compact-entries .entry-date {
   display:inline-block;
-  min-width:5.75rem;
+  min-width:var(--date-col);
   padding-top:0;
   text-indent:0
 }
@@ -702,6 +721,17 @@ footer {
     padding-top:40px
   }
 }
+/* Below this width the seven nav links no longer fit beside the name. */
+@media(max-width:900px) {
+  .site-header {
+    flex-direction:column;
+    align-items:flex-start;
+    gap:4px
+  }
+  nav {
+    justify-content:flex-start
+  }
+}
 @media(max-width:800px) {
   .wrap {
     width:calc(100% - 40px)
@@ -730,27 +760,36 @@ footer {
   }
 }
 @media(max-width:600px) {
+  :root {
+    --date-col:80px;
+    --date-gap:12px
+  }
+  html {
+    scroll-padding-top:16px
+  }
   body {
     font-size:15px
   }
   .wrap {
     width:calc(100% - 36px)
   }
+  /* A wrapped seven-link nav is too tall to keep pinned on a phone. */
   .site-header {
+    position:static;
+    flex-direction:column;
     align-items:flex-start;
-    gap:18px;
-    padding:8px 0
+    gap:4px;
+    padding:10px 0
   }
   .wordmark {
     white-space:nowrap;
     font-size:17px
   }
   nav {
-    justify-content:flex-end;
+    justify-content:flex-start;
     flex-wrap:wrap;
-    gap:7px 14px;
-    font-size:12px;
-    max-width:230px
+    gap:2px 14px;
+    font-size:13px
   }
   .intro {
     grid-template-columns:1fr;
@@ -800,11 +839,7 @@ footer {
   .section-heading .quiet-link {
     font-size:11px
   }
-  .news-row {
-    grid-template-columns:67px minmax(0,1fr);
-    gap:14px
-  }
-  .news-row time {
+  .news-row time,.entry .entry-date,.entry-date,.award-year {
     font-size:11px
   }
   /* Small thumbnail beside the title; the rest of the entry spans full width. */
@@ -918,6 +953,10 @@ footer {
   .publication-scroll,.publication .paper-details p,.publication .citation pre {
     max-height:none;
     overflow:visible
+  }
+  .news-scroll,.publication-scroll {
+    -webkit-mask-image:none!important;
+    mask-image:none!important
   }
 }
 .supervised-item {

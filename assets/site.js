@@ -8,6 +8,19 @@ const updateHeaderHeight = () => {
 updateHeaderHeight();
 new ResizeObserver(updateHeaderHeight).observe(header);
 
+// Fade the bottom edge of a scroll window while more content lies below it,
+// since overlay scrollbars give no hint that the window scrolls.
+const scrollWindows = [...document.querySelectorAll('.news-scroll, .publication-scroll')];
+const updateScrollHint = element => {
+  element.toggleAttribute('data-more', element.scrollTop + element.clientHeight < element.scrollHeight - 2);
+};
+for (const element of scrollWindows) {
+  updateScrollHint(element);
+  element.addEventListener('scroll', () => updateScrollHint(element), { passive: true });
+  new ResizeObserver(() => updateScrollHint(element)).observe(element);
+  element.addEventListener('toggle', () => updateScrollHint(element), true);
+}
+
 const filterPanel = document.querySelector('#publication-filters');
 const buttons = [...filterPanel.querySelectorAll('button')];
 const publications = [...document.querySelectorAll('.publication')].map(element => ({
@@ -30,6 +43,7 @@ function applyFilters(updateURL = false) {
   }
   document.querySelector('#publication-count').textContent = `${count} of ${publications.length} publications`;
   document.querySelector('#empty-results').hidden = count !== 0;
+  scrollWindows.forEach(updateScrollHint);
   if (updateURL) {
     document.querySelector('#publications').scrollTop = 0;
     const url = new URL(location.href);

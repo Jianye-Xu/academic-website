@@ -7,7 +7,7 @@
   "education": [
     {
       "area": "Ph.D. Computer Science",
-      "institution": "RWTH Aachen University",
+      "institution": "RWTH Aachen University, Chair of Embedded Software",
       "date_start": "2023-04-01",
       "date_end": "2027-03-31",
       "details": [
@@ -23,13 +23,13 @@
     },
     {
       "area": "M.Sc. Automation Engineering",
-      "institution": "RWTH Aachen University",
+      "institution": "RWTH Aachen University, Institute of Automatic Control",
       "date_start": "2020-10-01",
       "date_end": "2022-09-30",
       "details": [
         {
           "label": "GPA",
-          "text": "1.2/1.0 (graduated with distinction)"
+          "text": "1.2/1.0 (with distinction)"
         },
         {
           "label": "Thesis",
@@ -68,7 +68,7 @@
   ],
   "awards": [
     {
-      "title": "Best Poster",
+      "title": "Best Poster Award",
       "date": "2025-12-11",
       "awarder": "German Autonomy Summit (GAS)",
       "summary": "[2025 German Autonomy Summit (GAS)](https://ieee-itss-germany.org/activities/2025-gas/) [best poster award](https://ieee-itss-germany.org/activities/2025-gas/poster_awards_gallery/).\n"
@@ -76,20 +76,22 @@
     {
       "title": "Best Paper Nomination",
       "date": "2025-11-21",
-      "awarder": "IEEE Intelligent Transportation Systems Society (ITSS)",
+      "awarder": "IEEE International Conference on Intelligent Transportation Systems (ITSC)",
       "summary": "IEEE International Conference on Intelligent Transportation Systems (ITSC) 2025 best paper nomination.\n"
     },
     {
       "title": "Dean's List",
       "date": "2023-01-01",
       "awarder": "RWTH Aachen University",
-      "summary": "Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.\n"
+      "summary": "Awarded for outstanding academic performance (top 5%) during the Master's program at RWTH Aachen University.\n",
+      "note": "top 5% in the academic year 2021/2022"
     },
     {
       "title": "M.Sc. with distinction",
       "date": "2022-09-01",
       "awarder": "RWTH Aachen University",
-      "summary": "Graduated with distinction in the Master of Science program at RWTH Aachen University.\n"
+      "summary": "Graduated with distinction in the Master of Science program at RWTH Aachen University.\n",
+      "note": "GPA 1.2/1.0"
     },
     {
       "title": "German National Scholarship (Deutschlandstipendium)",
@@ -98,10 +100,11 @@
       "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany.\n"
     },
     {
-      "title": "Patent - Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box",
+      "title": "Patent: Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box",
       "date": "2021-06-01",
       "awarder": "China National Intellectual Property Administration",
-      "summary": "Invented and received authorization for a patent on a mechanical device to enhance safety and efficiency in battery swapping systems for electric vehicles.\n"
+      "summary": "Invented and received authorization for a patent on a mechanical device to enhance safety and efficiency in battery swapping systems for electric vehicles.\n",
+      "note": "first inventor, publication number: CN 111086379 B"
     },
     {
       "title": "German National Scholarship (Deutschlandstipendium)",
@@ -114,7 +117,7 @@
       "date": "2020-06-01",
       "awarder": "Beijing Institute of Technology",
       "summary": "Recognized as an Outstanding Graduate for academic achievement and contributions during undergraduate studies.\n",
-      "note": "top 5%, GPA 91.48/100"
+      "note": "GPA 91.48/100, top 5%"
     },
     {
       "title": "China National Scholarship",
@@ -196,7 +199,7 @@
     {
       "date": "Jan–Jun 2024",
       "title": "Competition Co-Organizer",
-      "organization": "CPM Olympics · Aachen, Germany",
+      "organization": "RWTH Aachen University · Aachen, Germany",
       "description": "Co-organized [CPM Olympics](https://cpm.lrt.unibw.de/olympics/), a motion planning competition for connected and automated vehicles."
     }
   ],

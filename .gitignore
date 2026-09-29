@@ -1,7 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,git
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,git
 
-AGENTS.md 
+# Local agent instructions
+AGENTS.md
+CLAUDE.md
+
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
