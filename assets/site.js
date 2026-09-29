@@ -123,19 +123,30 @@ for (const details of document.querySelectorAll('.award-details')) {
     openedByHover = true;
     details.open = true;
   });
+  // Keep the mouse preview next to the pointer, clamped to the viewport.
+  details.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse' || !openedByHover) return;
+    const width = Math.min(420, window.innerWidth - 24);
+    details.classList.add('follow');
+    details.style.setProperty('--tip-x', `${Math.max(12, Math.min(event.clientX + 14, window.innerWidth - width - 12))}px`);
+    details.style.setProperty('--tip-y', `${event.clientY + 18}px`);
+  });
   details.addEventListener('pointerleave', () => {
     if (openedByHover) details.open = false;
     openedByHover = false;
+    details.classList.remove('follow');
   });
   details.querySelector('summary').addEventListener('focus', event => {
     if (event.target.matches(':focus-visible')) details.open = true;
   });
   details.addEventListener('focusout', () => {
     details.open = false;
+    details.classList.remove('follow');
     openedByHover = false;
   });
   details.querySelector('summary').addEventListener('click', () => {
     openedByHover = false;
+    details.classList.remove('follow');
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
