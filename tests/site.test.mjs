@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import { matchesPublication, readFilters } from '../assets/filters.js';
+import { SIZE, SAFE_DISTANCE, layoutZones, createFleet, stepFleet } from '../assets/fleet.js';
 const publications = JSON.parse(await readFile(new URL('../data/publications.json', import.meta.url)));
 const html = await readFile(new URL('../dist/index.html', import.meta.url),'utf8');
 
@@ -193,4 +194,35 @@ test('CV section order and Professional Activities hierarchy are preserved', () 
   for (const title of ['Assistant Lecturer', 'Guest Lecturer', 'Research Assistant', 'Undergraduate Teaching Assistant']) assert.ok(teaching.includes(title));
   assert.equal((html.match(/>Assistant Lecturer</g) || []).length, 1);
   assert.equal((html.match(/>Guest Lecturer</g) || []).length, 1);
+});
+
+test('background robots pair a Classic robot and a robot dog per margin and keep a safe distance', () => {
+  assert.ok(html.includes('<script type="module" src="/assets/robots.js"></script>'));
+  assert.ok(html.includes('<button type="button" class="motion-toggle" hidden>Pause animation</button>'));
+  assert.deepEqual(layoutZones(1280, 900, 110, 1170), []);
+  const zones = layoutZones(1440, 900, 190, 1250);
+  assert.equal(zones.length, 2);
+  const pad = SIZE * 0.45;
+  assert.ok(zones[0].x0 - pad >= 12 && zones[0].x1 + pad <= 190 - 16);
+  assert.ok(zones[1].x0 - pad >= 1250 + 16 && zones[1].x1 + pad <= 1440 - 12);
+  for (const zone of zones) {
+    assert.equal(zone.y1, 900 - 40);
+    assert.ok(Math.abs(zone.y1 + SIZE * 0.59 - (zone.y0 - SIZE * 0.52) - 250) < 1e-9);
+  }
+  const robots = createFleet(zones);
+  assert.deepEqual(robots.map(r => `${r.zone}:${r.kind}`), ['0:classic', '0:dog', '1:classic', '1:dog']);
+  let closest = Infinity;
+  for (let t = 0; t < 600; t += 1 / 30) {
+    stepFleet(robots, zones, 1 / 30, t);
+    for (const zone of [0, 1]) {
+      const [a, b] = robots.filter(r => r.zone === zone);
+      closest = Math.min(closest, Math.hypot(a.x - b.x, a.y - b.y));
+    }
+  }
+  assert.ok(closest > SAFE_DISTANCE - 1, `closest distance ${closest}`);
+  for (const r of robots) {
+    const z = zones[r.zone];
+    assert.ok(r.x >= z.x0 && r.x <= z.x1 && r.y >= z.y0 && r.y <= z.y1);
+    assert.ok(r.travel > 100);
+  }
 });

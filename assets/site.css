@@ -699,6 +699,29 @@ footer {
   color:var(--muted);
   font-size:12px
 }
+.footer-links {
+  display:flex;
+  gap:16px
+}
+.motion-toggle {
+  border:0;
+  padding:0;
+  background:none;
+  color:var(--muted);
+  font-size:inherit
+}
+.motion-toggle:hover {
+  color:var(--ink)
+}
+/* Decorative robots in the side margins (assets/robots.js); canvas sits behind the content. */
+.robot-fleet {
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  pointer-events:none
+}
 .skip-link {
   position:absolute;
   left:16px;
@@ -922,7 +945,7 @@ footer {
   }
 }
 @media print {
-  .site-header,.filters,.copy-button,.skip-link,footer {
+  .site-header,.filters,.copy-button,.skip-link,footer,.robot-fleet {
     display:none!important
   }
   .wrap {
