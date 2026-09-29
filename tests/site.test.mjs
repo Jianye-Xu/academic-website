@@ -73,12 +73,12 @@ test('publication buttons name their preprint server and publisher', () => {
     assert.ok(!links.some(link => ['Paper', 'Publisher'].includes(link.label)));
   }
 });
-test('page retains academic sections, supervision and expandable news without JavaScript', () => {
+test('page retains academic sections, supervision and scrollable news without JavaScript', () => {
   for (const id of ['about','news','research','education','awards','talks','teaching','service']) assert.ok(html.includes(`id="${id}"`));
   assert.ok(html.includes('Supervised theses <span class="muted">(20)'));
   assert.ok(html.includes('Supervised seminar works <span class="muted">(14)'));
-  assert.ok(html.includes('<details class="news-more">'));
-  assert.ok(!html.includes('<details class="news-more" open'));
+  assert.ok(html.includes('class="news-scroll"'));
+  assert.ok(!html.includes('news-more'));
   assert.ok(html.includes('https://jianyexu.com/'));
   assert.ok(!html.includes('background-'));
 });
@@ -154,8 +154,10 @@ test('talks and service preserve content and links in compact entries', async ()
     assert.ok(content.includes('class="entry-list compact-entries"'));
     assert.doesNotMatch(content, /<(?:p|br)\b/);
     for (const item of profile[section]) {
-      for (const field of ['date', 'title', 'organization', 'description']) assert.ok(content.includes(escape(item[field])));
-      if (item.url) assert.ok(content.includes(`href="${escape(item.url)}"`));
+      for (const field of ['date', 'title', 'organization']) assert.ok(content.includes(escape(item[field])));
+      const rendered = escape(item.description).replace(/\[([^\]]+)\]\((https:\/\/[^)]+)\)/g, '<a href="$2">$1</a>');
+      assert.ok(content.includes(rendered));
+      assert.equal(item.url, undefined);
     }
   }
 });

@@ -1,5 +1,6 @@
 {
   "name": "Jianye Xu",
+  "analytics": { "goatcounter": "jianye" },
   "role": "Ph.D. Student",
   "education": [
     {
@@ -36,7 +37,7 @@
       "title": "Best Poster",
       "date": "2025-12-11",
       "awarder": "German Autonomy Summit (GAS)",
-      "summary": "2025 German Autonomy Summit (GAS) best poster award.\n"
+      "summary": "[2025 German Autonomy Summit (GAS)](https://ieee-itss-germany.org/activities/2025-gas/) [best poster award](https://ieee-itss-germany.org/activities/2025-gas/poster_awards_gallery/).\n"
     },
     {
       "title": "Best Paper Nomination",
@@ -122,15 +123,13 @@
       "date": "Sep 2026",
       "title": "Workshop Invited Speaker",
       "organization": "IEEE ITSC · Naples, Italy",
-      "description": "Invited to speak at the workshop “The 16th Workshop & Industry Panel on Cooperative and Automated Driving and Future Mobility”.",
-      "url": "https://ieee-itsc.org/2026/workshops/"
+      "description": "Invited to speak at the workshop “[The 16th Workshop & Industry Panel on Cooperative and Automated Driving and Future Mobility](https://ieee-itsc.org/2026/workshops/)”."
     },
     {
       "date": "Nov 2025",
       "title": "Workshop Invited Speaker",
       "organization": "IEEE ITSC · Gold Coast, Australia",
-      "description": "Invited to speak at the workshop “Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI”.",
-      "url": "https://www.itsc2025.mixedtraffic.org/"
+      "description": "Invited to speak at the workshop “[Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI](https://www.itsc2025.mixedtraffic.org/)”."
     }
   ],
   "service": [
@@ -144,29 +143,25 @@
       "date": "Sep 2026",
       "title": "Invited Session Organizer",
       "organization": "IEEE ITSC · Naples, Italy",
-      "description": "Co-organized the invited session “Bridging Optimal Control and Learning for Connected and Automated Vehicles”.",
-      "url": "https://bassamlab.github.io/itsc2026-invited-session/"
+      "description": "Co-organized the invited session “[Bridging Optimal Control and Learning for Connected and Automated Vehicles](https://bassamlab.github.io/itsc2026-invited-session/)”."
     },
     {
       "date": "Nov 2025",
       "title": "Workshop Co-Organizer",
       "organization": "IEEE ITSC · Gold Coast, Australia",
-      "description": "Co-organized the workshop “Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI”.",
-      "url": "https://www.itsc2025.mixedtraffic.org/"
+      "description": "Co-organized the workshop “[Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI](https://www.itsc2025.mixedtraffic.org/)”."
     },
     {
       "date": "Jun 2024",
       "title": "Workshop Co-Organizer",
       "organization": "IEEE IV · Jeju, South Korea",
-      "description": "Co-organized the “1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms”.",
-      "url": "https://cpm.lrt.unibw.de/workshop/"
+      "description": "Co-organized the “[1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms](https://cpm.lrt.unibw.de/workshop/)”."
     },
     {
       "date": "Jan–Jun 2024",
       "title": "Competition Co-Organizer",
       "organization": "CPM Olympics · Aachen, Germany",
-      "description": "Co-organized CPM Olympics, a motion planning competition for connected and automated vehicles.",
-      "url": "https://cpm.lrt.unibw.de/olympics/"
+      "description": "Co-organized [CPM Olympics](https://cpm.lrt.unibw.de/olympics/), a motion planning competition for connected and automated vehicles."
     }
   ],
   "journalReviewing": [

@@ -1,14 +1,57 @@
 [
   {
     "date": "2024-06-02",
-    "title": "Join our \"1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms\" at IEEE IV 2024!",
-    "summary": "Discuss challenges and design a roadmap.",
-    "url": "https://cpm.lrt.unibw.de/workshop/"
+    "title": "Join our “[1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms](https://cpm.lrt.unibw.de/workshop/)” at IEEE IV 2024!",
+    "summary": "Discuss challenges and design a [roadmap](#xu-2026-smallscale)."
   },
   {
     "date": "2024-04-10",
-    "title": "Join our CPM Olympics",
-    "summary": "A motion planning competition for connected and automated vehicles.",
-    "url": "https://cpm.lrt.unibw.de/olympics/"
+    "title": "Join our [CPM Olympics](https://cpm.lrt.unibw.de/olympics/)!",
+    "summary": "A motion planning competition for connected and automated vehicles. Come race with us!"
+  },
+  {
+    "date": "2026-09-01",
+    "title": "Excited to be invited to speak at the [ITSC 2026 workshop](https://ieee-itsc.org/2026/workshops/) in Naples! 🇮🇹",
+    "summary": "Looking forward to sharing our work at “The 16th Workshop & Industry Panel on Cooperative and Automated Driving and Future Mobility”."
+  },
+  {
+    "date": "2026-09-01",
+    "title": "Thrilled to co-organize an [invited session](https://bassamlab.github.io/itsc2026-invited-session/) at IEEE ITSC 2026!",
+    "summary": "Join us in Naples for “Bridging Optimal Control and Learning for Connected and Automated Vehicles”."
+  },
+  {
+    "date": "2026-05-01",
+    "title": "New preprint and accepted at IEEE ITSC 2026: [Beyond Safety Filtering](#xu-2026-safety)!",
+    "summary": "We show how control barrier function-informed reinforcement learning goes beyond safety filtering for connected and automated vehicles."
+  },
+  {
+    "date": "2026-01-01",
+    "title": "New preprint: [TTCBF](#xu-2026-ttcbf) is out! 🎉",
+    "summary": "Introducing a truncated Taylor control barrier function that makes high-order safety constraints simple to handle."
+  },
+  {
+    "date": "2025-12-11",
+    "title": "Honored to win the [Best Poster Award](https://ieee-itss-germany.org/activities/2025-gas/poster_awards_gallery/) at the German Autonomy Summit! 🏆",
+    "summary": "Grateful for the recognition at the [2025 German Autonomy Summit (GAS)](https://ieee-itss-germany.org/activities/2025-gas/)."
+  },
+  {
+    "date": "2025-11-21",
+    "title": "Delighted to be nominated for the Best Paper Award at IEEE ITSC 2025!",
+    "summary": "Thank you to the IEEE ITS Society for this recognition."
+  },
+  {
+    "date": "2025-11-01",
+    "title": "Had a great time speaking at the [ITSC 2025 workshop](https://www.itsc2025.mixedtraffic.org/) in Gold Coast!",
+    "summary": "Proud to have given an invited talk at “Automated Mobility in Mixed Traffic—Emerging Mixed Autonomy in the Era of AI”, which we also co-organized."
+  },
+  {
+    "date": "2024-09-01",
+    "title": "New preprint: [XP-MARL](#xu-2024-xpmarl) is on arXiv!",
+    "summary": "We tackle non-stationarity in multi-agent reinforcement learning with auxiliary prioritization."
+  },
+  {
+    "date": "2023-04-01",
+    "title": "Excited to start my Ph.D. at RWTH Aachen University! 🎓",
+    "summary": "Beginning my doctoral journey in Computer Science under the supervision of [Prof. Bassam Alrifaee](https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee)."
   }
 ]
