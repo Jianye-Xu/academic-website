@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "sync": "node scripts/sync-bib.mjs",
     "test": "node --test tests/*.test.mjs",
     "preview": "node scripts/serve.mjs"
   },

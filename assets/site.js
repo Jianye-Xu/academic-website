@@ -31,6 +31,7 @@ function applyFilters(updateURL = false) {
   document.querySelector('#publication-count').textContent = `${count} of ${publications.length} publications`;
   document.querySelector('#empty-results').hidden = count !== 0;
   if (updateURL) {
+    document.querySelector('#publications').scrollTop = 0;
     const url = new URL(location.href);
     url.searchParams.delete('area');
     for (const key of ['type', 'tag']) {
@@ -92,14 +93,21 @@ for (const button of document.querySelectorAll('.copy-button')) {
     }
   });
 }
-const newsDisclosure = document.querySelector('.news-more');
-if (newsDisclosure) {
-  newsDisclosure.addEventListener('toggle', () => {
-    newsDisclosure.querySelector('summary').textContent = newsDisclosure.open ? 'Show less news' : 'Show all news';
-  });
-}
 // Keep incoming links from the former homepage useful.
-const legacyAnchors = { biography: 'education', publications: 'research', projects: 'research', home: 'about' };
+const legacyAnchors = { biography: 'education', publications: 'research', projects: 'research', home: 'about',
+  // Paper anchors used to be hyphenated; they are now the Zotero BibTeX keys.
+  'xu-2026-ttcbf': 'xu2026ttcbf',
+  'beerwerth-2026-zeroshot': 'beerwerth2026zeroshot',
+  'xu-2026-safety': 'xu2026safety',
+  'xu-2026-smallscale': 'xu2026smallscale',
+  'xu-2025-highorder': 'xu2025highorder',
+  'xu-2025-learningbased': 'xu2025learningbased',
+  'xu-2025-realtime': 'xu2025realtime',
+  'mokhtarian-2024-survey': 'mokhtarian2024survey',
+  'schafer-2024-educational': 'schafer2024educational',
+  'scheffe-2024-limiting': 'scheffe2024limiting',
+  'xu-2024-sigmarl': 'xu2024sigmarl',
+  'xu-2024-xpmarl': 'xu2024xpmarl' };
 if (legacyAnchors[location.hash.slice(1)]) {
   location.replace(`${location.pathname}${location.search}#${legacyAnchors[location.hash.slice(1)]}`);
 }

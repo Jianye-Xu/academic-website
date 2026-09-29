@@ -25,10 +25,10 @@ test('only the requested filters and tags are rendered', () => {
   for (const tag of tags) assert.ok(publications.some(p=>matchesPublication(p,'all',tag)));
   assert.ok(publications.every(p=>p.tags.every(tag=>tags.includes(tag))));
   assert.equal((html.match(/class="preprint-badge"/g)||[]).length,publications.filter(p=>p.status==='preprint').length);
-  for (const id of ['xu-2026-safety','xu-2025-learningbased','xu-2025-realtime']) assert.ok(publications.find(p=>p.id===id).tags.includes('Learning'));
+  for (const id of ['xu2026safety','xu2025learningbased','xu2025realtime']) assert.ok(publications.find(p=>p.id===id).tags.includes('Learning'));
 });
 test('CAVs excludes single-robot and single-vehicle studies', () => {
-  for (const id of ['xu-2026-ttcbf','xu-2025-highorder','xu-2025-realtime']) assert.ok(!publications.find(p=>p.id===id).tags.includes('CAVs'));
+  for (const id of ['xu2026ttcbf','xu2025highorder','xu2025realtime']) assert.ok(!publications.find(p=>p.id===id).tags.includes('CAVs'));
 });
 test('all source publications and citations are preserved in static HTML', async () => {
   assert.equal((html.match(/<article class="publication"/g)||[]).length,publications.length);
@@ -51,8 +51,8 @@ test('local assets and fragment targets resolve', async () => {
 });
 test('publication buttons name their preprint server and publisher', () => {
   const researchGate = {
-    'schafer-2024-educational': 'https://doi.org/10.13140/RG.2.2.34128.28161',
-    'scheffe-2024-limiting': 'https://doi.org/10.13140/RG.2.2.32731.03368',
+    'schafer2024educational': 'https://doi.org/10.13140/RG.2.2.34128.28161',
+    'scheffe2024limiting': 'https://doi.org/10.13140/RG.2.2.32731.03368',
   };
   for (const p of publications) {
     const article = html.split(`<article class="publication" id="${p.id}"`)[1].split('</article>')[0];
@@ -66,18 +66,19 @@ test('publication buttons name their preprint server and publisher', () => {
       assert.equal(new URL(preprint.href).hostname, 'arxiv.org');
     }
     if (p.status === 'peer-reviewed' && p.links.publisher) {
-      assert.ok(links.some(link => link.href === p.links.publisher && link.label === (p.id === 'beerwerth-2026-zeroshot' ? 'De Gruyter Brill' : 'IEEE')));
+      assert.ok(links.some(link => link.href === p.links.publisher && link.label === (p.id === 'beerwerth2026zeroshot' ? 'De Gruyter Brill' : 'IEEE')));
     } else {
       assert.ok(!links.some(link => ['IEEE', 'De Gruyter Brill'].includes(link.label)));
     }
     assert.ok(!links.some(link => ['Paper', 'Publisher'].includes(link.label)));
   }
 });
-test('page retains academic sections, supervision and scrollable news without JavaScript', () => {
+test('page retains academic sections, supervision and scrollable news and publications without JavaScript', () => {
   for (const id of ['about','news','research','education','awards','talks','teaching','service']) assert.ok(html.includes(`id="${id}"`));
   assert.ok(html.includes('Supervised theses <span class="muted">(20)'));
   assert.ok(html.includes('Supervised seminar works <span class="muted">(14)'));
   assert.ok(html.includes('class="news-scroll"'));
+  assert.ok(html.includes('class="publication-scroll" role="region"'));
   assert.ok(!html.includes('news-more'));
   assert.ok(html.includes('https://jianyexu.com/'));
   assert.ok(!html.includes('background-'));
@@ -117,7 +118,7 @@ test('paper titles are plain headings and action-row disclosures target preserve
     const article = html.split(`<article class="publication" id="${p.id}"`)[1].split('</article>')[0];
     assert.ok(!article.match(/<h3[^>]*>[\s\S]*?<a[\s\S]*?<\/h3>/));
     const row = article.split('<div class="paper-links">')[1].split('</div>')[0];
-    for (const [kind, content] of [['bibtex',p.bibtex],['about',p.summary]]) {
+    for (const [kind, content] of [['bibtex',p.bibtex],['abstract',p.abstract]]) {
       assert.equal(row.includes(`aria-controls="${kind}-${p.id}"`),Boolean(content));
       if (content) assert.ok(article.includes(`id="${kind}-${p.id}"`));
     }

@@ -50,7 +50,7 @@
         <div role="group" aria-label="Publication tag" class="filter-row"><span class="filter-label">Tag</span>{{TAG_FILTERS}}</div>
       </div>
       <p id="publication-count" class="result-count" role="status" aria-live="polite" aria-atomic="true">{{COUNT}} publications</p>
-      <div id="publications">{{PUBLICATIONS}}</div>
+      <div id="publications" class="publication-scroll" role="region" aria-label="Publication list" tabindex="0">{{PUBLICATIONS}}</div>
       <p id="empty-results" hidden>No publications match these filters. <button id="reset-filters" class="text-button" type="button">Show all publications</button></p>
     </section>
     <section id="education" aria-labelledby="education-title"><div class="section-heading"><h2 id="education-title">Education</h2></div>{{EDUCATION}}</section>

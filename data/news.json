@@ -2,7 +2,7 @@
   {
     "date": "2024-06-02",
     "title": "Join our “[1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms](https://cpm.lrt.unibw.de/workshop/)” at IEEE IV 2024!",
-    "summary": "Discuss challenges and design a [roadmap](#xu-2026-smallscale)."
+    "summary": "Discuss challenges and design a [roadmap](#xu2026smallscale)."
   },
   {
     "date": "2024-04-10",
@@ -21,12 +21,12 @@
   },
   {
     "date": "2026-05-01",
-    "title": "New preprint and accepted at IEEE ITSC 2026: [Beyond Safety Filtering](#xu-2026-safety)!",
+    "title": "New preprint and accepted at IEEE ITSC 2026: [Beyond Safety Filtering](#xu2026safety)!",
     "summary": "We show how control barrier function-informed reinforcement learning goes beyond safety filtering for connected and automated vehicles."
   },
   {
     "date": "2026-01-01",
-    "title": "New preprint: [TTCBF](#xu-2026-ttcbf) is out! 🎉",
+    "title": "New preprint: [TTCBF](#xu2026ttcbf) is out! 🎉",
     "summary": "Introducing a truncated Taylor control barrier function that makes high-order safety constraints simple to handle."
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "date": "2024-09-01",
-    "title": "New preprint: [XP-MARL](#xu-2024-xpmarl) is on arXiv!",
+    "title": "New preprint: [XP-MARL](#xu2024xpmarl) is on arXiv!",
     "summary": "We tackle non-stationarity in multi-agent reinforcement learning with auxiliary prioritization."
   },
   {

@@ -1,6 +1,6 @@
 [
   {
-    "id": "xu-2026-ttcbf",
+    "id": "xu2026ttcbf",
     "title": "TTCBF: A Truncated Taylor Control Barrier Function for High-Order Safety Constraints",
     "authors": [
       "Jianye Xu",
@@ -20,13 +20,13 @@
     "bibtex": "@article{xu2026ttcbf,\n archiveprefix = {arXiv},\n author = {Xu, Jianye and Alrifaee, Bassam},\n doi = {10.48550/arXiv.2601.15196},\n eprint = {2601.15196},\n journal = {arXiv preprint arXiv:2601.15196},\n primaryclass = {eess},\n publisher = {arXiv},\n title = {TTCBF: A Truncated Taylor Control Barrier Function for High-Order Safety Constraints},\n year = {2026}\n}\n",
     "image": "/assets/xu2026ttcbf.jpg",
     "imageAlt": "Comparison of high-order and truncated Taylor control barrier functions",
-    "summary": "High-Order Control Barrier Functions (HOCBFs) handle safety constraints with relative degree greater than one by introducing a chain of auxiliary functions. This requires multiple class K functions, whose number and tuning burden grow with the relative degree. Because their parameters affect the conservatism and feasibility of the resulting control constraint, tuning them can complicate controller design. We introduce a Truncated Taylor Control Barrier Function (TTCBF), which extends the discrete-time CBF formulation to high-order safety constraints using a single class K function, independent of relative degree. We also propose an adaptive variant, aTTCBF, which optimizes the class K gain online. This paper updates our earlier TTCBF preprint, which remains available at its original arXiv record.",
     "shortVenue": "arXiv",
     "previewTitle": "TTCBF: A Truncated Taylor Control Barrier Function for High-Order Safety Constraints",
-    "fullImage": "/assets/full/xu2026ttcbf.jpg"
+    "fullImage": "/assets/full/xu2026ttcbf.jpg",
+    "abstract": "Control Barrier Functions (CBFs) enforce safety by rendering a prescribed safe set forward invariant. However, standard CBFs are limited to safety constraints with relative degree one, while High-Order CBF (HOCBF) methods address higher relative degree at the cost of introducing a chain of auxiliary functions and multiple class K functions whose tuning scales with the relative degree. In this paper, we introduce a Truncated Taylor Control Barrier Function (TTCBF), which generalizes standard discrete-time CBFs to consider high-order safety constraints and requires only one class K function, independent of the relative degree. We also propose an adaptive variant, adaptive TTCBF (aTTCBF), that optimizes an online gain on the class K function to improve adaptability, while requiring fewer control design parameters than existing adaptive HOCBF variants. Numerical experiments in a relative-degree-six spring-mass system and a cluttered corridor navigation validate the above theoretical findings."
   },
   {
-    "id": "beerwerth-2026-zeroshot",
+    "id": "beerwerth2026zeroshot",
     "publisherName": "De Gruyter Brill",
     "title": "Zero-Shot MARL Benchmark in the Cyber-Physical Mobility Lab",
     "authors": [
@@ -51,13 +51,13 @@
     "bibtex": "@article{beerwerth2026zeroshot,\n author = {Beerwerth, Julius and Xu, Jianye and Schäfer, Simon and Belderink, Fynn and Alrifaee, Bassam},\n copyright = {De Gruyter expressly reserves the right to use all content for commercial text and data mining within the meaning of Section 44b of the German Copyright Act.},\n doi = {10.1515/auto-2025-0057},\n journal = {at - Automatisierungstechnik},\n number = {5},\n pages = {376--385},\n publisher = {De Gruyter},\n title = {Zero-Shot MARL Benchmark in the Cyber-Physical Mobility Lab},\n volume = {74},\n year = {2026}\n}\n",
     "image": "/assets/beerwerth2026zeroshot.jpg",
     "imageAlt": "Vehicle trajectories in the initial setup, SigmaRL simulation, CPM Lab digital twin, and physical experiment",
-    "summary": "",
     "shortVenue": "at",
     "previewTitle": "Zero-shot learning in the CPM Lab",
-    "fullImage": "/assets/full/beerwerth2026zeroshot.jpg"
+    "fullImage": "/assets/full/beerwerth2026zeroshot.jpg",
+    "abstract": "We present a reproducible benchmark for evaluating sim-to-real transfer of Multi-Agent Reinforcement Learning (MARL) policies for Connected and Automated Vehicles (CAVs). The platform, based on the Cyber-Physical Mobility Lab (CPM Lab), integrates simulation, a high-fidelity digital twin, and a physical testbed, enabling structured zero-shot evaluation of MARL motion-planning policies. We demonstrate its use by deploying a SigmaRL-trained policy across all three domains, revealing two complementary sources of performance degradation: architectural differences between simulation and hardware control stacks, and the sim-to-real gap induced by increasing environmental realism. The open-source setup enables systematic analysis of sim-to-real challenges in MARL under realistic, reproducible conditions."
   },
   {
-    "id": "xu-2026-safety",
+    "id": "xu2026safety",
     "title": "Beyond Safety Filtering: Control Barrier Function-Informed Reinforcement Learning for Connected and Automated Vehicles",
     "authors": [
       "Jianye Xu",
@@ -79,13 +79,13 @@
     "bibtex": "@inproceedings{xu2026safety,\n author = {Xu, Jianye and Alrifaee, Bassam},\n booktitle = {2026 IEEE 29th International Conference on Intelligent Transportation Systems (ITSC), in Press},\n title = {Beyond Safety Filtering: Control Barrier Function-Informed Reinforcement Learning for Connected and Automated Vehicles},\n year = {2026}\n}\n",
     "image": "/assets/xu2026safety.jpg",
     "imageAlt": "Heatmaps comparing total reward and control barrier function activation across hyperparameter settings",
-    "summary": "",
     "shortVenue": "ITSC",
     "previewTitle": "Beyond safety filtering",
-    "fullImage": "/assets/full/xu2026safety.jpg"
+    "fullImage": "/assets/full/xu2026safety.jpg",
+    "abstract": "Reinforcement Learning (RL) uses rewards to guide learning, yet reward design is typically hand-crafted using heuristics that can be difficult to tune. We propose a Control Barrier Function (CBF)-informed reward design for Multi-Agent RL (MARL) that converts CBF constraint values under joint MARL actions into a reward signal that explicitly guides safe learning. We compare against two heuristic reward baselines in a four-way multi-lane intersection with connected and automated vehicles. Results show that our method achieves the highest task performance and is less sensitive to reward hyperparameters, yielding consistently strong performance across the tested hyperparameter range. Code for reproducing the experimental results and a video demonstration are available at https://github.com/bassamlab/SigmaRL."
   },
   {
-    "id": "xu-2026-smallscale",
+    "id": "xu2026smallscale",
     "publisherName": "IEEE",
     "title": "Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: Challenges and a Roadmap",
     "authors": [
@@ -118,13 +118,13 @@
     "bibtex": "@article{xu2026smallscale,\n author = {Xu, Jianye and Betz, Johannes and Mokhtarian, Armin and Mittal, Archak and Cai, Mengchi and Mangharam, Rahul and Shehata, Omar M. and Elias, Catherine M. and Zaech, Jan-Nico and Scheffe, Patrick and Jahncke, Felix and Ulhas, Sangeet Sankaramangalam and Arfvidsson, Kaj Munhoz and Alrifaee, Bassam},\n doi = {10.1109/MITS.2026.3666681},\n journal = {IEEE Intelligent Transportation Systems Magazine},\n pages = {2--16},\n title = {Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: Challenges and a Roadmap},\n year = {2026}\n}\n",
     "image": "/assets/xu2026smallscale.jpg",
     "imageAlt": "Collage of presentations and participants at the small-scale testbeds workshop at IEEE IV 2024",
-    "summary": "This paper summarizes the outcomes of the 1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms at IEEE IV 2024. Small-scale testbeds combine rapid prototyping with experiments that approximate real-world conditions more closely than simulations.",
     "shortVenue": "ITSM",
     "previewTitle": "Testbeds: challenges & a roadmap",
-    "fullImage": "/assets/full/xu2026smallscale.jpg"
+    "fullImage": "/assets/full/xu2026smallscale.jpg",
+    "abstract": "This article proposes a roadmap to address the current challenges in small-scale testbeds for connected and automated vehicles (CAVs) and robot swarms. The roadmap is a joint effort of participants in the workshop “First Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms,” held on 2 June at the IEEE Intelligent Vehicles Symposium (IV) 2024 in Jeju, South Korea. The roadmap contains three parts: 1) enhancing accessibility and diversity, especially for underrepresented communities, 2) sharing best practices for the development and maintenance of testbeds, and 3) global testbed connectivity, e.g., through an abstraction layer, to support collaboration. The workshop features invited speakers, contributed papers, and a presentation of a survey paper on testbeds. The survey paper provides an online comparative table of more than 25 testbeds, available at https://bassamlab.github.io/testbeds-survey. The workshop's own website is available at https://cpm.lrt.unibw.de/workshop."
   },
   {
-    "id": "xu-2025-highorder",
+    "id": "xu2025highorder",
     "title": "High-Order Control Barrier Functions: Insights and a Truncated Taylor-Based Formulation",
     "authors": [
       "Jianye Xu",
@@ -143,14 +143,14 @@
     "bibtex": "@article{xu2025highorder,\n archiveprefix = {arXiv},\n author = {Xu, Jianye and Alrifaee, Bassam},\n doi = {10.48550/arXiv.2503.15014},\n eprint = {2503.15014},\n journal = {arXiv preprint arXiv:2503.15014},\n primaryclass = {eess},\n publisher = {arXiv},\n title = {High-Order Control Barrier Functions: Insights and a Truncated Taylor-Based Formulation},\n year = {2025}\n}\n",
     "image": "/assets/xu2026ttcbf.jpg",
     "imageAlt": "High-order control barrier function parameter and trajectory comparisons",
-    "summary": "",
     "shortVenue": "arXiv",
     "note": "Earlier preprint; see the updated TTCBF paper (2026).",
     "previewTitle": "High-Order Control Barrier Functions: Insights and a Truncated Taylor-Based Formulation",
-    "fullImage": "/assets/full/xu2026ttcbf.jpg"
+    "fullImage": "/assets/full/xu2026ttcbf.jpg",
+    "abstract": "We examine the complexity of the standard High-Order Control Barrier Function (HOCBF) approach and propose a truncated Taylor-based approach that reduces design parameters. First, we derive the explicit inequality condition for the HOCBF approach and show that the corresponding equality condition sets a lower bound on the barrier function value that regulates its decay rate. Next, we present our Truncated Taylor CBF (TTCBF), which uses a truncated Taylor series to approximate the discrete-time CBF condition. While the standard HOCBF approach requires multiple class K functions, leading to more design parameters as the constraint's relative degree increases, our TTCBF approach requires only one. We support our theoretical findings in numerical collision-avoidance experiments and show that our approach ensures safety while reducing design complexity."
   },
   {
-    "id": "xu-2025-learningbased",
+    "id": "xu2025learningbased",
     "publisherName": "IEEE",
     "title": "A Learning-Based Control Barrier Function for Car-Like Robots: Toward Less Conservative Collision Avoidance",
     "authors": [
@@ -174,13 +174,13 @@
     "bibtex": "@inproceedings{xu2025learningbased,\n author = {Xu, Jianye and Alrifaee, Bassam},\n booktitle = {2025 European Control Conference (ECC)},\n doi = {10.23919/ECC65951.2025.11187043},\n pages = {988--995},\n title = {A Learning-Based Control Barrier Function for Car-Like Robots: Toward Less Conservative Collision Avoidance},\n year = {2025}\n}\n",
     "image": "/assets/xu2025learningbased.jpg",
     "imageAlt": "Overtaking and bypassing comparisons for collision avoidance",
-    "summary": "We propose a learning-based CBF to reduce conservatism in collision avoidance of car-like robots. Traditional CBFs often use Euclidean distance between robots' centers as safety margin, neglecting headings and simplifying geometries to circles. While this ensures smooth, differentiable safety functions required by CBFs, it can be overly conservative in tight environments. To address this limitation, we design a heading-aware safety margin that accounts for the robots' orientations, enabling a less conservative and more accurate estimation of safe regions. Since the function computing this safety margin is non-differentiable, we approximate it with a neural network to ensure differentiability and facilitate integration with CBFs. We describe how we achieve bounded learning error and incorporate the upper bound into the CBF to provide formal safety guarantees through forward invariance. We show that our CBF is a high-order CBF with relative degree two for a system with two robots whose dynamics are modeled by the nonlinear kinematic bicycle model. Experimental results in overtaking and bypassing scenarios reveal a 33.5 % reduction in conservatism compared to traditional methods, while maintaining safety",
     "shortVenue": "ECC",
     "previewTitle": "A Learning-Based Control Barrier Function for Car-Like Robots: Toward Less Conservative Collision Avoidance",
-    "fullImage": "/assets/full/xu2025learningbased.jpg"
+    "fullImage": "/assets/full/xu2025learningbased.jpg",
+    "abstract": "We propose a learning-based Control Barrier Function (CBF) to reduce conservatism in collision avoidance for car-like robots. Traditional CBFs often use the Euclidean distance between robots' centers as a safety margin, which neglects their headings and approximates their geometries as circles. Although this simplification meets the smoothness and differentiability requirements of CBFs, it may result in overly conservative behavior in dense environments. We address this by designing a safety margin that considers both the robot's heading and actual shape, thereby enabling a more precise estimation of safe regions. Because this safety margin is non-differentiable, we approximate it with a neural network to ensure differentiability. In addition, we propose a notion of relative dynamics that makes the learning process tractable. In a case study, we establish the theoretical foundation for applying this notion to a nonlinear kinematic bicycle model. Numerical experiments in overtaking and bypassing scenarios show that our approach reduces conservatism (e.g., requiring 33.5 % less lateral space for bypassing) without incurring significant extra computation time."
   },
   {
-    "id": "xu-2025-realtime",
+    "id": "xu2025realtime",
     "publisherName": "IEEE",
     "title": "A Real-Time Control Barrier Function-Based Safety Filter for Motion Planning with Arbitrary Road Boundary Constraints",
     "authors": [
@@ -204,13 +204,13 @@
     "bibtex": "@inproceedings{xu2025realtime,\n author = {Xu, Jianye and Che, Chang and Alrifaee, Bassam},\n booktitle = {2025 IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)},\n doi = {10.1109/ITSC60802.2025.11423203},\n pages = {2818--2825},\n title = {A Real-Time Control Barrier Function-Based Safety Filter for Motion Planning with Arbitrary Road Boundary Constraints},\n year = {2025}\n}\n",
     "image": "/assets/xu2025realtime.jpg",
     "imageAlt": "Vehicle footprints in four traffic scenarios with and without the control barrier function safety filter",
-    "summary": "",
     "shortVenue": "ITSC",
     "previewTitle": "Real-time safety filtering",
-    "fullImage": "/assets/full/xu2025realtime.jpg"
+    "fullImage": "/assets/full/xu2025realtime.jpg",
+    "abstract": "We present a real-time safety filter for motion planning, including those that are learning-based, using Control Barrier Functions (CBFs) to provide formal guarantees for collision avoidance with road boundaries. A key feature of our approach is its ability to directly incorporate road geometries of arbitrary shape that are represented as polylines without resorting to conservative overapproximations. We formulate the safety filter as a constrained optimization problem as a Quadratic Program (QP), which achieves safety by making minimal, necessary adjustments to the control actions issued by the nominal motion planner. We validate our safety filter through extensive numerical experiments across a variety of traffic scenarios featuring complex road boundaries. The results confirm its reliable safety and high computational efficiency (execution frequency up to 40 Hz). Code reproducing our experimental results and a video demonstration are available at github.com/bassamlab/SigmaRL."
   },
   {
-    "id": "mokhtarian-2024-survey",
+    "id": "mokhtarian2024survey",
     "publisherName": "IEEE",
     "title": "A Survey on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: A Guide for Creating a New Testbed",
     "authors": [
@@ -244,13 +244,13 @@
     "bibtex": "@article{mokhtarian2024survey,\n author = {Mokhtarian, Armin and Xu, Jianye and Scheffe, Patrick and Kloock, Maximilian and Schäfer, Simon and Bang, Heeseung and Le, Viet-Anh and Ulhas, Sangeet and Betz, Johannes and Wilson, Sean and Berman, Spring and Paull, Liam and Prorok, Amanda and Alrifaee, Bassam},\n doi = {10.1109/MRA.2024.3505772},\n journal = {IEEE Robotics & Automation Magazine},\n pages = {2--19},\n title = {A Survey on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: A Guide for Creating a New Testbed},\n year = {2024}\n}\n",
     "image": "/assets/mokhtarian2024survey.jpg",
     "imageAlt": "Small-scale vehicle and robot testbeds reviewed in the survey",
-    "summary": "A survey of small-scale testbeds for connected and automated vehicles and robot swarms, with an online comparison of more than 25 existing testbeds.",
     "shortVenue": "RAM",
     "previewTitle": "A Survey on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: A Guide for Creating a New Testbed",
-    "fullImage": "/assets/full/mokhtarian2024survey.jpg"
+    "fullImage": "/assets/full/mokhtarian2024survey.jpg",
+    "abstract": "Connected and automated vehicles (CAVs) and robot swarms (RSs) hold transformative potential for enhancing safety, efficiency, and sustainability in the transportation and manufacturing sectors. Extensive testing and validation of these technologies are crucial for their deployment in the real world. While simulations are essential for initial testing, they often have limitations in capturing the complex dynamics of real-world interactions. This limitation underscores the importance of small-scale testbeds. These testbeds provide a realistic, cost-effective, and controlled environment for testing and validating algorithms, acting as an essential intermediary between simulation and full-scale experiments. This work serves to facilitate researchers' efforts in identifying existing small-scale testbeds suitable for their experiments and provide insights for those who want to build their own. In addition, it delivers a comprehensive survey of the current landscape of these testbeds. We derive 62 characteristics of testbeds based on the well-known sense–plan–act paradigm and offer an online table comparing 23 small-scale testbeds based on these characteristics. The online table is hosted on our designated public webpage, https://bassamlab.github.io/testbeds-survey, and we invite testbed creators and developers to contribute to it. We closely examine nine testbeds in this article, demonstrating how the derived characteristics can be used to present testbeds. Furthermore, we discuss three ongoing challenges concerning small-scale testbeds that we identified, i.e., small-scale to full-scale transition, sustainability, and power and resource management."
   },
   {
-    "id": "schafer-2024-educational",
+    "id": "schafer2024educational",
     "preprintServer": "ResearchGate",
     "publisherName": "IEEE",
     "title": "Educational Applications of the Cyber-Physical Mobility Lab: A Summary",
@@ -276,13 +276,13 @@
     "bibtex": "@inproceedings{schafer2024educational,\n author = {Schäfer, Simon and Xu, Jianye and Klüner, David and Mokhtarian, Armin and Scheffel, Patrick and Alrifaee, Bassam},\n booktitle = {2024 European Control Conference (ECC)},\n doi = {10.23919/ECC64448.2024.10591176},\n pages = {2666--2671},\n title = {Educational Applications of the Cyber-Physical Mobility Lab: A Summary},\n year = {2024}\n}\n",
     "image": "/assets/schafer2024educational.jpg",
     "imageAlt": "Course evaluation responses for goals, structure, concept, interest, application, and alignment",
-    "summary": "",
     "shortVenue": "ECC",
     "previewTitle": "Learning in the CPM Lab",
-    "fullImage": "/assets/full/schafer2024educational.jpg"
+    "fullImage": "/assets/full/schafer2024educational.jpg",
+    "abstract": "In the domain of Connected and Automated Vehicles (CAVs), small-scale testbeds bridge expensive testing in the real world and computer simulations. Meanwhile, they offer educational opportunities for students to acquire hands-on experience in areas like control, vehicle dynamics, trajectory planning, and real-time software. At RWTH Aachen University, we, the Cyber-Physical Mobility Group, built a small-scale testbed, the open-source and remotely accessible Cyber-Physical Mobility Lab (CPM Lab). We use it for one undergraduate course, one graduate course, and an international competition. Our literature research indicates that no similar publicly available testbed offers continuous educational applications for all academic levels, including postgraduate students. This paper presents (i) an educational umbrella concept designed to create a course portfolio suitable for undergraduate, graduate, and postgraduate needs, (ii) updates to the course concepts with an emphasis on previous publications, and (iii) lessons learned to develop an education portfolio based on small-scale testbeds. We base our results on evaluations conducted over four years involving over 370 students participating in our courses. Our findings indicate that small-scale testbeds can help students become more invested in the topic and may motivate them beyond course requirements."
   },
   {
-    "id": "scheffe-2024-limiting",
+    "id": "scheffe2024limiting",
     "preprintServer": "ResearchGate",
     "publisherName": "IEEE",
     "title": "Limiting Computation Levels in Prioritized Trajectory Planning with Safety Guarantees",
@@ -306,13 +306,13 @@
     "bibtex": "@inproceedings{scheffe2024limiting,\n author = {Scheffe, Patrick and Xu, Jianye and Alrifaee, Bassam},\n booktitle = {2024 European Control Conference (ECC)},\n doi = {10.23919/ECC64448.2024.10591179},\n pages = {297--304},\n title = {Limiting Computation Levels in Prioritized Trajectory Planning with Safety Guarantees},\n year = {2024}\n}\n",
     "image": "/assets/scheffe2024limiting.jpg",
     "imageAlt": "Colliding and safe intersection trajectories with vehicle predictions and reachable sets",
-    "summary": "",
     "shortVenue": "ECC",
     "previewTitle": "Safe trajectory planning",
-    "fullImage": "/assets/full/scheffe2024limiting.jpg"
+    "fullImage": "/assets/full/scheffe2024limiting.jpg",
+    "abstract": "In prioritized planning for vehicles, vehicles plan trajectories in parallel or in sequence. In parallel prioritized planning, the computation time remains approximately constant with an increasing number of vehicles, but it is difficult to guarantee collision-free trajectories. Although sequential prioritized planning can guarantee collision-free trajectories, the computation time increases with the number of sequentially computing vehicles, which we call computation levels. This number is determined by the directed coupling graph which results from the coupling and prioritization of vehicles. This work's contribution is twofold. First, we guarantee safe trajectories in parallel planning through reachability analysis. Although these trajectories are collision-free, they tend to be conservative. Second, we address this conservativeness by planning with a subset of vehicles in sequence. We formulate the problem of selecting this subset as a graph partitioning problem, in which we limit the size of the resulting subgraphs. Consequently, we can choose the number of computation levels independently from the directed coupling graph, and thus are able to limit the computation time in prioritized planning. In our simulations, we reduce the number of computation levels to approximately 64% compared to sequential prioritized planning while maintaining the solution quality. Video youtu.be/di6X6XTGt88 Code github.com/embedded-software-laboratory/p-dmpc"
   },
   {
-    "id": "xu-2024-sigmarl",
+    "id": "xu2024sigmarl",
     "publisherName": "IEEE",
     "title": "SigmaRL: A Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning Framework for Motion Planning",
     "authors": [
@@ -336,13 +336,13 @@
     "bibtex": "@inproceedings{xu2024sigmarl,\n author = {Xu, Jianye and Hu, Pan and Alrifaee, Bassam},\n booktitle = {2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},\n doi = {10.1109/ITSC58415.2024.10919918},\n pages = {768--775},\n title = {SigmaRL: A Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning Framework for Motion Planning},\n year = {2024}\n}\n",
     "image": "/assets/xu2024sigmarl.jpg",
     "imageAlt": "Vehicle trajectories in a testbed, intersection, on-ramp, and roundabout",
-    "summary": "Sample efficiency and generalization are two key challenges in MARL. Most RL agents exhibit a limited capacity to generalize, often focusing narrowly on specific scenarios, and are usually evaluated in similar or even the same scenarios seen during training. Various methods have been proposed to address these challenges, including experience replay and regularization. However, how observation design in RL affects sample efficiency and generalization remains an under-explored area. We introduce an open-source, decentralized framework named SigmaRL, designed to enhance both sample efficiency and generalization of MARL for motion planning of CAVs. We address this gap by proposing five strategies to design information-dense observations, focusing on general features that are applicable to most traffic scenarios. We train our RL agents using these strategies on an intersection and evaluate their generalization through numerical experiments across completely unseen traffic scenarios, including a new intersection, an on-ramp, and a roundabout. Incorporating these information-dense observations reduces training times to under one hour on a single CPU, and the evaluation results reveal that our RL agents can effectively zero-shot generalize.",
     "shortVenue": "ITSC",
     "previewTitle": "SigmaRL: A Sample-Efficient and Generalizable Multi-Agent Reinforcement Learning Framework for Motion Planning",
-    "fullImage": "/assets/full/xu2024sigmarl.jpg"
+    "fullImage": "/assets/full/xu2024sigmarl.jpg",
+    "abstract": "This paper introduces an open-source, decentralized framework named SigmaRL, designed to enhance both sample effciency and generalization of multi-agent Reinforcement Learning (RL) for motion planning of connected and automated vehicles. Most RL agents exhibit a limited capacity to generalize, often focusing narrowly on specific scenarios, and are usually evaluated in similar or even the same scenarios seen during training. Various methods have been proposed to address these challenges, including experience replay and regularization. However, how observation design in RL affects sample efficiency and generalization remains an under-explored area. We address this gap by proposing five strategies to design information-dense observations, focusing on general features that are applicable to most traffic scenarios. We train our RL agents using these strategies on an intersection and evaluate their generalization through numerical experiments across completely unseen traffic scenarios, including a new intersection, an on-ramp, and a roundabout. Incorporating these information-dense observations reduces training times to under one hour on a single CPU, and the evaluation results reveal that our RL agents can effectively zero-shot generalize."
   },
   {
-    "id": "xu-2024-xpmarl",
+    "id": "xu2024xpmarl",
     "title": "XP-MARL: Auxiliary Prioritization in Multi-Agent Reinforcement Learning to Address Non-Stationarity",
     "authors": [
       "Jianye Xu",
@@ -364,9 +364,9 @@
     "bibtex": "@article{xu2024xpmarl,\n archiveprefix = {arXiv},\n author = {Xu, Jianye and Sobhy, Omar and Alrifaee, Bassam},\n doi = {10.48550/arXiv.2409.11852},\n eprint = {2409.11852},\n journal = {arXiv preprint arXiv:2409.11852},\n primaryclass = {cs},\n publisher = {arXiv},\n title = {XP-MARL: Auxiliary Prioritization in Multi-Agent Reinforcement Learning to Address Non-Stationarity},\n year = {2024}\n}\n",
     "image": "/assets/xu2024xpmarl.jpg",
     "imageAlt": "Prioritized agents and their interactions on a road network",
-    "summary": "Non-stationarity poses a fundamental challenge in MARL, arising from agents simultaneously learning and altering their policies. This creates a non-stationary environment from the perspective of each individual agent, often leading to suboptimal or even unconverged learning outcomes. We propose an open-source framework named XP-MARL, which augments MARL with auxiliary prioritization to address this challenge in cooperative settings. XP-MARL is 1) founded upon our hypothesis that prioritizing agents and letting higher-priority agents establish their actions first would stabilize the learning process and thus mitigate non-stationarity and 2) enabled by our proposed mechanism called action propagation, where higher-priority agents act first and communicate their actions, providing a more stationary environment for others. Moreover, instead of using a predefined or heuristic priority assignment, XP-MARL learns priority-assignment policies with an auxiliary MARL problem, leading to a joint learning scheme. Experiments in a motion-planning scenario involving CAVs demonstrate that XP-MARL improves the safety of a baseline model by 84.4% and outperforms a state-of-the-art approach, which improves the baseline by only 12.8%",
     "shortVenue": "arXiv",
     "previewTitle": "XP-MARL: Auxiliary Prioritization in Multi-Agent Reinforcement Learning to Address Non-Stationarity",
-    "fullImage": "/assets/full/xu2024xpmarl.jpg"
+    "fullImage": "/assets/full/xu2024xpmarl.jpg",
+    "abstract": "Non-stationarity poses a fundamental challenge in Multi-Agent Reinforcement Learning (MARL), arising from agents simultaneously learning and altering their policies. This creates a non-stationary environment from the perspective of each individual agent, often leading to suboptimal or even unconverged learning outcomes. We propose an open-source framework named XP-MARL, which augments MARL with auxiliary prioritization to address this challenge in cooperative settings. XP-MARL is 1) founded upon our hypothesis that prioritizing agents and letting higher-priority agents establish their actions first would stabilize the learning process and thus mitigate non-stationarity and 2) enabled by our proposed mechanism called action propagation, where higher-priority agents act first and communicate their actions, providing a more stationary environment for others. Moreover, instead of using a predefined or heuristic priority assignment, XP-MARL learns priority-assignment policies with an auxiliary MARL problem, leading to a joint learning scheme. Experiments in a motion-planning scenario involving Connected and Automated Vehicles (CAVs) demonstrate that XP-MARL improves the safety of a baseline model by 84.4% and outperforms a state-of-the-art approach, which improves the baseline by only 12.8%. Code: github.com/cas-lab-munich/sigmarl"
   }
 ]
