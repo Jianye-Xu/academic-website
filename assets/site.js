@@ -61,30 +61,60 @@ window.addEventListener('popstate', () => {
 applyFilters();
 
 // Keep disclosure controls in the shared action row while retaining native
-// details/summary access when JavaScript is unavailable.
-for (const button of document.querySelectorAll('.disclosure-button')) {
-  const panel = document.getElementById(button.getAttribute('aria-controls'));
+// details/summary access when JavaScript is unavailable. Only one paper panel
+// is open at a time, and the clicked paper stays put when another one closes.
+const disclosureButtons = [...document.querySelectorAll('.disclosure-button')];
+const panelOf = button => document.getElementById(button.getAttribute('aria-controls'));
+const scrollerOf = element => element.closest('.publication-scroll');
+for (const button of disclosureButtons) {
+  const panel = panelOf(button);
   panel.querySelector('summary').hidden = true;
   button.hidden = false;
   button.setAttribute('aria-expanded', String(panel.open));
   button.addEventListener('click', () => {
-    panel.open = !panel.open;
-    button.setAttribute('aria-expanded', String(panel.open));
+    const opening = !panel.open;
+    const top = button.getBoundingClientRect().top;
+    if (opening) {
+      for (const other of disclosureButtons) {
+        if (other !== button) panelOf(other).open = false;
+      }
+    }
+    panel.open = opening;
+    const shift = button.getBoundingClientRect().top - top;
+    const scroller = scrollerOf(button);
+    if (shift && scroller && scroller.scrollHeight > scroller.clientHeight) scroller.scrollTop += shift;
+    else if (shift) window.scrollBy(0, shift);
   });
   panel.addEventListener('toggle', () => {
     button.setAttribute('aria-expanded', String(panel.open));
   });
+  panel.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    panel.open = false;
+    button.focus();
+  });
 }
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !event.target.classList?.contains('disclosure-button')) return;
+  panelOf(event.target).open = false;
+});
 
 for (const button of document.querySelectorAll('.copy-button')) {
+  const label = button.querySelector('span');
+  let reset;
+  const flash = (text, ms) => {
+    label.textContent = text;
+    clearTimeout(reset);
+    reset = setTimeout(() => { label.textContent = 'Copy'; }, ms);
+  };
   button.hidden = false;
   button.addEventListener('click', async () => {
     const citation = document.getElementById(button.dataset.citation);
     try {
       await navigator.clipboard.writeText(citation.textContent);
-      button.textContent = 'Copied';
+      flash('Copied ✓', 2000);
     } catch {
-      button.textContent = 'Select and copy the citation below';
+      flash('Selected, press Ctrl/⌘+C', 5000);
       const range = document.createRange();
       range.selectNodeContents(citation);
       const selection = window.getSelection();

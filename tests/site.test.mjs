@@ -123,9 +123,10 @@ test('paper titles are plain headings and action-row disclosures target preserve
       if (content) assert.ok(article.includes(`id="${kind}-${p.id}"`));
     }
     if (p.bibtex) {
-      const actions = article.split('<div class="citation-actions">')[1].split('</div>')[0];
-      assert.ok(actions.includes('Download .bib'));
-      assert.ok(actions.includes('Copy BibTeX'));
+      const bar = article.split('<div class="citation-bar">')[1].split('</div>')[0];
+      assert.ok(bar.includes(`data-citation="cite-${p.id}"`));
+      assert.ok(bar.includes('aria-label="Copy BibTeX"'));
+      assert.ok(!article.includes('Download .bib'));
     }
   }
 });

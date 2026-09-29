@@ -1,6 +1,8 @@
 {
   "name": "Jianye Xu",
-  "analytics": { "goatcounter": "jianye" },
+  "analytics": {
+    "goatcounter": "jianye"
+  },
   "role": "Ph.D. Student",
   "education": [
     {
@@ -8,28 +10,60 @@
       "institution": "RWTH Aachen University",
       "date_start": "2023-04-01",
       "date_end": "2027-03-31",
-      "summary": "Supervised by [Prof. Bassam Alrifaee](https://www.unibw.de/cas-en/team/univ-prof-dr-ing-bassam-alrifaee).\n"
+      "details": [
+        {
+          "label": "Thesis",
+          "text": "*Learning Safe Coordination for Connected Vehicles* (working title)"
+        },
+        {
+          "label": "Advisor",
+          "text": "[Prof. Bassam Alrifaee](https://www.unibw.de/cas-en/team/bassam-alrifaee)"
+        }
+      ]
     },
     {
       "area": "M.Sc. Automation Engineering",
       "institution": "RWTH Aachen University",
       "date_start": "2020-10-01",
       "date_end": "2022-09-30",
-      "summary": "GPA: 1.2/1.0 (graduated with distinction)\n"
-    },
-    {
-      "area": "Exchange studies in Mechanical Engineering",
-      "institution": "RWTH Aachen University",
-      "date_start": "2019-10-01",
-      "date_end": "2020-08-01",
-      "summary": "Faculty of Mechanical Engineering. Source: curriculum vitae."
+      "details": [
+        {
+          "label": "GPA",
+          "text": "1.2/1.0 (graduated with distinction)"
+        },
+        {
+          "label": "Thesis",
+          "text": "*Parallel Priority-Based Trajectory Planning with Safety Guarantees for Networked Vehicles*"
+        },
+        {
+          "label": "Advisor",
+          "text": "[Prof. Stefan Kowalewski](https://www.embedded.rwth-aachen.de/cms/embedded/der-lehrstuhl/mitarbeiteruebersicht/~bfkegn/stefan-kowalewski/?allou=1&lidx=1)"
+        }
+      ]
     },
     {
       "area": "B.Sc. Vehicle Engineering",
       "institution": "Beijing Institute of Technology",
-      "date_start": "2016-08-01",
+      "date_start": "2016-10-01",
       "date_end": "2020-09-30",
-      "summary": "GPA: 91.48/100 (graduated with distinction)\n"
+      "details": [
+        {
+          "label": "GPA",
+          "text": "91.48/100 (Outstanding Graduate, top 5%)"
+        },
+        {
+          "label": "Exchange",
+          "text": "Final year at RWTH Aachen University, Faculty of Mechanical Engineering (Oct 2019 – Aug 2020)"
+        },
+        {
+          "label": "Thesis",
+          "text": "*Implementation and Comparison of Different Strategies for MTPA Control of Permanent-Magnet Synchronous Machines Considering Magnetic Saturation* (written at RWTH Aachen University)"
+        },
+        {
+          "label": "Advisors",
+          "text": "[Prof. Chen Lin](https://me.bit.edu.cn/szdw/jsml/jlgcx/ddjlgcjzzx/bssds4/704c3ad0c2d2446abae0f873bef8e014.htm) (Beijing Institute of Technology), [Prof. Jakob Andert](https://www.mmp.rwth-aachen.de/cms/mechatronics/der-lehrstuhl/team/~fzgq/jakob-andert/?allou=1&lidx=1) (RWTH Aachen University)"
+        }
+      ]
     }
   ],
   "awards": [
@@ -61,7 +95,7 @@
       "title": "German National Scholarship (Deutschlandstipendium)",
       "date": "2021-11-01",
       "awarder": "RWTH Aachen University",
-      "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany..\n"
+      "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany.\n"
     },
     {
       "title": "Patent - Quick Locking and Unlocking Device for Vehicle-Mounted Power Battery Box",
@@ -73,13 +107,14 @@
       "title": "German National Scholarship (Deutschlandstipendium)",
       "date": "2020-11-01",
       "awarder": "RWTH Aachen University",
-      "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany..\n"
+      "summary": "The Deutschlandstipendium supports highly talented students at all participating universities in Germany.\n"
     },
     {
       "title": "Outstanding Graduate",
       "date": "2020-06-01",
       "awarder": "Beijing Institute of Technology",
-      "summary": "Recognized as an Outstanding Graduate for academic achievement and contributions during undergraduate studies.\n"
+      "summary": "Recognized as an Outstanding Graduate for academic achievement and contributions during undergraduate studies.\n",
+      "note": "top 5%, GPA 91.48/100"
     },
     {
       "title": "China National Scholarship",
@@ -94,10 +129,11 @@
       "summary": "Awarded second prize in a national competition for mechanical product digital design, demonstrating advanced CAD modeling and design skills.\n"
     },
     {
-      "title": "Outstanding Undergraduate",
+      "title": "Outstanding Undergraduate Student",
       "date": "2017-12-01",
       "awarder": "Beijing Institute of Technology",
-      "summary": "Recognized for outstanding academic achievements during undergraduate studies.\n"
+      "summary": "Recognized as an Outstanding Undergraduate Student for outstanding academic achievements in 2017, 2018, and 2019 during undergraduate studies.\n",
+      "year_label": "2017–2019"
     },
     {
       "title": "First Prize in Beijing Student Engineering Design Expression Competition",

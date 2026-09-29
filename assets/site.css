@@ -220,6 +220,7 @@ main>section {
   max-height:min(840px,75vh);
   overflow-y:auto;
   overscroll-behavior:contain;
+  overflow-anchor:none;
   margin-top:8px;
   border-top:1px solid var(--rule);
   border-bottom:1px solid var(--rule)
@@ -387,17 +388,15 @@ main>section {
   border-radius:3px;
   padding:1px 7px
 }
-.paper-links,.citation-actions {
+.paper-links {
   display:flex;
   align-items:center;
   flex-wrap:wrap;
   gap:6px;
+  margin-top:6px;
   font-size:12px
 }
-.paper-links {
-  margin-top:6px
-}
-.paper-links a,.disclosure-button,.citation-actions a,.copy-button {
+.paper-links a,.disclosure-button {
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -411,7 +410,7 @@ main>section {
   line-height:1.5;
   text-decoration:none
 }
-.paper-links a:hover,.disclosure-button:hover,.citation-actions a:hover,.copy-button:hover {
+.paper-links a:hover,.disclosure-button:hover {
   background:#e8f0f6;
   border-color:var(--accent)
 }
@@ -442,14 +441,53 @@ main>section {
   margin-top:10px;
   font-size:13px
 }
+.publication .paper-details p,.publication .citation pre {
+  max-height:15em;
+  overflow-y:auto
+}
+.citation-box {
+  background:var(--soft);
+  border-radius:4px
+}
+.citation-bar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding:3px 6px 3px 12px;
+  border-bottom:1px solid var(--rule);
+  color:var(--muted);
+  font-size:11px
+}
+.copy-button {
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  min-height:24px;
+  padding:2px 6px;
+  border:0;
+  border-radius:3px;
+  background:none;
+  color:var(--muted);
+  font:inherit;
+  cursor:pointer
+}
+.copy-button:hover,.copy-button:focus-visible {
+  color:var(--accent);
+  background:#e8f0f6
+}
+.copy-button svg {
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.4
+}
 .citation pre {
+  margin:0;
   max-width:100%;
   overflow:auto;
   white-space:pre-wrap;
   overflow-wrap:anywhere;
-  background:var(--soft);
-  padding:15px;
-  border-radius:4px;
+  padding:10px 12px;
   font-size:11px;
   line-height:1.6
 }
@@ -479,6 +517,29 @@ main>section {
   color:var(--muted);
   margin-top:4px
 }
+.entry-facts {
+  margin:4px 0 0;
+  font-size:13px;
+  color:var(--muted)
+}
+.entry-facts div {
+  display:grid;
+  grid-template-columns:70px minmax(0,1fr);
+  gap:10px;
+  margin-top:2px
+}
+.entry-facts dt {
+  font-weight:600
+}
+.entry-facts dd {
+  margin:0
+}
+@media (max-width:600px) {
+  .entry-facts div {
+    grid-template-columns:1fr;
+    gap:0
+  }
+}
 .subheading {
   margin:22px 0 14px;
   font-size:18px
@@ -492,6 +553,16 @@ main>section {
   font-size:12px;
   color:var(--muted);
   margin-right:8px
+}
+.award-list:not(.thesis-list) .award-details summary {
+  padding-left:4.75rem;
+  text-indent:-4.75rem
+}
+.award-list:not(.thesis-list) .award-year {
+  display:inline-block;
+  min-width:4.75rem;
+  margin-right:0;
+  text-indent:0
 }
 .award-list .awarder {
   color:var(--muted);
@@ -529,10 +600,15 @@ main>section {
 }
 .compact-entries li {
   margin-bottom:6px;
+  padding-left:5.75rem;
+  text-indent:-5.75rem;
   font-size:14px
 }
 .compact-entries .entry-date {
-  margin-right:8px
+  display:inline-block;
+  min-width:5.75rem;
+  padding-top:0;
+  text-indent:0
 }
 .compact-entries h4 {
   margin:0;
@@ -839,7 +915,7 @@ footer {
   .publication[hidden] {
     display:grid!important
   }
-  .publication-scroll {
+  .publication-scroll,.publication .paper-details p,.publication .citation pre {
     max-height:none;
     overflow:visible
   }
