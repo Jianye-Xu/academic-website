@@ -76,7 +76,7 @@ test('publication buttons name their preprint server and publisher', () => {
 });
 test('page retains academic sections, supervision and scrollable news and publications without JavaScript', () => {
   for (const id of ['about','news','research','education','awards','talks','teaching','service']) assert.ok(html.includes(`id="${id}"`));
-  assert.ok(html.includes('Supervised theses <span class="muted">(20)'));
+  assert.ok(html.includes('Supervised theses <span class="muted">(21)'));
   assert.ok(html.includes('Supervised seminar works <span class="muted">(14)'));
   assert.ok(html.includes('class="news-scroll"'));
   assert.ok(html.includes('class="publication-scroll" role="region"'));
@@ -191,7 +191,8 @@ test('CV section order and Professional Activities hierarchy are preserved', () 
   for (const text of ['Associate Editor', 'Automatica', 'IEEE Control Systems Letters (L-CSS)', 'IEEE International Conference on Robotics and Automation (ICRA)', 'Graduate Student Member, IEEE', 'IEEE Young Professionals']) assert.ok(activities.includes(text));
   assert.ok(!activities.includes('Guest Lecturer'));
   const teaching = html.split('<section id="teaching"')[1];
-  for (const title of ['Assistant Lecturer', 'Guest Lecturer', 'Research Assistant', 'Undergraduate Teaching Assistant']) assert.ok(teaching.includes(title));
+  for (const title of ['Assistant Lecturer', 'Guest Lecturer', 'Undergraduate Teaching Assistant']) assert.ok(teaching.includes(title));
+  assert.ok(!teaching.includes('Research Assistant'));
   assert.equal((html.match(/>Assistant Lecturer</g) || []).length, 1);
   assert.equal((html.match(/>Guest Lecturer</g) || []).length, 1);
 });

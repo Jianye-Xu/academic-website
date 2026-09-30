@@ -13,12 +13,6 @@
       "description": "Gave a guest lecture titled “Control Barrier Functions and Their Applications to Collision Avoidance in Networked and Autonomous Vehicles” for a [master’s course](https://cpm.lrt.unibw.de/courses/master/)."
     },
     {
-      "date": "Jun 2021 – Feb 2022",
-      "title": "Research Assistant",
-      "organization": "Institute for Plastics Processing (IKV), RWTH Aachen University, Germany",
-      "description": "Developed a web-based interface for injection molding process optimization using JavaScript and Vue 3. Used Python for data processing and analysis with pandas and Keras."
-    },
-    {
       "date": "Sep–Oct 2017",
       "title": "Undergraduate Teaching Assistant",
       "organization": "Beijing Institute of Technology, China",
@@ -54,6 +48,12 @@
       "year": "2026",
       "student": "Yousef Sayed",
       "title": "A Study of Responsibility Assignment in Control Barrier Function for Connected and Automated Vehicles",
+      "details": "Bachelor's thesis, RWTH Aachen University"
+    },
+    {
+      "year": "2026",
+      "student": "Mohamed ElShaarawy",
+      "title": "Large Language Model-Based Traffic Scenario Analysis and Decision-Making in the Cyber-Physical Mobility Lab",
       "details": "Bachelor's thesis, RWTH Aachen University"
     },
     {
