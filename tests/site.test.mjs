@@ -58,7 +58,7 @@ test('publication buttons name their preprint server and publisher', () => {
   for (const p of publications) {
     const article = html.split(`<article class="publication" id="${p.id}"`)[1].split('</article>')[0];
     const resources = article.split('<div class="paper-links">')[1].split('</div>')[0];
-    const links = [...resources.matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(([, href, label]) => ({ href, label }));
+    const links = [...resources.matchAll(/<a (?:class="[^"]*" )?href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(([, href, label]) => ({ href, label })).filter(link => link.label !== 'Project Page');
     const preprint = links[0];
     if (researchGate[p.id]) {
       assert.deepEqual(preprint, { href: researchGate[p.id], label: 'ResearchGate' });
@@ -158,7 +158,7 @@ test('talks and service preserve content and links in compact entries', async ()
     assert.doesNotMatch(content, /<(?:p|br)\b/);
     for (const item of profile[section]) {
       for (const field of ['date', 'title', 'organization']) assert.ok(content.includes(escape(item[field])));
-      const rendered = escape(item.description).replace(/\[([^\]]+)\]\((https:\/\/[^)]+)\)/g, '<a href="$2">$1</a>');
+      const rendered = escape(item.description).replace(/\[([^\]]+)\]\((https:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
       assert.ok(content.includes(rendered));
       assert.equal(item.url, undefined);
     }
@@ -225,5 +225,27 @@ test('background robots pair a Classic robot and a robot dog per margin and keep
     const z = zones[r.zone];
     assert.ok(r.x >= z.x0 && r.x <= z.x1 && r.y >= z.y0 && r.y <= z.y1);
     assert.ok(r.travel > 100);
+  }
+});
+
+test('external links, the CV, and full figures open in a new tab; in-page anchors do not', () => {
+  const anchors = html.match(/<a\s[^>]*>/g);
+  const newTab = anchors.filter(a => /href="(https?:\/\/|\/uploads\/|\/assets\/)/.test(a));
+  assert.ok(newTab.some(a => a.includes('/uploads/resume.pdf')) && newTab.some(a => a.includes('publication-preview')));
+  for (const a of newTab) assert.match(a, /target="_blank" rel="noopener"/, a);
+  for (const a of anchors.filter(a => /href="#/.test(a))) assert.doesNotMatch(a, /target=/, a);
+});
+
+test('a project page is the first, filled button and the thumbnail target', () => {
+  for (const p of publications) {
+    const article = html.split(`<article class="publication" id="${p.id}"`)[1].split('</article>')[0];
+    const row = article.split('<div class="paper-links">')[1].split('</div>')[0];
+    const preview = article.match(/<a class="publication-preview"[^>]*>/)[0];
+    if (p.links.project) {
+      assert.ok(row.startsWith(`<a class="primary-link" href="${p.links.project}"`));
+      assert.ok(preview.includes(`href="${p.links.project}"`) && article.includes('class="preview-label"'));
+    } else {
+      assert.ok(!row.includes('primary-link') && !article.includes('preview-label'));
+    }
   }
 });

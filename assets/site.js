@@ -207,3 +207,14 @@ for (const details of document.querySelectorAll('.award-details')) {
     }
   });
 }
+
+// Start the lab clip once, when half of it first scrolls into view; it then stops on its last frame.
+const labClip = document.querySelector('.lab-clip video');
+if (labClip && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    observer.disconnect();
+    labClip.play().catch(() => {});
+  }, { threshold: 0.5 });
+  observer.observe(labClip);
+}

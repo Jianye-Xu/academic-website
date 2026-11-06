@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-11-01",
+    "title": "New preprint and under review at IEEE T-ITS: [BH-CBF](#xu2026safeguarding)!",
+    "summary": "We safeguard multi-agent reinforcement learning for connected and automated vehicles with recursively feasible control barrier functions."
+  },
+  {
     "date": "2024-06-02",
     "title": "Join our “[1st Workshop on Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms](https://cpm.lrt.unibw.de/workshop/)” at IEEE IV 2024!",
     "summary": "Discuss challenges and design a [roadmap](#xu2026smallscale)."

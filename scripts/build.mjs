@@ -29,11 +29,15 @@ validate();
 function paper(p) {
   const title = escape(p.title);
   const badge = p.selected ? '<span class="selected-star" aria-label="Selected publication">★</span>' : '';
+  // With a project page, the thumbnail opens it and carries a label saying so; otherwise it opens the full figure.
   const preview = p.image
-    ? `<a class="publication-preview" href="${escape(p.fullImage || p.image)}" aria-label="View full figure: ${title}"><img src="${escape(p.image)}" alt="${escape(p.imageAlt)}" loading="lazy" decoding="async" width="640" height="430"></a>`
+    ? (p.links.project
+      ? `<a class="publication-preview" href="${escape(p.links.project)}" aria-label="Open project page: ${title}"><img src="${escape(p.image)}" alt="${escape(p.imageAlt)}" loading="lazy" decoding="async" width="640" height="430"><span class="preview-label" aria-hidden="true">Project page ↗</span></a>`
+      : `<a class="publication-preview" href="${escape(p.fullImage || p.image)}" aria-label="View full figure: ${title}"><img src="${escape(p.image)}" alt="${escape(p.imageAlt)}" loading="lazy" decoding="async" width="640" height="430"></a>`)
     : `<a class="publication-preview paper-cover" href="${escape(p.links.paper)}" aria-label="Read paper: ${title}"><span class="cover-venue">${escape(p.shortVenue)}</span><span class="cover-title">${escape(p.previewTitle || p.title)}</span><span class="cover-year">${p.year} <span aria-hidden="true">↗</span></span></a>`;
-  const labels = { paper: p.preprintServer || 'arXiv', publisher: p.publisherName, code: 'Code', video: 'Video', project: 'Project Page' };
-  const resources = Object.entries(labels).filter(([key]) => p.links[key] && (key !== 'publisher' || p.status === 'peer-reviewed')).map(([key, label]) => link(p.links[key], escape(label))).join('');
+  // The project page, if any, comes first as the one filled button.
+  const labels = { project: 'Project Page', paper: p.preprintServer || 'arXiv', publisher: p.publisherName, code: 'Code', video: 'Video' };
+  const resources = Object.entries(labels).filter(([key]) => p.links[key] && (key !== 'publisher' || p.status === 'peer-reviewed')).map(([key, label]) => key === 'project' ? `<a class="primary-link" href="${escape(p.links[key])}">${escape(label)}</a>` : link(p.links[key], escape(label))).join('');
   const disclosures = [p.bibtex && ['bibtex', 'BibTeX'], p.abstract && ['abstract', 'Abstract']].filter(Boolean).map(([kind, label]) => `<button type="button" class="disclosure-button" aria-expanded="false" aria-controls="${kind}-${p.id}" hidden>${label}</button>`).join('');
   return `<article class="publication" id="${p.id}" data-status="${p.status}" data-selected="${p.selected}" data-tags="${escape(p.tags.join('|'))}" aria-labelledby="title-${p.id}"><figure class="preview-container">${preview}</figure><div class="publication-body"><h3 id="title-${p.id}">${badge}${title}</h3><p class="authors">${p.authors.map(author => author === 'Jianye Xu' ? `<strong>${escape(author)}</strong>` : escape(author)).join(', ')}</p><p class="venue"><strong>${escape(p.venue)}</strong> · ${p.year}<span class="tags">${p.status === 'preprint' ? '<span class="preprint-badge">Preprint</span>' : ''}${p.tags.map(tag => `<span class="tag" data-tag="${escape(tag)}">${escape(tag)}</span>`).join('')}</span></p>${p.note ? `<p class="paper-note">${escape(p.note)}</p>` : ''}<div class="paper-links">${resources}${disclosures}</div>${p.bibtex ? `<details class="paper-details citation" id="bibtex-${p.id}"><summary>BibTeX</summary><div class="citation-box"><div class="citation-bar"><span>BibTeX</span><button type="button" class="copy-button" data-citation="cite-${p.id}" aria-label="Copy BibTeX" hidden><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M11 5V3.5A1.5 1.5 0 0 0 9.5 2h-6A1.5 1.5 0 0 0 2 3.5v6A1.5 1.5 0 0 0 3.5 11H5"/></svg><span>Copy</span></button></div><pre id="cite-${p.id}">${escape(p.bibtex.trim())}</pre></div></details>` : ''}${p.abstract ? `<details class="paper-details" id="abstract-${p.id}"><summary>Abstract</summary><p>${escape(p.abstract)}</p></details>` : ''}</div></article>`;
 }
@@ -75,6 +79,9 @@ const replacements = {
 let html = await read('index.html');
 for (const [key, value] of Object.entries(replacements)) html = html.replace(`{{${key}}}`, value);
 if (/\{\{\w+\}\}/.test(html)) throw Error('Unresolved template field');
+// External links, the CV, and full-size figures open in a new tab; in-page anchors stay in this one.
+html = html.replace(/<a href="(https?:\/\/[^"]+|\/uploads\/[^"]+|\/assets\/[^"]+)"(?![^>]*\starget=)/g, '<a href="$1" target="_blank" rel="noopener"');
+html = html.replace(/<a class="(publication-preview|primary-link)" href="([^"]+)"(?![^>]*\starget=)/g, '<a class="$1" href="$2" target="_blank" rel="noopener"');
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
 await cp(path.join(root,'assets'), path.join(out,'assets'), { recursive: true });

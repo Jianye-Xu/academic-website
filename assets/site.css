@@ -179,6 +179,22 @@ main>section {
   color:var(--muted);
   margin-bottom:14px
 }
+/* Lab clip under the Publications intro: plays once, muted, with native controls. */
+.lab-clip {
+  margin:0 0 14px
+}
+.lab-clip video {
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:3px;
+  background:var(--soft)
+}
+.lab-clip figcaption {
+  font-size:13px;
+  color:var(--muted);
+  margin-top:6px
+}
 .selected-key {
   color:var(--accent);
   margin-right:4px
@@ -326,6 +342,25 @@ main>section {
 .publication-preview:hover {
   border-color:#a3b6c5
 }
+/* A thumbnail that opens a project page says so in its corner. */
+.publication-preview:has(.preview-label) {
+  position:relative
+}
+.preview-label {
+  position:absolute;
+  right:4px;
+  bottom:4px;
+  padding:0 6px;
+  border:1px solid #cad4dc;
+  border-radius:3px;
+  background:rgba(255,255,255,.92);
+  color:var(--accent);
+  font-size:11px;
+  line-height:1.6
+}
+.publication-preview:hover .preview-label {
+  border-color:var(--accent)
+}
 .paper-cover {
   height:112px;
   width:100%;
@@ -429,6 +464,16 @@ main>section {
 .paper-links a:hover,.disclosure-button:hover {
   background:#e8f0f6;
   border-color:var(--accent)
+}
+/* The project page is the one filled button of a paper. */
+.paper-links a.primary-link {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff
+}
+.paper-links a.primary-link:hover {
+  background:#1b4766;
+  border-color:#1b4766
 }
 .disclosure-button::before {
   content:"+";
@@ -783,6 +828,10 @@ footer {
   }
 }
 @media(max-width:600px) {
+  /* Too small for the corner label; the filled button remains. */
+  .preview-label {
+    display:none
+  }
   :root {
     --date-col:80px;
     --date-gap:12px
@@ -945,6 +994,9 @@ footer {
   }
 }
 @media print {
+  .preview-label {
+    display:none
+  }
   .site-header,.filters,.copy-button,.skip-link,footer,.robot-fleet {
     display:none!important
   }
