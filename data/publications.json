@@ -137,7 +137,7 @@
     "year": 2026,
     "venue": "IEEE Intelligent Transportation Systems Magazine",
     "status": "peer-reviewed",
-    "selected": true,
+    "selected": false,
     "tags": [
       "CAVs"
     ],
@@ -382,7 +382,7 @@
     "year": 2024,
     "venue": "arXiv preprint arXiv:2409.11852",
     "status": "preprint",
-    "selected": true,
+    "selected": false,
     "tags": [
       "Learning",
       "CAVs"

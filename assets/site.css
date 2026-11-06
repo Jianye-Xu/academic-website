@@ -3,6 +3,9 @@
   --ink:#202a33;
   --muted:#5d6670;
   --accent:#245c83;
+  /* Text links: brighter than the accent so they stand apart from the ink (3:1) and stay readable on white (5:1). */
+  --link:#1d6fd1;
+  --link-line:rgba(29,111,209,.35);
   --rule:#e0e5e9;
   --soft:#f3f6f8;
   --radius:5px;
@@ -28,12 +31,21 @@ body {
   -webkit-font-smoothing:antialiased
 }
 a {
-  color:var(--accent);
-  text-decoration:none;
+  color:var(--link);
+  text-decoration:underline;
+  text-decoration-color:var(--link-line);
+  text-decoration-thickness:1px;
   text-underline-offset:3px
 }
 a:hover {
-  text-decoration:underline
+  text-decoration-color:currentColor
+}
+/* Navigation, the name, buttons, and thumbnails are not running text: no underline, accent color. */
+nav a,.wordmark,.skip-link,.footer-links a,.profile-links a,.paper-links a,.publication-preview {
+  text-decoration:none
+}
+.paper-links a,.publication-preview {
+  color:var(--accent)
 }
 button,summary,a {
   -webkit-tap-highlight-color:transparent
@@ -106,7 +118,7 @@ nav {
   gap:12px 20px;
   flex-wrap:wrap;
   justify-content:flex-end;
-  font-size:14px
+  font-size:15px
 }
 nav a {
   color:var(--muted)
@@ -126,7 +138,7 @@ nav a:hover {
 }
 .eyebrow {
   text-transform:uppercase;
-  font-size:11px;
+  font-size:12px;
   font-weight:600;
   letter-spacing:1.45px;
   color:var(--muted)
@@ -138,7 +150,7 @@ nav a:hover {
   border-radius:3px
 }
 .portrait figcaption {
-  font-size:12px;
+  font-size:13px;
   color:var(--muted);
   margin-top:10px;
   letter-spacing:.3px
@@ -148,7 +160,7 @@ nav a:hover {
   flex-wrap:wrap;
   gap:8px 20px;
   margin-top:16px;
-  font-size:14px
+  font-size:15px
 }
 .profile-links a {
   padding-block:4px
@@ -167,7 +179,7 @@ main>section {
   margin-bottom:16px
 }
 .quiet-link {
-  font-size:13px;
+  font-size:14px;
   white-space:nowrap
 }
 .section-intro {
@@ -175,7 +187,7 @@ main>section {
   margin-bottom:14px
 }
 .research-note {
-  font-size:13px;
+  font-size:14px;
   color:var(--muted);
   margin-bottom:14px
 }
@@ -191,7 +203,7 @@ main>section {
   background:var(--soft)
 }
 .lab-clip figcaption {
-  font-size:13px;
+  font-size:14px;
   color:var(--muted);
   margin-top:6px
 }
@@ -212,11 +224,11 @@ main>section {
   grid-template-columns:calc(var(--date-col) - var(--date-gap)) minmax(0,1fr);
   gap:var(--date-gap);
   margin-bottom:10px;
-  font-size:14px
+  font-size:15px
 }
 .news-row time {
   color:var(--muted);
-  font-size:12px;
+  font-size:13px;
   padding-top:2px;
   font-variant-numeric:tabular-nums
 }
@@ -227,7 +239,7 @@ main>section {
   text-decoration:underline
 }
 .news-scroll {
-  max-height:200px;
+  max-height:240px;
   overflow-y:auto;
   padding-right:8px;
   overscroll-behavior:contain
@@ -277,7 +289,7 @@ main>section {
 }
 .filter-label {
   width:45px;
-  font-size:12px;
+  font-size:13px;
   color:var(--muted)
 }
 .filter-button {
@@ -286,7 +298,7 @@ main>section {
   border-radius:4px;
   padding:6px 13px;
   min-height:36px;
-  font-size:12px;
+  font-size:13px;
   color:#424f5b;
   transition:background .15s,color .15s
 }
@@ -300,7 +312,7 @@ main>section {
   color:#fff
 }
 .result-count {
-  font-size:12px;
+  font-size:13px;
   color:var(--muted);
   margin:12px 0 0
 }
@@ -355,7 +367,7 @@ main>section {
   border-radius:3px;
   background:rgba(255,255,255,.92);
   color:var(--accent);
-  font-size:11px;
+  font-size:12px;
   line-height:1.6
 }
 .publication-preview:hover .preview-label {
@@ -372,7 +384,7 @@ main>section {
   background:linear-gradient(0deg,#fafbfc,#fff)
 }
 .paper-cover .cover-venue {
-  font-size:12px;
+  font-size:13px;
   text-transform:uppercase;
   letter-spacing:1.8px
 }
@@ -383,25 +395,25 @@ main>section {
   line-height:1.3
 }
 .paper-cover .cover-year {
-  font-size:12px;
+  font-size:13px;
   color:var(--accent)
 }
 .paper-cover:hover {
   text-decoration:none
 }
 .publication h3 {
-  font-size:16px;
+  font-size:17px;
   line-height:1.4;
   letter-spacing:-.1px;
   margin-bottom:4px
 }
 .selected-star {
   color:var(--accent);
-  font-size:15px;
+  font-size:16px;
   margin-right:6px
 }
 .authors {
-  font-size:13px;
+  font-size:14px;
   line-height:1.45;
   color:var(--muted);
   margin-bottom:3px
@@ -410,7 +422,7 @@ main>section {
   color:var(--ink)
 }
 .venue {
-  font-size:13px;
+  font-size:14px;
   line-height:1.5
 }
 .venue strong {
@@ -418,7 +430,7 @@ main>section {
 }
 .paper-note {
   color:var(--muted);
-  font-size:12px;
+  font-size:13px;
   margin-top:3px
 }
 .tags {
@@ -429,7 +441,7 @@ main>section {
   margin-left:8px
 }
 .tag,.preprint-badge {
-  font-size:10px;
+  font-size:11px;
   font-weight:600;
   line-height:1.7;
   letter-spacing:.25px;
@@ -445,7 +457,7 @@ main>section {
   flex-wrap:wrap;
   gap:6px;
   margin-top:6px;
-  font-size:12px
+  font-size:13px
 }
 .paper-links a,.disclosure-button {
   display:inline-flex;
@@ -457,7 +469,7 @@ main>section {
   border-radius:4px;
   background:#fff;
   color:var(--accent);
-  font-size:12px;
+  font-size:13px;
   line-height:1.5;
   text-decoration:none
 }
@@ -487,7 +499,7 @@ main>section {
   content:"−"
 }
 .paper-details {
-  font-size:12px
+  font-size:13px
 }
 .paper-details[open] {
   margin-top:8px
@@ -500,7 +512,7 @@ main>section {
 }
 .paper-details p {
   margin-top:10px;
-  font-size:13px
+  font-size:14px
 }
 .publication .paper-details p,.publication .citation pre {
   max-height:15em;
@@ -518,7 +530,7 @@ main>section {
   padding:3px 6px 3px 12px;
   border-bottom:1px solid var(--rule);
   color:var(--muted);
-  font-size:11px
+  font-size:12px
 }
 .copy-button {
   display:inline-flex;
@@ -549,7 +561,7 @@ main>section {
   white-space:pre-wrap;
   overflow-wrap:anywhere;
   padding:10px 12px;
-  font-size:11px;
+  font-size:12px;
   line-height:1.6
 }
 .publication-body {
@@ -562,7 +574,7 @@ main>section {
   margin-bottom:18px
 }
 .entry-date,.entry .entry-date {
-  font-size:12px;
+  font-size:13px;
   color:var(--muted);
   padding-top:2px
 }
@@ -571,19 +583,19 @@ main>section {
 }
 .entry h3 {
   margin-bottom:3px;
-  font-size:16px
+  font-size:17px
 }
 .entry p {
-  font-size:14px
+  font-size:15px
 }
 .entry .entry-detail {
-  font-size:13px;
+  font-size:14px;
   color:var(--muted);
   margin-top:4px
 }
 .entry-facts {
   margin:4px 0 0;
-  font-size:13px;
+  font-size:14px;
   color:var(--muted)
 }
 .entry-facts div {
@@ -606,15 +618,15 @@ main>section {
 }
 .subheading {
   margin:22px 0 14px;
-  font-size:18px
+  font-size:19px
 }
 .award-list li {
   position:relative;
   margin-bottom:6px;
-  font-size:14px
+  font-size:15px
 }
 .award-year {
-  font-size:12px;
+  font-size:13px;
   color:var(--muted);
   margin-right:8px
 }
@@ -630,7 +642,7 @@ main>section {
 }
 .award-list .awarder {
   color:var(--muted);
-  font-size:13px
+  font-size:14px
 }
 .award-details summary {
   cursor:pointer;
@@ -652,7 +664,7 @@ main>section {
   background:#fff;
   box-shadow:0 3px 10px #00000014;
   color:var(--ink);
-  font-size:13px
+  font-size:14px
 }
 .award-details.follow p {
   position:fixed;
@@ -666,7 +678,7 @@ main>section {
   margin-bottom:6px;
   padding-left:var(--date-col);
   text-indent:calc(-1 * var(--date-col));
-  font-size:14px
+  font-size:15px
 }
 .compact-entries .entry-date {
   display:inline-block;
@@ -678,10 +690,10 @@ main>section {
   margin:0;
   font-weight:600;
   display:inline;
-  font-size:14px
+  font-size:15px
 }
 .activity-summary {
-  font-size:14px
+  font-size:15px
 }
 .muted {
   color:var(--muted)
@@ -690,11 +702,11 @@ main>section {
   margin-bottom:18px
 }
 .teaching-course p {
-  font-size:14px;
+  font-size:15px;
   margin-top:5px
 }
 .teaching-course details {
-  font-size:13px;
+  font-size:14px;
   margin-top:9px
 }
 .course-image {
@@ -708,12 +720,12 @@ main>section {
 }
 .supervision>summary {
   font-weight:600;
-  font-size:16px;
+  font-size:17px;
   cursor:pointer
 }
 .supervision ul {
   padding-left:20px;
-  font-size:13px
+  font-size:14px
 }
 .supervision .thesis-list {
   padding-left:0;
@@ -726,7 +738,7 @@ main>section {
   margin:8px 0
 }
 .supervision h4 {
-  font-size:14px;
+  font-size:15px;
   margin:23px 0 0
 }
 .text-button {
@@ -742,7 +754,7 @@ footer {
   display:flex;
   justify-content:space-between;
   color:var(--muted);
-  font-size:12px
+  font-size:13px
 }
 .footer-links {
   display:flex;
@@ -789,7 +801,7 @@ footer {
     padding-top:40px
   }
 }
-/* Below this width the seven nav links no longer fit beside the name. */
+/* Below this width the six nav links no longer fit beside the name. */
 @media(max-width:900px) {
   .site-header {
     flex-direction:column;
@@ -840,12 +852,12 @@ footer {
     scroll-padding-top:16px
   }
   body {
-    font-size:15px
+    font-size:16px
   }
   .wrap {
     width:calc(100% - 36px)
   }
-  /* A wrapped seven-link nav is too tall to keep pinned on a phone. */
+  /* A wrapped six-link nav is too tall to keep pinned on a phone. */
   .site-header {
     position:static;
     flex-direction:column;
@@ -861,7 +873,7 @@ footer {
     justify-content:flex-start;
     flex-wrap:wrap;
     gap:2px 14px;
-    font-size:13px
+    font-size:14px
   }
   .intro {
     grid-template-columns:1fr;
@@ -889,7 +901,7 @@ footer {
     margin:8px 0 14px
   }
   .eyebrow {
-    font-size:10px;
+    font-size:11px;
     letter-spacing:1px
   }
   .profile-links {
@@ -909,10 +921,10 @@ footer {
     gap:10px
   }
   .section-heading .quiet-link {
-    font-size:11px
+    font-size:12px
   }
   .news-row time,.entry .entry-date,.entry-date,.award-year {
-    font-size:11px
+    font-size:12px
   }
   /* Small thumbnail beside the title; the rest of the entry spans full width. */
   .publication {
@@ -934,7 +946,7 @@ footer {
     grid-column:2;
     grid-row:1;
     align-self:center;
-    font-size:15px;
+    font-size:16px;
     margin-bottom:0
   }
   .publication .authors {
@@ -952,13 +964,13 @@ footer {
     display:none
   }
   .paper-cover .cover-title {
-    font-size:10px
+    font-size:11px
   }
   .authors,.venue {
-    font-size:13px
+    font-size:14px
   }
   .paper-links {
-    font-size:13px;
+    font-size:14px;
     gap:7px
   }
   .filter-row {
@@ -978,10 +990,10 @@ footer {
     margin-bottom:18px
   }
   .research-note {
-    font-size:12px
+    font-size:13px
   }
   .section-intro {
-    font-size:14px
+    font-size:15px
   }
 }
 @media(prefers-reduced-motion:reduce) {
@@ -1035,7 +1047,7 @@ footer {
   }
 }
 .supervised-item {
-  font-size:13px;
+  font-size:14px;
   margin:15px 0;
   line-height:1.8
 }
